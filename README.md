@@ -1,14 +1,14 @@
-# TMS-python-autumn
+# TMS-python-spring
 Курс Python разработчик
 
 ## Как добавить домашку?
 1. Скачиваем проект
 ```
-git clone https://github.com/tamkovich/tms-python-autumn.git
+git clone https://github.com/tamkovich/tms-python-spring.git
 ```
 или (если сделали fork репозитория)
 ```
-git clone https://github.com/<your_username>/tms-python-autumn.git
+git clone https://github.com/<your_username>/tms-python-spring.git
 ```
 2. Переключаемся на ветку <i>master</i>
 ```
@@ -64,7 +64,7 @@ git push origin -f your_name_and_lesson_number
 
 1. Добавляете ссылку исходного репозитория
 ```
-git remote add upstream https://github.com/tamkovich/tms-python-autumn.git
+git remote add upstream https://github.com/tamkovich/tms-python-spring.git
 ```
 2. Создаете временную ветку
 ```
@@ -91,7 +91,7 @@ git checkout -b master
 ## Что делать если не могу запушить?
 1. нужно изменить ссылку локальную
 ```
-git remote set-url origin https://github.com/<your_username>/tms-python-autumn.git
+git remote set-url origin https://github.com/<your_username>/tms-python-spring.git
 ```
 2. Проставить свои данные
 ```
