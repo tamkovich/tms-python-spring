@@ -4,5 +4,6 @@ lastname = 'Tishevich'
 
 age = '22'
 
-result = ("Привет,меня зовут" + " " + firstname
-          + " " + lastname + "," + "мне" + " " + age + " " + "года")
+result = ("Привет,меня зовут" + " " + firstname + " \n" + lastname + "," + "мне" + " " + age + " " + "года")
+
+print(result)
