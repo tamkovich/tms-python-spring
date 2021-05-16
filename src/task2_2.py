@@ -10,5 +10,3 @@ second_list.insert(0,'и конечно же')
 print(second_list)
 first_list.extend(second_list)
 print(first_list)
-
-
