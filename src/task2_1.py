@@ -1,6 +1,6 @@
 firstname = 'Kate'
 
-lastname = 'Tishevich'
+lastname = 'T'
 
 age = '22'
 
