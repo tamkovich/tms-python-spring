@@ -1,9 +1,9 @@
 firstname = 'Kate'
 
-lastname = 'T'
+lastname = 'Tishevich'
 
 age = '22'
 
-result = ("Привет,меня зовут" + " " + firstname + " \n" + lastname + "," + "мне" + " " + age + " " + "года")
+result = ("Хей,меня зовут" + " " + firstname + " \n" + lastname + "," + "мне" + " " + age + " " + "лет")
 
 print(result)
