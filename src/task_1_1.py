@@ -1,3 +1,5 @@
+import math
+
 # Задание 1
 a = 5
 b = 2
@@ -11,8 +13,6 @@ print("Произведение равно:", mult)
 # Задание 2 Сделал так, потому что через input постоянно просило вводить числа
 x = 6
 y = -8
-import math
-
 result = (math.fabs(x) - math.fabs(y)) / (1 - math.fabs(x * y))
 print("Result is: ", result)
 
