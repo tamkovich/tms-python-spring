@@ -22,4 +22,3 @@ while i < len(string):
     string_result = string_result + string[i]
     i = i + 2
 print(string_result)
-
