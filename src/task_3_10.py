@@ -25,7 +25,9 @@ else:
           8: ["рублей", "копеек"],
           9: ["рублей", "копеек"]}
 
-    if rub > 20:
+    if rub > 100 and rub % 100 in (11, 12, 13, 14):
+        rub = str(rub) + " " + rk[0][0]
+    elif rub > 20:
         rub = str(rub) + " " + rk[rub % 10][0]
     elif 20 > rub >= 10:
         rub = str(rub) + " " + rk[0][0]
