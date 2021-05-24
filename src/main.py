@@ -1,5 +1,5 @@
-from datetime import time
 from datetime import date
+from datetime import time
 from shift import Shift
 
 # Пример 1
