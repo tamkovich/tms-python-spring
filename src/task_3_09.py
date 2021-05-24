@@ -74,8 +74,13 @@ else:
         x1 = (-b + d ** 0.5) / (2 * a)
         x2 = (-b - d ** 0.5) / (2 * a)
         print(f"There is two roots: \n  x\u2081 = {round(x1, 2)},  x\u2082 = {round(x2, 2)}")
+        print("Checking the roots:\n",
+              f"  equation with x1: {round(a * x1 ** 2 + b * x1 + c, 2)}\n",
+              f"  equation with x2: {round(a * x2 ** 2 + b * x2 + c, 2)}")  # Checking the roots
     elif d == 0:
         x1 = -b / (2 * a)
         print(f"There is one root: \n  x = {round(x1, 2)}")
+        print("Checking the root:\n",
+              f"  equation with x: {round(a * x1 ** 2 + b * x1 + c, 2)}")
     else:
         print(f"There is two complex roots... but this is another one story. ;-)")
