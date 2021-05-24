@@ -83,4 +83,4 @@ else:
         print("Checking the root:\n",
               f"  equation with x: {round(a * x1 ** 2 + b * x1 + c, 2)}")
     else:
-        print(f"There is two complex roots... but this is another one story. ;-)")
+        print("There is two complex roots... but this is another one story. ;-)")
