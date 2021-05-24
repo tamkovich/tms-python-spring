@@ -16,6 +16,3 @@ shift_04 = Shift(time(10, 0, 0), time(13, 0, 0), date(2020, 1, 1), date(2020, 1,
 
 print(shift_03.is_intersect(shift_04))
 print(shift_04.is_intersect(shift_03))
-
-
-
