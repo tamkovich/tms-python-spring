@@ -1,3 +1,4 @@
+from math import sqrt
 katet_1 = 5
 katet_2 = 8
 gipotenuza = sqrt(katet_1**2 + katet_2**2)
