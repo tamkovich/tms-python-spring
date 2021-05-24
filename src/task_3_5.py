@@ -10,9 +10,11 @@ a = float(input("a = "))
 b = float(input("b = "))
 c = float(input("c = "))
 
+# находим дискриминант
 discr = b ** 2 - 4 * a * c
 print("Дискриминант D = %.2f" % discr)
 
+# находим корни
 if discr > 0:
     x1 = ((-b + (discr ** 0.5)) / (2 * a))
     x2 = ((-b - (discr ** 0.5)) / (2 * a))

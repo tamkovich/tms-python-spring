@@ -3,14 +3,11 @@
 # то создать и вывести часть строки между первым и последним символами исходной строки.
 # (подсказка: для получения центральной буквы, найдите длину строки и разделите ее пополам.
 # Для создания результирующий строки используйте срез)
-#string = input("Enter string: ")
-#mid = string[len(string) // 2]
-#print(mid)
 
 string = input("Enter string: ")
 mid = int(len(string) / 2)
 print(string[mid])
 
 if string[0] == string[mid]:
-    result_string = string[1: len(string)-1: 1]
+    result_string = string[1: len(string) - 1: 1]
     print(result_string)
