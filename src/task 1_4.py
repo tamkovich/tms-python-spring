@@ -16,5 +16,3 @@ print(id(b))
 b = [45]
 print(id(a))
 print(id(b))
-
-
