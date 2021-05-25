@@ -8,4 +8,3 @@ print(id(b))
 b.insert(0, 5)
 print(a)
 print(b)
-
