@@ -19,7 +19,7 @@ class Shift():
         if not is_dow_intersect:
             return False
 
-        hours = [h for h in range(24)]
+        hours = list(range(24))
 
         start, end = self.time_from.hour, self.time_to.hour
         if start >= end:
