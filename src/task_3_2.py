@@ -9,7 +9,7 @@
 count = int(input("Веедите количество членов семьи: "))
 if count > 50:
     print("Ресторан")
-elif 20 <= count <= 50:
+elif 20 <= count:
     print("Кафе")
 else:
     print("Дом")

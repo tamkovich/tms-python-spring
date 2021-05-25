@@ -5,6 +5,11 @@ print("Введите сумму")
 rub = input("Рубли: ")
 kop = input("Копейки: ")
 
+while not(rub.isdigit() and kop.isdigit()):
+    print('Неверный ввод, повторите')
+    rub = input("Рубли: ")
+    kop = input("Копейки: ")
+
 # запрет на ввод трехзначного числа
 while int(kop) >= 100:
     print("Неверное число, повторите ввод!")
