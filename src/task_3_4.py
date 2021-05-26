@@ -9,4 +9,4 @@ print(sr_str)
 print(str[0])
 if sr_str == str[0]:
     str_new = input("Введите новую строку: ")
-    print(str_new[1:int((len(str_new)-1) / 2)])
+    print(str_new[1:int((len(str_new) - 1) / 2)])
