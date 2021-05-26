@@ -20,7 +20,7 @@ seq_len = 15
 fib_seq = [seq_starter, seq_starter]
 i = seq_starter
 
-while i < seq_len-1:
+while i < seq_len - 1:
     fib_seq.append(fib_seq[i] + fib_seq[i - 1])
     i += 1
 
