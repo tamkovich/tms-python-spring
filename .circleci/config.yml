@@ -5,7 +5,6 @@ workflows:
   test:
     jobs:
       - test-flake8
-      - test-pycodestyle
 jobs:
   build:
     docker:
