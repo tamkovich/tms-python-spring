@@ -6,4 +6,4 @@
 num_1 = int(input('Введите первое число: '))
 num_2 = int(input('Введите второе число: '))
 summ = num_1 + num_2
-print(num_1, 'плюс', num_2, 'равно', summ )
+print(num_1, 'плюс', num_2, 'равно', summ)
