@@ -16,10 +16,10 @@ elif int(mon_1[-1]) >= 2 and int(mon_1[-1]) < 5:
 elif int(mon_1[-1]) >= 5 and int(mon_1[-1]) <= 9 or int(mon_1[-1]) == 0:
     m_str = 'копеек'
 if mon < 100:
-    if int(rub_1[-1]) > 0 and int(rub_1[-1]) < 2:
-        r_str = 'рубль'
-    elif len(rub_1) >= 2 and int(rub_1[-2]) == 1:
+    if len(rub_1) >= 2 and int(rub_1[-2]) == 1:
         r_str = 'рублей'
+    elif int(rub_1[-1]) > 0 and int(rub_1[-1]) < 2:
+        r_str = 'рубль'
     elif int(rub_1[-1]) >= 2 and int(rub_1[-1]) < 5:
         r_str = 'рубля'
     elif int(rub_1[-1]) >= 5 and int(rub_1[-1]) <= 9 or int(rub_1[-1]) == 0:
