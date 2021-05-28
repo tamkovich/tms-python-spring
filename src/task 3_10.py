@@ -42,10 +42,10 @@ if len(mon_1) > 3 and int(mon_1[-3:]) > 100:
     rub_2 = int(rub + (mon / 100))
     mon_2 = int(mon_1[-2:])
     rub_3 = str(rub_2)
-    if int(rub_3[-1]) > 0 and int(rub_3[-1]) < 2:
-        r_str = 'рубль'
-    elif len(rub_3) >= 2 and int(rub_3[-2]) == 1:
+    if len(rub_3) >= 2 and int(rub_3[-2]) == 1:
         r_str = 'рублей'
+    elif int(rub_3[-1]) > 0 and int(rub_3[-1]) < 2:
+        r_str = 'рубль'
     elif int(rub_3[-1]) >= 2 and int(rub_3[-1]) < 5:
         r_str = 'рубля'
     elif int(rub_3[-1]) >= 5 and int(rub_3[-1]) <= 9 or int(rub_3[-1]) == 0:
@@ -54,10 +54,10 @@ if len(mon_1) > 3 and int(mon_1[-3:]) > 100:
 if len(mon_1) > 3 and int(mon_1[-3:]) == 100:
     rub_2 = int(rub + (mon / 100))
     rub_3 = str(rub_2)
-    if int(rub_3[-1]) > 0 and int(rub_3[-1]) < 2:
-        r_str = 'рубль'
-    elif len(rub_3) >= 2 and int(rub_3[-2]) == 1:
+    if len(rub_3) >= 2 and int(rub_3[-2]) == 1:
         r_str = 'рублей'
+    elif int(rub_3[-1]) > 0 and int(rub_3[-1]) < 2:
+        r_str = 'рубль'
     elif int(rub_3[-1]) >= 2 and int(rub_3[-1]) < 5:
         r_str = 'рубля'
     elif int(rub_3[-1]) >= 5 and int(rub_3[-1]) <= 9 or int(rub_3[-1]) == 0:
@@ -67,10 +67,10 @@ if len(mon_1) > 3 and int(mon_1[-3:]) < 100:
     rub_2 = int(rub + (mon / 100))
     mon_2 = int(mon_1[-2:])
     rub_3 = str(rub_2)
-    if int(rub_3[-1]) > 0 and int(rub_3[-1]) < 2:
-        r_str = 'рубль'
-    elif len(rub_3) >= 2 and int(rub_3[-2]) == 1:
+    if len(rub_3) >= 2 and int(rub_3[-2]) == 1:
         r_str = 'рублей'
+    elif int(rub_3[-1]) > 0 and int(rub_3[-1]) < 2:
+        r_str = 'рубль'
     elif int(rub_3[-1]) >= 2 and int(rub_3[-1]) < 5:
         r_str = 'рубля'
     elif int(rub_3[-1]) >= 5 and int(rub_3[-1]) <= 9 or int(rub_3[-1]) == 0:
