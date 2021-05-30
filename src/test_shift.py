@@ -1,7 +1,7 @@
-import unittest
 from datetime import date
-from shift import Shift
 from datetime import time
+from shift import Shift
+import unittest
 
 
 class TestShift(unittest.TestCase):
