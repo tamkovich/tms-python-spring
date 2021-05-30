@@ -1,10 +1,10 @@
-class Shift():
-    def __init__(self, time_from, time_to, date_from, date_to, week_days):
-        self.time_from = time_from
-        self.time_to = time_to
-        self.date_from = date_from
-        self.date_to = date_to
-        self.week_days = week_days
+class Shift:
+    def __init__(self, shift_info):
+        self.time_from = shift_info['time_from']
+        self.time_to = shift_info['time_to']
+        self.date_from = shift_info['date_from']
+        self.date_to = shift_info['date_to']
+        self.week_days = shift_info['week_days']
 
     def is_intersect(self, shift_2):
 
@@ -19,7 +19,7 @@ class Shift():
         if not is_dow_intersect:
             return False
 
-        hours = list(range(24))
+        hours = [h for h in range(24)]
 
         start, end = self.time_from.hour, self.time_to.hour
         if start >= end:
