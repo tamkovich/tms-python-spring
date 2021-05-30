@@ -1,8 +1,7 @@
 import unittest
 from datetime import date
-from datetime import time
-
 from shift import Shift
+from datetime import time
 
 
 class TestShift(unittest.TestCase):

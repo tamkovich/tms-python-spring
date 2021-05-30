@@ -1,40 +1,40 @@
-from datetime import time
 from datetime import date
 from shift import Shift
+from datetime import time
 
 tests_false = [
-            dict(
-                time_from=time(8, 0, 00),
-                time_to=time(17, 00, 00),
-                date_from=date(2020, 1, 1),
-                date_to=date(2020, 1, 10),
-                week_days=[1, 2, 3],
-            ),
-            dict(
-                time_from=time(17, 00, 00),
-                time_to=time(4, 00, 00),
-                date_from=date(2020, 1, 1),
-                date_to=date(2020, 1, 10),
-                week_days=[1, 2, 3],
-            ),
-         ]
+    dict(
+        time_from=time(8, 0, 00),
+        time_to=time(17, 00, 00),
+        date_from=date(2020, 1, 1),
+        date_to=date(2020, 1, 10),
+        week_days=[1, 2, 3],
+    ),
+    dict(
+        time_from=time(17, 00, 00),
+        time_to=time(4, 00, 00),
+        date_from=date(2020, 1, 1),
+        date_to=date(2020, 1, 10),
+        week_days=[1, 2, 3],
+    ),
+]
 
 tests_true = [
-            dict(
-                time_from=time(8, 0, 00),
-                time_to=time(5, 00, 00),
-                date_from=date(2020, 1, 1),
-                date_to=date(2020, 1, 10),
-                week_days=[1, 2, 3],
-            ),
-            dict(
-                time_from=time(10, 00, 00),
-                time_to=time(13, 00, 00),
-                date_from=date(2020, 1, 1),
-                date_to=date(2020, 1, 10),
-                week_days=[1, 2, 3],
-            ),
-         ]
+    dict(
+        time_from=time(8, 0, 00),
+        time_to=time(5, 00, 00),
+        date_from=date(2020, 1, 1),
+        date_to=date(2020, 1, 10),
+        week_days=[1, 2, 3],
+    ),
+    dict(
+        time_from=time(10, 00, 00),
+        time_to=time(13, 00, 00),
+        date_from=date(2020, 1, 1),
+        date_to=date(2020, 1, 10),
+        week_days=[1, 2, 3],
+    ),
+]
 
 # Пример 1 True
 shift_01 = Shift(tests_false[0])
