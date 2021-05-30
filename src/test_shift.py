@@ -12,7 +12,7 @@ class TestShift(unittest.TestCase):
                 time_to=time(10, 00, 00),
                 date_from=date(2020, 9, 1),
                 date_to=date(2020, 9, 30),
-                week_days=[3, 4],
+                week_days=[2, 4],
             ),
             dict(
                 time_from=time(8, 00, 00),
@@ -97,9 +97,9 @@ class TestShift(unittest.TestCase):
             dict(
                 time_from=time(10, 00, 00),
                 time_to=time(20, 00, 00),
-                date_from=date(2020, 1, 9),
+                date_from=date(2020, 1, 11),
                 date_to=date(2020, 1, 20),
-                week_days=[6, 7, 1, 5],
+                week_days=[6, 7, 1],
             ),
         ),
     ]
