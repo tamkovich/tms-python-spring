@@ -23,7 +23,7 @@ print('Вариант с for:')
 list_new = []
 list_1 = [1, 2, 4, 5]
 for i in list_1:
-     a = -2
-     c = a * i
-     list_new.append(c)
+    a = -2
+    c = a * i
+    list_new.append(c)
 print(list_new)
