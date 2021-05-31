@@ -9,7 +9,7 @@ list_size = 19
 
 for i in range(list_size):  # src_list = [randint(1, 500) for i in range(list_size)]
     src_list.append(randint(1, 500))
-print(f"Source array: {src_list}\n")
+print(f"Source array:\n{src_list}\n")
 
 max_elem = src_list[0]
 for elem in src_list:
@@ -18,8 +18,8 @@ for elem in src_list:
 
 print(f"Max element in source array: {max_elem}\n")
 
-for index in range(len(src_list)):
-    if src_list[index] % 2 == 0:
+for index, elem in enumerate(src_list):
+    if elem % 2 == 0:
         src_list[index] = max_elem
 
 print(f"The source array where even elements replaced with max = {max_elem}:\n{src_list}")
