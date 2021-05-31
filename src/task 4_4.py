@@ -6,18 +6,18 @@
 # c while:
 print('Вариант с while:')
 list = [1, 2, 3, 4, 5, 6, 7]
-list_new = []
 i = 0
-while i < len(list):
+num = 0
+while i < len(list) - 1:
     num = list.pop()
-    list_new.append(num)
-print(list_new)
+    list.insert(0, num)
+    i += 1
+print(list)
 
 # c for:
 print('Вариант с for:')
 list = [1, 2, 3, 4, 5, 6, 7]
-list_new = []
-for i in range(len(list)):
+for i in range(len(list) - 1):
     num = list.pop()
-    list_new.append(num)
-print(list_new)
+    list.insert(0, num)
+print(list)
