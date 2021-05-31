@@ -1,10 +1,10 @@
 while True:
-    print(f"введине X", end=" ")
+    print("введине X", end=" ")
     X = int(input())
     while True:
-        print(f"введине Y", end=" ")
+        print("введине Y", end=" ")
         Y = int(input())
-        print(f"введине знак операции", end=" ")
+        print("введине знак операции", end=" ")
         sign = input()
         if Y == 0 and sign == "/":
             print("вы вели не правильный Y на ноль делить нельзя")

@@ -18,10 +18,10 @@ while True:
             list_number_1.clear()
         else:
             print(
-                f"пара дружественых чисел{n, i}, делители этих чисел {list_number_1 , list_number_2}"
+                f"пара дружественых чисел{n, i}, делители чисел {list_number_1, list_number_2}"
             )
             print(
-                f"сумма делителей этих чиселл {sum(list_number_1), sum(list_number_2)}"
+                f"сумма делителей чиселл {sum(list_number_1), sum(list_number_2)}"
             )
             list_number_2.clear()
             list_number_1.clear()
