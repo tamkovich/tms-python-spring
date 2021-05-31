@@ -1,4 +1,5 @@
-from datetime import time, datetime, date, timedelta
+from datetime import time
+from datetime import datetime
 
 list_raspisanie_poezdob = [
     {
@@ -29,5 +30,11 @@ for dict_poezd in list_raspisanie_poezdob:
     delta = dict_poezd["time_pribitiya"] - dict_poezd["time_otpravki"]
     if delta.seconds > second:
         print(
-            f"номер поезда { dict_poezd['number_poezd'] } \n время отправки {dict_poezd['time_otpravki']} \n время прибытия {dict_poezd['time_pribitiya']} \n пункт отправки {dict_poezd['punkt_otpravki']} \n пункт назначения {dict_poezd['punkt_pribitiya']} \n время в пути {delta}"
+            f"номер поезда { dict_poezd['number_poezd'] } \n-время отправки {dict_poezd['time_otpravki']}"
+        )
+        print(
+            f"-время прибытия {dict_poezd['time_pribitiya']} \n-пункт отправки {dict_poezd['punkt_otpravki']}"
+        )
+        print(
+            f"-пункт назначения {dict_poezd['punkt_pribitiya']} \n-время в пути {delta}"
         )
