@@ -3,9 +3,9 @@
 Разделителями слов считаются пробелы.
 """
 print("Введите строку: ")
-stroka_is = input()
-stroka_new = stroka_is.split(' ')
-stroka_is = ""
+stroka = input()
+stroka_new = stroka.split(' ')
+stroka = ""
 for i in stroka_new:
-    stroka_is += i[::-1] + " "
-print(stroka_is)
+    stroka += i[::-1] + " "
+print(stroka)
