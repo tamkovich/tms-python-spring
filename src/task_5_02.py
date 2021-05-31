@@ -7,5 +7,5 @@ num = input("Введите число: ")
 for i in num:
     summa += int(i)
     mult *= int(i)
-print(f'Сумма цифр числа: ', summa)
-print(f'Произведение цифр числа: ', mult)
+print("Сумма цифр числа: ", summa)
+print("Произведение цифр числа: ", mult)
