@@ -141,17 +141,25 @@ class TestShift(unittest.TestCase):
 
     def test_true_is_intersect(self):
         for test_case in self.true_tests:
-            shift_01 = Shift(test_case[0])
-            shift_02 = Shift(test_case[1])
+            shift_01 = Shift(test_case[0]['time_from'], test_case[0]['time_to'],
+                             test_case[0]['date_from'], test_case[0]['date_to'], test_case[0]['week_days'])
+            
+            shift_02 = Shift(test_case[1]['time_from'], test_case[1]['time_to'],
+                             test_case[1]['date_from'], test_case[1]['date_to'], test_case[1]['week_days'])
+
             with self.subTest(shift_02):
-                self.assertEqual(shift_01.is_intersect(shift_02), True)
+                self.assertTrue(shift_01.is_intersect(shift_02))
 
     def test_false_is_intersect(self):
         for test_case in self.false_tests:
-            shift_01 = Shift(test_case[0])
-            shift_02 = Shift(test_case[1])
+            shift_01 = Shift(test_case[0]['time_from'], test_case[0]['time_to'],
+                             test_case[0]['date_from'], test_case[0]['date_to'], test_case[0]['week_days'])
+
+            shift_02 = Shift(test_case[1]['time_from'], test_case[1]['time_to'],
+                             test_case[1]['date_from'], test_case[1]['date_to'], test_case[1]['week_days'])
+
             with self.subTest(shift_02):
-                self.assertEqual(shift_01.is_intersect(shift_02), False)
+                self.assertFalse(shift_01.is_intersect(shift_02))
 
 
 if __name__ == '__main__':
