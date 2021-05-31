@@ -2,7 +2,7 @@
 # Дан список целых чисел
 # Подсчитать, сколько четных чисел в списке
 
-# c while:
+# while:
 print('Вариант с while:')
 list_1 = [1, 2, 3, 4, 9]
 list_chet = []
@@ -18,7 +18,7 @@ while i <= len(list_1) - 1:
 print(f'Список чётных цифр - {list_chet}')
 print(f'Количество чётных цифр = {len(list_chet)}')
 
-# c for:
+# for:
 print('Вариант с for:')
 list_chet = []
 list_1 = [1, 2, 3, 4, 9]

@@ -5,7 +5,7 @@
 # Чтобы получить список ключей - использовать в конце метод .keys()
 # (подсказка: создаётся новый ключ с цифрой в конце, старый удаляется)
 
-# c while:
+# while:
 print('Вариант с while:')
 dict_1 = {'test': 'test_value',
           'europe': 'eur',
@@ -23,7 +23,7 @@ while i < len(keys):
     i += 1
 print(dict_1)
 
-# c for:
+# for:
 print('Вариант с for:')
 dict_1 = {'test': 'test_value',
           'europe': 'eur',
