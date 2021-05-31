@@ -69,3 +69,5 @@ shift_04 = Shift(tests_true[3])
 
 print(shift_03.is_intersect(shift_04))
 print(shift_04.is_intersect(shift_03))
+
+
