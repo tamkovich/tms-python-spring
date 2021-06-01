@@ -20,7 +20,7 @@ poezd = [
         'end_place': 'Новороссийск',
     },
     {
-        'number_poezd':  261,
+        'number_poezd': 261,
         'begin_time': datetime(2021, 8, 1, 5, 54, 0),
         'begin_place': 'Архагельск',
         'end_time': datetime(2021, 8, 3, 16, 43, 0),
