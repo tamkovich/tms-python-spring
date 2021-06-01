@@ -4,8 +4,8 @@
 """
 print("Введите строку: ")
 stroka = input()
-stroka_new = stroka.split(' ')
+list_of_words = stroka.split(' ')
 stroka = ""
-for i in stroka_new:
+for i in list_of_words:
     stroka += i[::-1] + " "
 print(stroka)
