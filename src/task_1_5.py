@@ -1,3 +1,6 @@
+# Даны катеты прямоугольного треугольника. Найти его гипотенузу и площадь.
+
+
 import math
 
 from fractions import Fraction
