@@ -6,4 +6,4 @@
 firstname = "Yosuman"
 lastname = "Kasimova"
 age = "26"
-print("Привет, меня зовут " + firstname + " " + lastname + "," + " мне " + age + " лет")
+print(f"Привет, меня зовут {firstname} {lastname} мне {age} лет")
