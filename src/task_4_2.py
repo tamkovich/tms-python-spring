@@ -13,7 +13,7 @@ print(rez)
 # -------------------------FOR-----------------------------------------
 
 rez = 0
-for i in range(len(list_1)):
-    if list_1[i] % 2 == 0:
+for i in list_1:
+    if list_1[i-1] % 2 == 0:
         rez += 1
 print(rez)

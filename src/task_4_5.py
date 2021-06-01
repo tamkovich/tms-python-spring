@@ -17,6 +17,4 @@ fib = [0, 1]
 for i in range(15):
     if i > 1:
         fib.insert(i, fib[i - 1] + fib[i - 2])
-    else:
-        pass
 print(fib)

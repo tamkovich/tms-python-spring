@@ -9,13 +9,14 @@ dict_1 = {'test': 'test_value',
           'ruble': 'rub'}
 
 keys, values, i = list(dict_1.keys()), list(dict_1.values()), 0
+dict_1_items = dict_1.items()
 
 # ------------------------WHILE----------------------------------------
 
 while i < len(dict_1):
     key = keys[i]
     del dict_1[key]
-    dict_1[key + str(len(key))] = values[i]
+    dict_1[f'{key}{str(len(key))}'] = values[i]
     i += 1
 print(dict_1)
 
@@ -29,5 +30,5 @@ dict_1 = {'test': 'test_value',
 for i in range(len(dict_1)):
     key = keys[i]
     del dict_1[key]
-    dict_1[key + str(len(key))] = values[i]
+    dict_1[f'{key}{str(len(key))}'] = values[i]
 print(dict_1)
