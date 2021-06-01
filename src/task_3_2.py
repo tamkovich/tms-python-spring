@@ -7,7 +7,7 @@
 Вывести "ресторан", "кафе", "дом" в зависимости от количества гостей
 """
 guest = input("Введител количество гостей: ")
-if if guest.isdigit():
+if guest.isdigit():
     if int(guest) > 50:
         print("Ресторан")
     elif int(guest) >= 20:
