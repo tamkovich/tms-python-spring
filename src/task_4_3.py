@@ -6,25 +6,22 @@
 
 # Using for loop
 src_dict = {'test': 'test_value', 'europe': 'eur', 'dollar': 'usd', 'ruble': 'rub'}
+result_dict = {}
 
-keys, values = list(src_dict.keys()), list(src_dict.values())
-src_dict.clear()
-i = 0
+for key, value in src_dict.items():
+    result_dict.update({f"{key}{len(key)}": value})
 
-for key in keys:
-    src_dict.update({f"{key}{len(key)}": values[i]})
-    i += 1
-
+src_dict = result_dict.copy()
+result_dict.clear()
 print(src_dict)
 
 # Using while loop
 src_dict = {'test': 'test_value', 'europe': 'eur', 'dollar': 'usd', 'ruble': 'rub'}
 
-keys, values = list(src_dict.keys()), list(src_dict.values())
-src_dict.clear()
+while src_dict:
+    item = src_dict.popitem()
+    result_dict.update({f"{item[0]}{len(item[0])}": item[1]})
 
-while keys:
-    key = keys.pop()
-    src_dict.update({f"{key}{len(key)}": values.pop()})
-
+src_dict = result_dict.copy()
+result_dict.clear()
 print(src_dict)
