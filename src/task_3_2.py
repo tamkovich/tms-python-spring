@@ -6,10 +6,11 @@
 а если меньше 20 то отпраздную дома.
 Вывести "ресторан", "кафе", "дом" в зависимости от количества гостей
 """
-guest = int(input("Введител количество гостей: "))
-if guest > 50:
-    print("Ресторан")
-elif (guest >= 20) and (guest <= 50):
-    print("Кафе")
-else:
-    print("Дом")
+guest = input("Введител количество гостей: ")
+if if guest.isdigit():
+    if int(guest) > 50:
+        print("Ресторан")
+    elif int(guest) >= 20:
+        print("Кафе")
+    else:
+        print("Дом")
