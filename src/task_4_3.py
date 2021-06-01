@@ -11,8 +11,8 @@ dict_1 = {'test': 'test_value',
           'ruble': 'rub'}
 dict_keys = list(dict_1.keys())
 dict_values = list(dict_1.values())
-print(dict_keys)
 i = 0
+
 while i < len(dict_1):
     del dict_1[dict_keys[i]]
     dict_1[dict_keys[i] + str(len(dict_keys[i]))] = dict_values[i]
