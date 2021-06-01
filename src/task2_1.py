@@ -11,6 +11,6 @@ lastname = 'Tishevich'
 
 age = '22'
 
-result = f"Хей,я" + " " + firstname + " " + lastname + "," + "мне" + " " + age + " " + "года"
+result = ("Хей,я" + " " + firstname + " " + lastname + "," + "мне" + " " + age + " " + "года")
 
 print(result)
