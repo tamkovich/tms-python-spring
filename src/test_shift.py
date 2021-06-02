@@ -1,9 +1,9 @@
-# python -m pytest
+# python -m pytest -v -rfEsxXpP
+
 from datetime import date
 from datetime import time
 from shift import Shift
 import pytest
-
 
 true_tests = [
     (
