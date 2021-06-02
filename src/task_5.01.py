@@ -37,13 +37,13 @@ while True:
               '                    Выход\n'
               'Введите операцию: ')
     if z == 'Сложение' or z == 'сложение':
-        print(f"\nОтвет: {plus(x = int(input('Первое число: ')), y = int(input('Второе число: ')))}")
+        print(f"\nОтвет: {plus(x = int(input('1 число: ')), y = int(input('2 число: ')))}")
     elif z == 'Вычитание' or z == 'вычитание':
-        print(f"\nОтвет: {minus(x = int(input('Первое число: ')), y = int(input('Второе число: ')))}")
+        print(f"\nОтвет: {minus(x = int(input('1 число: ')), y = int(input('2 число: ')))}")
     elif z == 'Умножение' or z == 'умножение':
-        print(f"\nОтвет: {mul(x = int(input('Первое число: ')), y = int(input('Второе число: ')))}")
+        print(f"\nОтвет: {mul(x = int(input('1 число: ')), y = int(input('2 число: ')))}")
     elif z == 'Деление' or z == 'деление':
-        print(f"\nОтвет: {div(x = int(input('Первое число: ')), y = int(input('Второе число: ')))}")
+        print(f"\nОтвет: {div(x = int(input('1 число: ')), y = int(input('2 число: ')))}")
     elif z == 'Выход' or z == 'выход':
         break
     else:
