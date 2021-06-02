@@ -106,8 +106,8 @@ while True:
     print(f"We are going to do conversion №{MENU[user_choice - 1]}.")
 
     val = get_value()
-    converted_value = converters[user_choice - 1](val)
-    print(f"{val} {converted_value[1]} = {round(converted_value[0], 1)} {converted_value[2]}")
+    converted_value, unit_src, unit_res = converters[user_choice - 1](val)
+    print(f"{val} {unit_src} = {round(converted_value, 1)} {unit_res}")
     input("\nPress ENTER to continue.\n")
 
 print("Exit the program.")
