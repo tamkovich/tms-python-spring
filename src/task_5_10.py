@@ -29,18 +29,10 @@ second = (itime.hour * 60 * 60) + (itime.minute * 60)
 for dict_poezd in list_raspisanie_poezdob:
     delta = dict_poezd["time_pribitiya"] - dict_poezd["time_otpravki"]
     if delta.seconds > second:
-        print(
-            f"номер поезда {dict_poezd['number_poezd']}"
-        )
-        print(
-            f"-время отправки {dict_poezd['time_otpravki']}"
-        )
-        print(
-            f"-время прибытия {dict_poezd['time_pribitiya']}"
-        )
-        print(
-            f"-пункт отправки {dict_poezd['punkt_otpravki']}"
-        )
+        print(f"номер поезда {dict_poezd['number_poezd']}")
+        print(f"-время отправки {dict_poezd['time_otpravki']}")
+        print(f"-время прибытия {dict_poezd['time_pribitiya']}")
+        print(f"-пункт отправки {dict_poezd['punkt_otpravki']}")
         print(
             f"-пункт назначения {dict_poezd['punkt_pribitiya']}\n-время в пути {delta}"
         )
