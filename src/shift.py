@@ -43,31 +43,12 @@ class Shift:
         early_date_to = Shift.clarify_date_to(early_shift)
         late_date_from = late_shift.date_from
 
-        # start, end = early_shift.time_from.hour, early_shift.time_to.hour
-        # if start >= end:
-        #     early_shift.date_to += timedelta(1)
-        #
-        # start, end = late_shift.time_from.hour, late_shift.time_to.hour
-        # if start >= end:
-        #     late_shift.date_to += timedelta(1)
-
         is_date_intersect = early_date_from <= late_date_from <= early_date_to
         if not is_date_intersect:
             return False
 
         self_dow = Shift.clarify_week_days(self)
         shift_2_dow = Shift.clarify_week_days(shift_2)
-        # self_dow = set(self.week_days)
-        # start, end = self.time_from.hour, self.time_to.hour
-        # if start >= end:
-        #     for day in self.week_days:
-        #         self_dow.add(day + 1 if day != 7 else 1)
-        #
-        # shift_2_dow = set(shift_2.week_days)
-        # start, end = shift_2.time_from.hour, shift_2.time_to.hour
-        # if start >= end:
-        #     for day in shift_2.week_days:
-        #         shift_2_dow.add(day + 1 if day != 7 else 1)
 
         is_dow_intersect = not self_dow.isdisjoint(shift_2_dow)
         if not is_dow_intersect:
@@ -75,20 +56,6 @@ class Shift:
 
         self_hours = Shift.get_hours_set(self)
         shift_2_hours = Shift.get_hours_set(shift_2)
-
-        # HOURS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
-        #
-        # start, end = self.time_from.hour, self.time_to.hour
-        # if start >= end:
-        #     self_hours = set(HOURS[start:] + HOURS[:end])
-        # else:
-        #     self_hours = set(HOURS[start:end])
-        #
-        # start, end = shift_2.time_from.hour, shift_2.time_to.hour
-        # if start >= end:
-        #     shift_2_hours = set(HOURS[start:] + HOURS[:end])
-        # else:
-        #     shift_2_hours = set(HOURS[start:end])
 
         is_time_intersect = not self_hours.isdisjoint(shift_2_hours)
         return is_time_intersect
