@@ -147,14 +147,24 @@ false_tests = [
                                    (true_tests[4][0], true_tests[4][1]),
                                    (true_tests[5][0], true_tests[5][1])])
 def test_true_is_intersect(s1, s2):
-    shift_01 = Shift(s1['time_from'], s1['time_to'], s1['date_from'], s1['date_to'], s1['week_days'])
-    shift_02 = Shift(s2['time_from'], s2['time_to'], s2['date_from'], s2['date_to'], s2['week_days'])
+    shift_01 = Shift(s1['time_from'], s1['time_to'],
+                     s1['date_from'], s1['date_to'],
+                     s1['week_days'])
+
+    shift_02 = Shift(s2['time_from'], s2['time_to'],
+                     s2['date_from'], s2['date_to'],
+                     s2['week_days'])
     assert shift_01.is_intersect(shift_02) == True
 
 
 @pytest.mark.parametrize("s1,s2", [(false_tests[0][0], false_tests[0][1]),
                                    (false_tests[1][0], false_tests[1][1])])
 def test_false_is_intersect(s1, s2):
-    shift_01 = Shift(s1['time_from'], s1['time_to'], s1['date_from'], s1['date_to'], s1['week_days'])
-    shift_02 = Shift(s2['time_from'], s2['time_to'], s2['date_from'], s2['date_to'], s2['week_days'])
+    shift_01 = Shift(s1['time_from'], s1['time_to'],
+                     s1['date_from'], s1['date_to'],
+                     s1['week_days'])
+
+    shift_02 = Shift(s2['time_from'], s2['time_to'],
+                     s2['date_from'], s2['date_to'],
+                     s2['week_days'])
     assert shift_01.is_intersect(shift_02) == False

@@ -51,30 +51,36 @@ tests_true = [
 ]
 
 # Пример 1 False
-shift_01 = Shift(tests_false[0]['time_from'], tests_false[0]['time_to'], tests_false[0]['date_from'],
-                 tests_false[0]['date_to'], tests_false[0]['week_days'])
+shift_01 = Shift(tests_false[0]['time_from'], tests_false[0]['time_to'],
+                 tests_false[0]['date_from'], tests_false[0]['date_to'],
+                 tests_false[0]['week_days'])
 
-shift_02 = Shift(tests_false[1]['time_from'], tests_false[1]['time_to'], tests_false[1]['date_from'],
-                 tests_false[1]['date_to'], tests_false[1]['week_days'])
+shift_02 = Shift(tests_false[1]['time_from'], tests_false[1]['time_to'],
+                 tests_false[1]['date_from'], tests_false[1]['date_to'],
+                 tests_false[1]['week_days'])
 
 print(shift_01.is_intersect(shift_02))
 print(shift_02.is_intersect(shift_01))
 
 # Пример 2 True
-shift_03 = Shift(tests_true[0]['time_from'], tests_true[0]['time_to'], tests_true[0]['date_from'],
-                 tests_true[0]['date_to'], tests_true[0]['week_days'])
+shift_03 = Shift(tests_true[0]['time_from'], tests_true[0]['time_to'],
+                 tests_true[0]['date_from'], tests_true[0]['date_to'],
+                 tests_true[0]['week_days'])
 
-shift_04 = Shift(tests_true[1]['time_from'], tests_true[1]['time_to'], tests_true[1]['date_from'],
-                 tests_true[1]['date_to'], tests_true[1]['week_days'])
+shift_04 = Shift(tests_true[1]['time_from'], tests_true[1]['time_to'],
+                 tests_true[1]['date_from'], tests_true[1]['date_to'],
+                 tests_true[1]['week_days'])
 
 print(shift_03.is_intersect(shift_04))
 print(shift_04.is_intersect(shift_03))
 
-shift_03 = Shift(tests_true[2]['time_from'], tests_true[2]['time_to'], tests_true[2]['date_from'],
-                 tests_true[2]['date_to'], tests_true[2]['week_days'])
+shift_03 = Shift(tests_true[2]['time_from'], tests_true[2]['time_to'],
+                 tests_true[2]['date_from'], tests_true[2]['date_to'],
+                 tests_true[2]['week_days'])
 
-shift_04 = Shift(tests_true[3]['time_from'], tests_true[3]['time_to'], tests_true[3]['date_from'],
-                 tests_true[3]['date_to'], tests_true[3]['week_days'])
+shift_04 = Shift(tests_true[3]['time_from'], tests_true[3]['time_to'],
+                 tests_true[3]['date_from'], tests_true[3]['date_to'],
+                 tests_true[3]['week_days'])
 
 print(shift_03.is_intersect(shift_04))
 print(shift_04.is_intersect(shift_03))
