@@ -1,7 +1,9 @@
+# python -m pytest
 from datetime import date
 from datetime import time
 from shift import Shift
 import pytest
+
 
 true_tests = [
     (
@@ -143,8 +145,7 @@ false_tests = [
                                    (true_tests[2][0], true_tests[2][1]),
                                    (true_tests[3][0], true_tests[3][1]),
                                    (true_tests[4][0], true_tests[4][1]),
-                                   (true_tests[5][0], true_tests[5][1]),
-                                   (true_tests[6][0], true_tests[6][1])])
+                                   (true_tests[5][0], true_tests[5][1])])
 def test_true_is_intersect(s1, s2):
     shift_01 = Shift(s1['time_from'], s1['time_to'], s1['date_from'], s1['date_to'], s1['week_days'])
     shift_02 = Shift(s2['time_from'], s2['time_to'], s2['date_from'], s2['date_to'], s2['week_days'])
@@ -157,25 +158,3 @@ def test_false_is_intersect(s1, s2):
     shift_01 = Shift(s1['time_from'], s1['time_to'], s1['date_from'], s1['date_to'], s1['week_days'])
     shift_02 = Shift(s2['time_from'], s2['time_to'], s2['date_from'], s2['date_to'], s2['week_days'])
     assert shift_01.is_intersect(shift_02) == False
-
-# def test_true_is_intersect(data, expected):
-#
-#     shift_01 = Shift(test_case[0]['time_from'], test_case[0]['time_to'],
-#                      test_case[0]['date_from'], test_case[0]['date_to'], test_case[0]['week_days'])
-#
-#     shift_02 = Shift(test_case[1]['time_from'], test_case[1]['time_to'],
-#                      test_case[1]['date_from'], test_case[1]['date_to'], test_case[1]['week_days'])
-#
-#
-#
-#
-# def test_false_is_intersect(self):
-#     for test_case in self.false_tests:
-#         shift_01 = Shift(test_case[0]['time_from'], test_case[0]['time_to'],
-#                          test_case[0]['date_from'], test_case[0]['date_to'], test_case[0]['week_days'])
-#
-#         shift_02 = Shift(test_case[1]['time_from'], test_case[1]['time_to'],
-#                          test_case[1]['date_from'], test_case[1]['date_to'], test_case[1]['week_days'])
-#
-#         with self.subTest(shift_02):
-#             self.assertFalse(shift_01.is_intersect(shift_02))
