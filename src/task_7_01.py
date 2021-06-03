@@ -1,49 +1,49 @@
-def in_to_cm(n):  # Inches to cm
-    return n * 2.54, "in", "cm"  # returns (converted, source units, result units)
+def in_to_cm(inches):  # Inches to cm
+    return inches * 2.54, "in", "cm"  # returns (converted, source units, result units)
 
 
-def cm_to_in(n):
-    return n / 2.54, "cm", "in"
+def cm_to_in(centimeters):
+    return centimeters / 2.54, "cm", "in"
 
 
-def mi_to_km(n):  # Miles to km
-    return n * 1.609, "mi", "km"
+def mi_to_km(miles):  # Miles to km
+    return miles * 1.609, "mi", "km"
 
 
-def km_to_mi(n):
-    return n / 1.609, "km", "mi"
+def km_to_mi(kilometers):
+    return kilometers / 1.609, "km", "mi"
 
 
-def lb_to_kg(n):  # Pounds to kg
-    return n * 0.454, "lb", "kg"
+def lb_to_kg(pounds):  # Pounds to kg
+    return pounds * 0.454, "lb", "kg"
 
 
-def kg_to_lb(n):
-    return n / 1.609, "kg", "lb"
+def kg_to_lb(kilograms):
+    return kilograms / 1.609, "kg", "lb"
 
 
-def oz_to_gm(n):  # Ounce to gram
-    return n * 28.35, "oz", "gm"
+def oz_to_gm(ounces):  # Ounce to gram
+    return ounces * 28.35, "oz", "gm"
 
 
-def gm_to_oz(n):
-    return n / 28.35, "gm", "oz"
+def gm_to_oz(grams):
+    return grams / 28.35, "gm", "oz"
 
 
-def gal_to_l(n):  # Gallon to litres
-    return n * 3.785, "gal", "L"
+def gal_to_l(gallons):  # Gallon to litres
+    return gallons * 3.785, "gal", "L"
 
 
-def l_to_gal(n):
-    return n / 3.785, "L", "gal"
+def l_to_gal(litres):
+    return litres / 3.785, "L", "gal"
 
 
-def pt_to_l(n):  # Pints to litres
-    return n / 2.113, "pt", "L"
+def pt_to_l(pints):  # Pints to litres
+    return pints / 2.113, "pt", "L"
 
 
-def l_to_pt(n):
-    return n * 2.113, "L", "pt"
+def l_to_pt(litres):
+    return litres * 2.113, "L", "pt"
 
 
 def show_menu(menu):
