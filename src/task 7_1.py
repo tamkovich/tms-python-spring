@@ -48,6 +48,7 @@ def unc_v_gr(u):  # Унции в граммы
     u *= 28.35
     return u
 
+
 def gr_v_unc(gr):  # Граммы в унции
     gr /= 28.35
     return gr
