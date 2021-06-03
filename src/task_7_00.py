@@ -37,10 +37,10 @@ def min_of_all_elements(matrix_):
     return min(min_element)
 
 
-a = int(input(f"Введите размерность матрицы: "))
+a = int(input("Введите размерность матрицы: "))
 create_matrix(a)
 matrix_ = create_matrix(a)
 print_matrix(matrix_)
-print(f"Сумма всех элементов: ", summ_all_elements(matrix_))
-print(f"Максимальный элемент: ", max_of_all_elements(matrix_))
-print(f"Минимальный элемент: ", min_of_all_elements(matrix_))
+print("Сумма всех элементов: ", summ_all_elements(matrix_))
+print("Максимальный элемент: ", max_of_all_elements(matrix_))
+print("Минимальный элемент: ", min_of_all_elements(matrix_))
