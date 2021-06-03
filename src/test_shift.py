@@ -2,8 +2,8 @@
 
 from datetime import date
 from datetime import time
-from shift import Shift
 import pytest
+from shift import Shift
 
 true_tests = [
     (
@@ -144,11 +144,11 @@ false_tests = [
 def test_true_is_intersect(s1, s2):
     shift_01 = Shift(**s1)
     shift_02 = Shift(**s2)
-    assert shift_01.is_intersect(shift_02) == True
+    assert shift_01.is_intersect(shift_02)
 
 
 @pytest.mark.parametrize("s1,s2", false_tests)
 def test_false_is_intersect(s1, s2):
     shift_01 = Shift(**s1)
     shift_02 = Shift(**s2)
-    assert shift_01.is_intersect(shift_02) == False
+    assert not shift_01.is_intersect(shift_02)
