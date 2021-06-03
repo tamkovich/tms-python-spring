@@ -1,60 +1,60 @@
-# Дюймы в сантиметры
-def fun_inch(inch):
+def fun_inch(inch): # Дюймы в сантиметры
     inch *= 2.54
     return inch
-# Сантиметры в дюймы
 
-def fun_santimetr(santimetr):
+
+def fun_santimetr(santimetr): # Сантиметры в дюймы
     santimetr *= 0.39
     return santimetr
-# Мили в километры
 
-def fun_milli(milli):
+
+def fun_milli(milli): # Мили в километры
     milli *= 1 / 1000000
     return milli
-# Километры в мили
 
-def fun_kilo(kilo):
+
+def fun_kilo(kilo): # Километры в мили
     kilo *= 1000000
     return kilo
-# Фунты в килограммы
 
-def fun_funt(funt):
+
+def fun_funt(funt): # Фунты в килограммы
     funt *= 0.45359237
     return funt
-# Килограммы в фунты
 
-def fun_kilogram(kilogram):
+
+def fun_kilogram(kilogram): # Килограммы в фунты
     kilogram /= 0.45359237
     return kilogram
-# Унции в граммы
 
-def fun_unsiya(unsiya):
+
+def fun_unsiya(unsiya): # Унции в граммы
     unsiya *= 28.3495
     return unsiya
-# Граммы в унции
 
-def fun_gramm(gramm):
+
+def fun_gramm(gramm): # Граммы в унции
     gramm *= 0.035274
     return gramm
-# Галлон в литры
 
-def fun_galon(galon):
+
+def fun_galon(galon): # Галлон в литры
     galon *= 3.785412
     return galon
-# Литры в галлоны
 
-def fun_litr(litr):
+
+def fun_litr(litr): # Литры в галлоны
     litr *= 2.113376
     return litr
-# Пинты в литры
 
-def fun_pinti(pint):
+
+def fun_pinti(pint): # Пинты в литры
     return pint * 0.473176
-# Литры в пинты
 
-def fun_litr_pint(litr_pint):
+
+def fun_litr_pint(litr_pint): # Литры в пинты
     return litr_pint * 2.11338
+
 
 while True:
     print("1. Дюймы в сантиметры")
