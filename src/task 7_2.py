@@ -8,53 +8,65 @@
 # Программа должна быть в бесконечном цикле.
 # Код выхода из программы - "0"
 
-def dyim_v_sant(d): # Дюймы в сантиметры
+def dyim_v_sant(d):  # Дюймы в сантиметры
     d *= 2.54
     return d
 
-def sant_v_dyim(s): # Сантиметры в дюймы
+
+def sant_v_dyim(s):  # Сантиметры в дюймы
     s /= 2.54
     return s
 
-def mili_v_km(m): # Мили в километры
+
+def mili_v_km(m):  # Мили в километры
     m *= 1.6
     return m
 
-def km_v_mili(k): # Километры в мили
+
+def km_v_mili(k):  # Километры в мили
     k /= 1.6
     return k
 
-def funt_v_kg(f): # Фунты в килограммы
+
+def funt_v_kg(f):  # Фунты в килограммы
     f /= 2.2
     return f
 
-def kg_v_funt(kg): # Килограммы в фунты
+
+def kg_v_funt(kg):  # Килограммы в фунты
     kg *= 2.2
     return kg
 
-def unc_v_gr(u): # Унции в граммы
+
+def unc_v_gr(u):  # Унции в граммы
     u *= 28.35
     return u
 
-def gr_v_unc(gr): # Граммы в унции
+
+def gr_v_unc(gr):  # Граммы в унции
     gr /= 28.35
     return gr
 
-def gall_v_litr(g): # Галлоны в литры
+
+def gall_v_litr(g):  # Галлоны в литры
     g *= 4.55
     return g
 
-def litr_v_gall(l): # Литры в галлоны
-    l /= 4.55
-    return l
 
-def pint_v_litr(p): # Пинты в литры
+def litr_v_gall(lt):  # Литры в галлоны
+    lt /= 4.55
+    return lt
+
+
+def pint_v_litr(p):  # Пинты в литры
     p /= 1.76
     return p
 
-def litr_v_pint(l): # Литры в пинты
-    l *= 1.76
-    return l
+
+def litr_v_pint(lit):  # Литры в пинты
+    lit *= 1.76
+    return lit
+
 
 print('Список доступных операций:')
 list_op = ['Дюймы в сантиметры', 'Сантиметры в дюймы', 'Мили в километры',
@@ -186,14 +198,14 @@ while True:
                           f'окно выбора операций введите "стоп"')
 
             if num == 10:
-                l = input('Введите количество литров: ')
-                if l == 'стоп':
+                lt = input('Введите количество литров: ')
+                if lt == 'стоп':
                     break
-                elif float(l) < 0:
+                elif float(lt) < 0:
                     print('Программа с отрицательными числами не работает. Попробуйте заново.')
                 else:
-                    l = float(l)
-                    print(f'Количество галлонов = {litr_v_gall(l)}. Если хотите вернуться в '
+                    lt = float(lt)
+                    print(f'Количество галлонов = {litr_v_gall(lt)}. Если хотите вернуться в '
                           f'окно выбора операций введите "стоп"')
 
             elif num == 11:
@@ -208,14 +220,14 @@ while True:
                           f'окно выбора операций введите "стоп"')
 
             if num == 12:
-                l = input('Введите количество литров: ')
-                if l == 'стоп':
+                lit = input('Введите количество литров: ')
+                if lit == 'стоп':
                     break
-                elif float(l) < 0:
+                elif float(lit) < 0:
                     print('Программа с отрицательными числами не работает. Попробуйте заново.')
                 else:
-                    l = float(l)
-                    print(f'Количество пинты = {litr_v_pint(l)}. Если хотите вернуться в '
+                    lit = float(lit)
+                    print(f'Количество пинты = {litr_v_pint(lit)}. Если хотите вернуться в '
                           f'окно выбора операций введите "стоп"')
 
         except(ValueError):
