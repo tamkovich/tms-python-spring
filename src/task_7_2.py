@@ -1,4 +1,4 @@
-def create_matrix(n1, m1): # Создать матрицу
+def create_matrix(n1, m1):  # Создать матрицу
     array = []
     for i in range(n1):
         box = []
@@ -10,13 +10,13 @@ def create_matrix(n1, m1): # Создать матрицу
     return array
 
 
-def print_matrix(array): # Вывод матрицы
+def print_matrix(array):  # Вывод матрицы
     for row in array:
         print(row)
         # вывод строки матрицы
 
 
-def find_max_element(array): # Нахождения максимального элемента
+def find_max_element(array):  # Нахождения максимального элемента
     list_of_max_elements = []
     # создаеем список максимальных элементов из каждой строки
     for row in array:
@@ -25,7 +25,7 @@ def find_max_element(array): # Нахождения максимального �
     return max(list_of_max_elements)
 
 
-def find_min_element(array): # Нахождения минимального элемента
+def find_min_element(array):  # Нахождения минимального элемента
     list_of_max_elements = []
     for row in array:
         list_of_max_elements.append(min(row))
@@ -33,7 +33,7 @@ def find_min_element(array): # Нахождения минимального э�
     return min(list_of_max_elements)
 
 
-def sum_all_elements(array): # Нахождения сумму элементов
+def sum_all_elements(array):   # Нахождения сумму элементов
     list_of_max_elements = []  # создаеем список сумм каждой строки
     for row in array:
         list_of_max_elements.append(sum(row))
