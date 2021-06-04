@@ -15,4 +15,3 @@ def fact2(n: int) -> int:
 nums = [1, 4, 7, 10, 15]
 for num in nums:
     print(f"{num}!! = {fact2(num)}")
-        

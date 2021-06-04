@@ -30,4 +30,5 @@ ipsilons = [1, 0.1, 0.01, 0.001, 0.0001, 0.00001, 0.000001, 0.000000001]
 
 ANGLE = 3.14 / 2  # pi/2 radians is equal to 90 degrees
 for ipsilon in ipsilons:
-    print(f"sin({round(ANGLE * 180 / 3.14, 0)}\u00b0) = {round(sin1(ANGLE, ipsilon), 7)}   at \u03b5 = {ipsilon}")
+    print(f"sin({round(ANGLE * 180 / 3.14, 0)}\u00b0) = {round(sin1(ANGLE, ipsilon), 7)}"
+          f"   at \u03b5 = {ipsilon}")
