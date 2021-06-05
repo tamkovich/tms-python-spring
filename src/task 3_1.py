@@ -3,4 +3,4 @@
 # Вывести на экран 'Hello, [name]!'
 
 name = input('Имя пользователя: ')
-print('Hello,', name + '!')
+print(f'Hello, {name}!')
