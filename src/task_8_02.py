@@ -5,7 +5,7 @@
 # палиндромы.)
 
 def palindrom_check(word_string):
-    if word_string == word_string[::-1]:
+    if word_string.upper() == word_string.upper()[::-1]:
         print("Введенное слово является палиндромом")
     else:
         print("Это не палиндром!")
