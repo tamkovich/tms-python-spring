@@ -14,6 +14,7 @@ def fact2(n):
             f *= i
     return f
 
+
 print(fact2(6))
 print(fact2(7))
 print(fact2(3))
