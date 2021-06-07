@@ -2,9 +2,7 @@
 
 f1 = f2 = 1
 n = int(input('число ряда Фибоначчи'))
-print(f1,f2, end='')
-for i in range(2,n):
-    f1,f2 = f1,f1+f2
-    print(f2,end='')
-
-
+print(f1, f2,  end=' ')
+for i in range(2, n):
+    f1, f2 = f1, f1+f2
+    print(f2, end=' ')
