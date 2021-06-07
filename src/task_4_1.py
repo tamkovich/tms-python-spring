@@ -4,6 +4,5 @@
 
 
 build_list = [1, 2, 3, 4]
-new_list = [build_list[0]*(-2),build_list[1]*(-2),build_list[2]*(-2),build_list[3]*(-2)]
+new_list = [build_list[0]*(-2), build_list[1]*(-2), build_list[2]*(-2), build_list[3]*(-2)]
 print(new_list)
-
