@@ -17,7 +17,3 @@ for n in counter:
         count += 1
 
 print(count)
-
-
-
-

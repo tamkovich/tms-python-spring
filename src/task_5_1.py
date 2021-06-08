@@ -35,4 +35,3 @@ while True:
         break
     else:
          print('Введен неверный знак')
-
