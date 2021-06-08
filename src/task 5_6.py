@@ -10,8 +10,8 @@ for i in range(1, 10):
     list.append(randint(1, 20))
 print(list)
 for j in range(1, len(list)):
-    if list[j] > list[j-1]:
-        if check == True:
+    if list[j] > list[j - 1]:
+        if check is True:
             x += 1
             check = False
     else:

@@ -4,7 +4,7 @@
 
 N = int(input('Введите натуральное число: '))
 summ = 0
-for i in range(1, N+1):
-    summ += 1/i
+for i in range(1, N + 1):
+    summ += 1 / i
     i += 1
 print(summ)
