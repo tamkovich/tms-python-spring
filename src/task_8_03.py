@@ -16,19 +16,17 @@ def sin1(x: float, e: float) -> float:
 
     n = 1
     result = 0
-    while True:
+    term = summand(n)
+    while abs(term) >= e:
+        result += term
+        n += 1
         term = summand(n)
-        if abs(term) <= e:
-            break
-        else:
-            result += term
-            n += 1
     return result
 
 
-ipsilons = [1, 0.1, 0.01, 0.001, 0.0001, 0.00001, 0.000001, 0.000000001]
+IPSILONS = [1, 0.1, 0.01, 0.001, 0.0001, 0.00001, 0.000001, 0.000000001]
 
 ANGLE = 3.14 / 2  # pi/2 radians is equal to 90 degrees
-for ipsilon in ipsilons:
+for ipsilon in IPSILONS:
     print(f"sin({round(ANGLE * 180 / 3.14, 0)}\u00b0) = {round(sin1(ANGLE, ipsilon), 7)}"
           f"   at \u03b5 = {ipsilon}")
