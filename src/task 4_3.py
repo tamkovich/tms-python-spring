@@ -16,7 +16,7 @@ dict_values = dict_1.values()
 keys = list(dict_keys)
 values = list(dict_values)
 i = 0
-while i < len(keys):
+while i < len(dict_1.items()):
     key = keys[i]
     del dict_1[key]
     dict_1[key + str(len(key))] = values[i]
@@ -34,7 +34,7 @@ dict_values = dict_1.values()
 keys = list(dict_keys)
 values = list(dict_values)
 i = 0
-for i in range(len(keys)):
+for i in range(len(dict_1.items())):
     key = keys[i]
     del dict_1[key]
     dict_1[key + str(len(key))] = values[i]
