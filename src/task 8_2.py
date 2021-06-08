@@ -9,6 +9,7 @@ def palind(word):
         a = f'{word} - палиндром'
         print(a)
 
+
 list_1 = ['Пенёк', 'Абыр', 'дед', 'хух']
 for n in list_1:
     palind(n)

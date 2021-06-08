@@ -4,18 +4,21 @@
 # факториалы пяти данных целых чисел
 
 list = [1, 2, 5, 6, 10]
+
+
 def fact_2(n):
     for i in range(n + 1):
         if n % 2 != 0:
             if n == 1:
                 return n
             else:
-                return n * fact_2(n-2)
+                return n * fact_2(n - 2)
         elif n % 2 == 0:
             if n == 2:
                 return n * 1
             else:
-                return n * fact_2(n-2)
+                return n * fact_2(n - 2)
+
 
 for n in list:
     print(fact_2(n))
