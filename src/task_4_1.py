@@ -12,6 +12,8 @@ while i < len(number):
 print(number_new)
 number_new = []
 print("\nИспользуем цикл For: ")
-for num in number: # Запуск цикл по элементом списка
-    number_new.append(num * -2) # элемент списка умнажается на -2 
+# Запуск цикл по элементом списка
+for num in number:
+    # элемент списка умнажается на -2
+    number_new.append(num * -2)
 print(number_new)
