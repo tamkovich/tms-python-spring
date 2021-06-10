@@ -5,7 +5,7 @@
 
 STRINGS = ["Python", "Java", "JavaScript", "Ruby"]
 
-fmtd_strings = (lambda strings: [f"{i} - {string}" for i, string in enumerate(strings)])(STRINGS)
+fmtd_strings = [f"{i} - {string}" for i, string in enumerate(STRINGS)]
 
 print(f"Source list:\n{STRINGS}\n")
 print(f"Formatted list:\n{fmtd_strings}")
