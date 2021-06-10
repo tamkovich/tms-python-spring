@@ -5,4 +5,5 @@
 
 """
 print((lambda **kwargs:
-       {f"{key + key} : {value}" for key, value in kwargs.items()})(int=1, begin=2, string=4, boolean=5, float=6))
+       {f"{key + key} : {value}" for key, value in kwargs.items()})
+      (int=1, begin=2, string=4, boolean=5, float=6))
