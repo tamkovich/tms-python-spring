@@ -3,18 +3,18 @@
 выполнения функции
 """
 
-from datetime import datetime
 from functools import reduce
 from time import sleep
+from time import time
 
 
 def time_checker(real_func):
     """The decorator trace and print the run time of the function"""
     def wrapper(*args, **kwargs):
-        time_start = datetime.now()
+        time_start = time()
         real_func(*args, **kwargs)
-        time_end = datetime.now()
-        print(f"Run time is {(time_end - time_start).microseconds} ms")
+        time_end = time()
+        print(f"Run time is {(time_end - time_start)} sec")
     return wrapper
 
 
