@@ -12,5 +12,5 @@ for i in range(200, 300):
     for j in range(1, k):
         if k % j == 0:
             n += j
-    if i == n and i !=k and i == min(i, k):
+    if i == n and i != k and i == min(i, k):
         print(i, k)
