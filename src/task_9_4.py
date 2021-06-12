@@ -5,7 +5,7 @@
 # Фуункция декаратор
 def func_wraper(func):
     """
-    Фуункция подменышь 
+        Фуункция подменышь
     """
     def wraper(*args, **kwargs):
         func(args, kwargs, "заданны пользователем")
