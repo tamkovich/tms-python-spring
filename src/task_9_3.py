@@ -4,7 +4,7 @@
     чисел
 """
 # Функция декаратор
-def decorator_proverki(func):
+def decorator_proverki(func ):
     # Функция подмены
     def func_value(*args):
         # Что получила функция подмены

@@ -3,7 +3,7 @@
     принимаемой функцией на противоположные
 """
 # Фуункция декаратор
-def func_wraper(func):
+def func_wraper(func ):
     # Фуункция подменышь
     def wraper(*args, **kwargs):
         func(args, kwargs, "заданны пользователем")
