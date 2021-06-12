@@ -1,9 +1,10 @@
 """
     Программа выполняет поиск минимальной даты
-    из файла и выводит ее 
+    из файла и выводит ее
 """
 import json
-from datetime import datetime, date
+from datetime import datetime
+from datetime import date
 
 # Входные данные для json
 data = {

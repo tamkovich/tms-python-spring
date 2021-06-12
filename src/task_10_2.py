@@ -1,13 +1,15 @@
 """
     Программа создает csv файл из списка словарей
-    и выводит среднее значение погоды для указаного 
+    и выводит среднее значение погоды для указаного
     диапозона дат пользоватеем
 """
 
 import csv
-from datetime import datetime, date
+from datetime import datetime
+from datetime import date
 
 # Список словарей для входных данных csv файла
+
 pogoda_city_rb = [
     {
         "date": "2021/6/1",
@@ -100,7 +102,9 @@ with open("pogoda_goroda.csv", "r") as pogoda_city:
     avg_degrees = []
     avg_wind_spid = []
     for row in read:
+
         # Условие для указаного города и диапозонa дат
+
         if (
             row["city"] == city
             and datetime.strptime(row["date"], "%Y/%m/%d").date() >= date_start
@@ -108,7 +112,12 @@ with open("pogoda_goroda.csv", "r") as pogoda_city:
         ):
             avg_degrees.append(int(row["degrees"]))
             avg_wind_spid.append(int(row["speed_wind"]))
-    # Отлавливаем исключение в случаи если для конкретного города в заданом диапозоне дат нету информации
+
+    """
+        Отлавливаем исключение в случаи если для конкретного
+        города в заданом диапозоне дат нету информации
+    """
+    
     try:
         print(
             f"Средняя температура для города {city}: {sum(avg_degrees)/len(avg_degrees)} c"
