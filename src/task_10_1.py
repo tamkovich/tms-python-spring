@@ -23,7 +23,7 @@ with open("new_file.csv", "w") as file_csv:
     # Вызываем метод класса DictWriter  writeheader который устанавливает заголовки в csv
     write.writeheader()
     """
-        Вызываем метод writerows в который передаем список словарей 
+        Вызываем метод writerows в который передаем список словарей
         list_value который создает строки со значениями в csv файле
     """
     write.writerows(list_value)
@@ -31,7 +31,7 @@ with open("new_file.csv", "w") as file_csv:
 #  открываем для чтения файл csv
 with open("new_file.csv", "r") as file_csv:
     """
-        Вызываем экземпляр класса DictReader котрый позволяет формировать 
+        Вызываем экземпляр класса DictReader котрый позволяет формировать
         список словарей из csv, передаем в конструктор атрибуты
     """
     read = csv.DictReader(file_csv)
@@ -46,21 +46,21 @@ with open("new_file.csv", "r") as file_csv:
         for row in read:
             if int(row["age"]) >= 1 and int(row["age"]) <= 12:
                 report.write(
-                    f"{row['first_name']} {row['last_name']} {srting_} 1-12 ему {row['age']} лет \n"
+                    f"{row['first_name']} {row['last_name']} {srting_} 1-12 ему {row['age']}\n"
                 )
             elif int(row["age"]) > 12 and int(row["age"]) <= 18:
                 report.write(
-                    f"{row['first_name']} {row['last_name']} {srting_} 13-18 ему {row['age']} лет \n"
+                    f"{row['first_name']} {row['last_name']} {srting_} 13-18 ему {row['age']}\n"
                 )
             elif int(row["age"]) > 18 and int(row["age"]) <= 25:
                 report.write(
-                    f"{row['first_name']} {row['last_name']} {srting_} 19-25 ему {row['age']} лет \n"
+                    f"{row['first_name']} {row['last_name']} {srting_} 19-25 ему {row['age']}\n"
                 )
             elif int(row["age"]) > 25 and int(row["age"]) <= 40:
                 report.write(
-                    f"{row['first_name']} {row['last_name']} {srting_} 26-40 ему {row['age']} лет \n"
+                    f"{row['first_name']} {row['last_name']} {srting_} 26-40 ему {row['age']}\n"
                 )
             elif int(row["age"]) > 40:
                 report.write(
-                    f"{row['first_name']} {row['last_name']} {srting_} 40+ ему {row['age']} лет \n"
+                    f"{row['first_name']} {row['last_name']} {srting_} 40+ ему {row['age']}\n"
                 )

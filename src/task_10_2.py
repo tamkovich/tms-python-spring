@@ -104,7 +104,6 @@ with open("pogoda_goroda.csv", "r") as pogoda_city:
     avg_wind_spid = []
     for row in read:
         date_ = datetime.strptime(row["date"], "%Y/%m/%d").date()
-        
         # Условие для указаного города и диапозонa дат
 
         if row["city"] == city and date_ >= date_start and date_ <= date_finish:
@@ -115,7 +114,6 @@ with open("pogoda_goroda.csv", "r") as pogoda_city:
         Отлавливаем исключение в случаи если для конкретного
         города в заданом диапозоне дат нету информации
     """
-    
     try:
         print(
             f"Средняя температура для города {city}: {sum(avg_degrees)/len(avg_degrees)} c"
