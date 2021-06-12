@@ -5,6 +5,8 @@
 """
 # Функция декаратор
 def decorator_proverki(func):
+
+    
     def func_value(*args):
         # Что получила функция подмены
         func(args)
