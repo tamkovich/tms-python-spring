@@ -42,24 +42,25 @@ with open("new_file.csv", "r") as file_csv:
         по возрастным групам и передаем их
         на запись в файл отчет
         """
+        srting_ = "возростная группа"
         for row in read:
             if int(row["age"]) >= 1 and int(row["age"]) <= 12:
                 report.write(
-                    f"{row['first_name']} {row['last_name']} возростная группа 1-12 лет ему {row['age']} лет \n"
+                    f"{row['first_name']} {row['last_name']} {srting_} 1-12 ему {row['age']} лет \n"
                 )
             elif int(row["age"]) > 12 and int(row["age"]) <= 18:
                 report.write(
-                    f"{row['first_name']} {row['last_name']} возростная группа 13-18 лет ему {row['age']} лет \n"
+                    f"{row['first_name']} {row['last_name']} {srting_} 13-18 ему {row['age']} лет \n"
                 )
             elif int(row["age"]) > 18 and int(row["age"]) <= 25:
                 report.write(
-                    f"{row['first_name']} {row['last_name']} возростная группа 19-25 лет ему {row['age']} лет \n"
+                    f"{row['first_name']} {row['last_name']} {srting_} 19-25 ему {row['age']} лет \n"
                 )
             elif int(row["age"]) > 25 and int(row["age"]) <= 40:
                 report.write(
-                    f"{row['first_name']} {row['last_name']} возростная группа 26-40 лет ему {row['age']} лет \n"
+                    f"{row['first_name']} {row['last_name']} {srting_} 26-40 ему {row['age']} лет \n"
                 )
             elif int(row["age"]) > 40:
                 report.write(
-                    f"{row['first_name']} {row['last_name']} возростная группа 40+ лет ему {row['age']} лет \n"
+                    f"{row['first_name']} {row['last_name']} {srting_} 40+ ему {row['age']} лет \n"
                 )

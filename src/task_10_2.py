@@ -5,8 +5,9 @@
 """
 
 import csv
-from datetime import datetime
 from datetime import date
+from datetime import datetime
+
 
 # Список словарей для входных данных csv файла
 
@@ -102,14 +103,11 @@ with open("pogoda_goroda.csv", "r") as pogoda_city:
     avg_degrees = []
     avg_wind_spid = []
     for row in read:
-
+        date_ = datetime.strptime(row["date"], "%Y/%m/%d").date()
+        
         # Условие для указаного города и диапозонa дат
 
-        if (
-            row["city"] == city
-            and datetime.strptime(row["date"], "%Y/%m/%d").date() >= date_start
-            and datetime.strptime(row["date"], "%Y/%m/%d").date() <= date_finish
-        ):
+        if row["city"] == city and date_ >= date_start and date_ <= date_finish:
             avg_degrees.append(int(row["degrees"]))
             avg_wind_spid.append(int(row["speed_wind"]))
 
