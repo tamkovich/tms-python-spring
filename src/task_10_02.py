@@ -20,9 +20,9 @@ del (data[0])
 
 weather_minsk = list(filter(lambda row: row if row[1] == "Minsk" else None, data))
 weather_minsk = list(
-    filter(lambda row: row if today - seek_period <=
-                              datetime.strptime(row[0], '%Y-%m-%d')
-                              <= today else None, weather_minsk))
+    filter(
+        lambda row: row if today - seek_period <= datetime.strptime(row[0], '%Y-%m-%d') <= today
+        else None, weather_minsk))
 
 avg_temp = 0
 avg_wind_speed = 0
