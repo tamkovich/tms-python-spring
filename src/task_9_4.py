@@ -3,6 +3,8 @@
     принимаемой функцией на противоположные
 """
 # Фуункция декаратор
+
+
 def func_wraper(func):
     def wraper(*args, **kwargs):
         func(args, kwargs, "заданны пользователем")
@@ -10,7 +12,7 @@ def func_wraper(func):
         a = list(map(lambda value: value, (list(args) + list(kwargs.keys()))[::-1]))
         # Генерируем args с новыми аргументами
         args = [a[index] for index in range(len(a) - len(kwargs.keys()))]
-        b = a[-(len(kwargs.keys())) : :]
+        b = a[-(len(kwargs.keys()))::]
         # Генерируем kwargs с новыми аргументами
         kwargs = {b[index]: value for index, value in enumerate(list(kwargs.values()))}
         return func(args, kwargs, "такие аргументы после подмены")
