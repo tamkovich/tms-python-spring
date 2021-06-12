@@ -8,8 +8,9 @@ for i in range(1, 20):
     list.append(randint(1, 101))
 print(list)
 a = 0
+list_max = max(list)
 for j in list:
     if j % 2 == 0:
-        list[a] = max(list)
+        list[a] = list_max
     a += 1
 print(list)

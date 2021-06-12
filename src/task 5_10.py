@@ -6,6 +6,7 @@
 
 from datetime import datetime
 from datetime import timedelta
+time_delta = timedelta(hours=7, minutes=20)
 dict_trains = [
     {
         'Номер_поезда': 1644,
@@ -32,7 +33,7 @@ dict_trains = [
 
 print('Номера поездов, находящихся в движении больше 7 часов 20 минут:\n')
 for i in dict_trains:
-    if i['Время_прибытия'] - i['Время_отбытия'] > timedelta(hours=7, minutes=20):
+    if i['Время_прибытия'] - i['Время_отбытия'] > time_delta:
         print(f"Номер поезда: {i['Номер_поезда']}\n"
               f"Пункт отбытия: {i['Пункт_отбытия']}, Время отбытия: {i['Время_отбытия']}\n"
               f"Пункт прибытия: {i['Пункт_прибытия']}, Время прибытия: {i['Время_прибытия']}\n")
