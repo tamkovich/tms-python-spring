@@ -12,7 +12,7 @@ while i < 15:
     if i == 0 or i == 1:
         list_fib.append(1)
     else:
-        list_fib.insert(i, list_fib[i - 1] + list_fib[i - 2])
+        list_fib.append(list_fib[i - 1] + list_fib[i - 2])
     i += 1
 print(list_fib)
 
@@ -23,6 +23,6 @@ for i in range(0, 15):
     if i == 0 or i == 1:
         list_fib.append(1)
     else:
-        list_fib.insert(i, list_fib[i - 1] + list_fib[i - 2])
+        list_fib.append(list_fib[i - 1] + list_fib[i - 2])
     i += 1
 print(list_fib)
