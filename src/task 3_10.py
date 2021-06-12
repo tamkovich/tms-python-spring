@@ -62,7 +62,7 @@ while True:
             rub_int_3 = int(rub_str_2[-1])
             if len(rub_str_2) >= 2 and int(rub_str_2[-2]) == 1:
                 rub_rezult = 'рублей'
-            elif rub_int_3 > 0 and rub_int_3  < 2:
+            elif rub_int_3 > 0 and rub_int_3 < 2:
                 rub_rezult = 'рубль'
             elif rub_int_3 >= 2 and rub_int_3 < 5:
                 rub_rezult = 'рубля'
