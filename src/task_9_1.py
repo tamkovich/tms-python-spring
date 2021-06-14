@@ -6,13 +6,7 @@
 """
 import csv
 import json
-data = {
-  "1 - 12": 0,
-  "13 - 18": 0,
-  "19 - 25": 0,
-  "26 - 40": 0,
-  "40+": 0
-}
+data = {"1 - 12": 0, "13 - 18": 0, "19 - 25": 0, "26 - 40": 0, "40+": 0}
 with open('file_people.csv', encoding="utf8") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     count = 0
