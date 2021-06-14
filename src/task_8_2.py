@@ -6,4 +6,4 @@
 """
 print((lambda **kwargs:
        {f"{key + key} : {value}" for key, value in kwargs.items()})
-      (int=1, begin=2, string=4, boolean=5, float=6))
+      (int__=1, begin__=2, string__=4, boolean__=5, float__=6))

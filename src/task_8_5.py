@@ -1,3 +1,4 @@
 # Дан список чисел. Найти произведение всех чисел, которые кратны 3.
 from functools import reduce
-print(reduce(lambda p, x: p * x, [1, 2, 3, 4, 15, 8, 9], 1))
+filtr = filter(lambda x: x % 3 == 0, [1, 2, 3, 4, 15, 8, 9])
+print(reduce(lambda p, x: p * x, filtr, 1))
