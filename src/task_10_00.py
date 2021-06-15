@@ -23,7 +23,7 @@ for _ in range(0, 300):
     data.append([fake.first_name(), fake.last_name(), randint(1, 122)])
 
 with open("data_01.csv", "w") as fout:
-    f_writer = csv.writer(fout, delimiter=",", lineterminator="\r")
+    f_writer = csv.writer(fout, delimiter=",", lineterminator="\n")
     f_writer.writerows(data)
 
 
@@ -49,7 +49,7 @@ for day in range(days_cnt):
         data.append([day_.strftime('%Y-%m-%d'), city, randint(9, 22), randint(0, 15)])
 
 with open("data_weather.csv", "w") as fout:
-    f_writer = csv.writer(fout, delimiter=",", lineterminator="\r")
+    f_writer = csv.writer(fout, delimiter=",", lineterminator="\n")
     f_writer.writerows(data)
 
 
@@ -67,5 +67,5 @@ for _ in range(items_cnt):
     datas.append(fake.date().split("-")[::-1])
 
 with open("datas.csv", "w") as fout:
-    f_writer = csv.writer(fout, delimiter=",", lineterminator="\r")
+    f_writer = csv.writer(fout, delimiter=",", lineterminator="\n")
     f_writer.writerows(datas)
