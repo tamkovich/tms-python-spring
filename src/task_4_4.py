@@ -5,8 +5,8 @@
 list_4_4 = [1, 2, 3, 4, 5]
 new_list = []
 for i in range(len(list_4_4) - 1):
-   new_list = list_4_4.pop()
-   list_4_4.insert(0, new_list)
+    new_list = list_4_4.pop()
+    list_4_4.insert(0, new_list)
 print(list_4_4)
 
 # while loop
