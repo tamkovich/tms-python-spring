@@ -1,0 +1,2 @@
+a = 'ok'
+print(a)
