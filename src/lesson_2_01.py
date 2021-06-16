@@ -5,7 +5,7 @@
 firstname = "Никита"
 lastname = " Семячко"
 age = "26"
-i = "Привет, меня  зовут " + firstname + lastname + ", " + "мне " + age + " лет"
+i = f"Привет, меня  зовут {firstname}, мне {age} лет."
 print(i)
 print(len(i))
 print(age.isdigit())
