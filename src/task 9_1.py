@@ -4,5 +4,5 @@
 
 
 list_str = ['Первая строка', 'Вторая строка', 'Третья строка', 'Четвёртая строка']
-format_str = lambda list: [f'{i+1} - {list_str[i]}' for i in range(len(list_str))]
+format_str = (lambda list: [f'{i+1} - {list_str[i]}' for i in range(len(list_str))])
 print(format_str(list_str))
