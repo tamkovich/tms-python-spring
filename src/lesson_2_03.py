@@ -7,7 +7,7 @@ avto = ["ford", "honda"]
 motor = ("бензин", "дизель")
 slvr = {motor: avto}
 print(slvr)
-slvrt = {("dodge",  "ford"): "USA", "honda": "JAPAN"}
+slvrt = {("dodge", "ford"): "USA", "honda": "JAPAN"}
 print(slvrt)
 print(type(slvrt))
 print(list('he'))
