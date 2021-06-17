@@ -9,8 +9,8 @@ def decor_f(func):
 
 
 @ decor_f
-def list_num():
-    print()
+def list_num(parametr):
+    print(parametr)
 
 
 list_num(1, 2, 3)
