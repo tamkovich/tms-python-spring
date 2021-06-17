@@ -15,5 +15,5 @@ print(firstname[3:])
 k = "Hello world"
 print(k[0:7:3])
 print(lastname[0: 5:2])
-stroka ="My {} {} {}".format("Hello" ,"Sweet", "World")
-print(stroka)
+string = "My {} {} {}".format("Hello", "Sweet", "World")
+print(string)
