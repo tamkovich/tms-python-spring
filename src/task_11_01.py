@@ -53,7 +53,8 @@ class Wine:
             self.__year = 0
 
     def get_info(self) -> str:
-        return f"{self.color} {'sparkling' if self.is_sparkling else 'still'} {self.grape_sort} {self.year}"
+        return f"{self.color} {'sparkling' if self.is_sparkling else 'still'} " \
+               f"{self.grape_sort} {self.year}"
 
 
 class Soil:
@@ -71,7 +72,7 @@ class Soil:
         self.hpc = hpc
 
     @property
-    def soil_name(self) -> str: 
+    def soil_name(self) -> str:
         return self.__soil_name
 
     @soil_name.setter
@@ -95,12 +96,12 @@ class Soil:
         self.__hpc = hpc
 
     def pressure_on_depth(self, depth) -> (float, float):
-        """
-        Calculate a pressure on depth
+        """Calculate a pressure on depth
 
         :param depth: depth (related to free surface) where the pressures calculates;
         :return: tuple of float values (vertical_pressure, horizontal_pressure)
         """
+
         vertical_pressure = depth * self.density
         horizontal_pressure = depth * self.density * self.hpc
         return vertical_pressure, horizontal_pressure
@@ -160,7 +161,7 @@ class Vehicle:
         self.firm = firm
         self.model = model
         self.year = year
-        
+
     @property
     def firm(self) -> str:
         return self.__firm
@@ -187,14 +188,14 @@ class Vehicle:
 
     def get_info(self) -> str:
         return f"{self.firm} {self.model}, {self.year} y."
-        
-    
+
+
 class House:
     def __init__(self, floors: int, flats: int, place: str):
         self.floors = floors
         self.flats = flats
         self.place = place
-    
+
     @property
     def floors(self) -> int:
         return self.__floors
@@ -202,7 +203,7 @@ class House:
     @floors.setter
     def floors(self, floors: int):
         self.__floors = floors
-        
+
     @property
     def flats(self) -> int:
         return self.__flats
@@ -210,7 +211,7 @@ class House:
     @flats.setter
     def flats(self, flats: int):
         self.__flats = flats
-        
+
     @property
     def place(self) -> str:
         return self.__place
@@ -231,7 +232,8 @@ if __name__ == "__main__":
     vp, hp = soil.pressure_on_depth(10)
     print(f"On depth on 10 m in {soil.soil_name} soil:\n"
           f"  - the vertical pressure is {round(vp, 2)} kPa\n"
-          f"  - the horizontal pressure is {round(hp, 2)} kPa", end="\n----------------------------\n")
+          f"  - the horizontal pressure is {round(hp, 2)} kPa",
+          end="\n----------------------------\n")
 
     product = Product("'PRESIDENT'", "Camamber cheese", 10.15)
     print(f"{product.get_info()} BYN", end="\n----------------------------\n")
