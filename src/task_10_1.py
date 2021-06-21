@@ -11,6 +11,8 @@ name - названия фигуры
 a - длина прямоугольника
 b - ширина прямоугольника
 """
+
+
 class fun_square:
     def __init__(self, name, a, b):
         self.__name = name
@@ -49,12 +51,15 @@ class fun_square:
     def perimeter(self, a, b):
         return 2 * (a + b)
 
+
 """
 Класс Цилиндра:
 name - названия фигуры
 r - радиус цилиндра
 h - высота цилиндра
 """
+
+
 class fun_cylinder:
     def __init__(self, name, r, h):
         self.__name = name
@@ -93,6 +98,7 @@ class fun_cylinder:
     def volume(self, r):
         return r * r * 3.14
 
+
 """
 Клссс Трапеция:
 name - названия фигуры
@@ -100,6 +106,8 @@ a - первая сторона
 b - вторая сторона
 h - высота трапеции
 """
+
+
 class fun_trapezoid:
     def __init__(self, name, a, b, h):
         self.__name = name
@@ -147,6 +155,7 @@ class fun_trapezoid:
     def middle_line(self, a, b):
         return (a + b) / 2
 
+
 """
 Класс треугольник:
 name - названия фигуры
@@ -154,6 +163,8 @@ a - первая сторона
 b - вторая сторона
 c - третья сторона
 """
+
+
 class fun_triangle:
     def __init__(self, name, a, b, c):
         self.__name = name
@@ -201,12 +212,15 @@ class fun_triangle:
     def perimeter(self, a, b, c):
         return (a + b + c) / 2
 
+
 """
 Класс Ромба:
 name - назвнии фигры
 a - сторона ромба
 h - высота рома
 """
+
+
 class fun_rhombus:
     def __init__(self, name, a, h):
         self.__name = name
@@ -244,6 +258,7 @@ class fun_rhombus:
     # Периметр ромба
     def perimeter(self, a):
         return 4 * a
+
 
 square = fun_square("parallelogram", 6, 12)
 print(square.name)

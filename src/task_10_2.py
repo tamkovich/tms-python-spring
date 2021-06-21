@@ -4,15 +4,19 @@
 скорости(скорость - 5), стоп(сброс скорости на 0), отображение скорости,
 разворот(изменение знака скорости). Все атрибуты приватные.
 """
+
+
 class Car:
-    def __init__(self, brand, model, year, speed = 0):
+    def __init__(self, brand, model, year, speed=0):
         self.__brand = brand
         self.__model = model
         self.__year = year
         self.__speed = speed
+
     @property
     def brand(self):
         return self.__brand
+
     @brand.setter
     def brand(self, brand):
         self.__brand = brand
@@ -52,6 +56,7 @@ class Car:
     # разворот(изменение знака скорости)
     def change_speed(self, speed):
         self.__speed = speed
+
 
 if __name__ == "__main__":
     car = Car("BMW", "M4", 2020, 120)
