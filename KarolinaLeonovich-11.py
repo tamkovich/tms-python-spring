@@ -8,7 +8,8 @@
 
 import random
 
-class Person():
+
+class Person:
     def __init__(self, age, gender, height, weight, hair, eyes):
         self.words_dictionnary = {}
         self.__age = age
@@ -92,12 +93,14 @@ class Person():
         return f"{self.__hair} глаза."
 
     @eyes.setter
-    def eyes(self, eyes):
+    def eyes(self):
         random_colors = ("красные", "зеленые", "синие", "белые", "серо-буро-малиновые", "фисташковые")
         random_color = random.choice(random_colors)
         self.__eyes = random_color
         print(
-            f"Пробирочные люди сами выбирают себе глаза.\nВы не вправе диктовать свою волю!\nГлаза теперь {self.__eyes}.")
+            f"Пробирочные люди сами выбирают себе глаза."
+            f"\nВы не вправе диктовать свою волю!"
+            f"\nГлаза теперь {self.__eyes}.")
 
     def learn_a_word(self):
         word = input("Я могу учить новые слова! Научи меня новому слову!")
@@ -115,7 +118,7 @@ class Person():
             word, meaning = random.choice(list(words_dictionnary.items()))
             word = word.lower()
             print(f"А ты знал, что {word} - это {meaning}?")
-        except:
+        except AttributeError:
             print("А я ничего не знаю")
 
 
@@ -177,10 +180,11 @@ class Student(Person):
     def score(self, score):
         self.__score = len(self.words_dictionnary)
         print(
-            f"Средний балл - {self.__score}.\nВаши попытки установить балл {score} безуспешны.\nЛучше научите студента новым словам.")
+            f"Средний балл - {self.__score}."
+            f"\nВаши попытки установить балл {score} безуспешны."
+            f"\nЛучше научите студента новым словам.")
 
     def miss_a_class(self):
-        '''Прогуливая, студент забывает многое из того, что выучил'''
         word_to_forget = random.choice(list(self.words_dictionnary.keys()))
         del self.words_dictionnary[word_to_forget]
         print("Студент прогулял уроки и кое-что забыл.")
@@ -330,13 +334,13 @@ class Teacher(Employee):
         print("Я учил, как мог")
 
     def ask_students(self):
-        for id, every_student in enumerate(self.student):
+        for i, every_student in enumerate(self.student):
             if every_student.words_dictionnary:
-                print(f"Отвечает студент номер {id + 1}")
+                print(f"Отвечает студент номер {i + 1}")
                 for k, v in every_student.words_dictionnary.items():
                     print(f"{k} - {v}.")
             else:
-                print(f"Студент номер {id + 1} тупой и ничего не знает")
+                print(f"Студент номер {i + 1} тупой и ничего не знает")
 
 
 # teacher1 = Teacher(31, "мужчина", 176, 78, "светлые", "синие", "учитель", 500, 6, student1, student2, student3)
@@ -351,7 +355,7 @@ class Teacher(Employee):
 # скорости(скорость - 5), стоп(сброс скорости на 0), отображение скорости,
 # разворот(изменение знака скорости). Все атрибуты приватные.
 
-class Car():
+class Car:
     def __init__(self, mark, model, year):
         self.__mark = mark
         self.__model = model
