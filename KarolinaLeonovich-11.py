@@ -270,7 +270,7 @@ class Employee(Person):
     @salary.deleter
     def salary(self):
         if self.__job:
-            print(f"Зарплата не может быть меньше МРОТ!")
+            print("Зарплата не может быть меньше МРОТ!")
         else:
             self.__salary = 0
 
@@ -312,8 +312,12 @@ class Employee(Person):
 # employee1.ask_a_promotion()
 
 class Teacher(Employee):
-    def __init__(self, age, gender, height, weight, hair, eyes, job, salary, experience, *student):
-        super(Teacher, self).__init__(age, gender, height, weight, hair, eyes, job, salary, experience)
+    def __init__(
+            self, age, gender, height, weight, hair, eyes, job, salary, experience, *student
+    ):
+        super(Teacher, self).__init__(
+            age, gender, height, weight, hair, eyes, job, salary, experience
+        )
         self.data = {
             "Фланировать":
                 "неспешная прогулка без какой-либо конкретной цели",
@@ -354,7 +358,9 @@ class Teacher(Employee):
                 print(f"Студент номер {i + 1} тупой и ничего не знает")
 
 
-# teacher1 = Teacher(31, "мужчина", 176, 78, "светлые", "синие", "учитель", 500, 6, student1, student2, student3)
+# teacher1 = Teacher(
+# 31, "мужчина", 176, 78, "светлые", "синие",
+# "учитель", 500, 6, student1, student2, student3)
 #
 # teacher1.ask_students()
 # teacher1.teach_students()
