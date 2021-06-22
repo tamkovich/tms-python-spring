@@ -98,9 +98,8 @@ class Person:
         random_color = random.choice(random_colors)
         self.__eyes = random_color
         print(
-            f"Пробирочные люди сами выбирают себе глаза."
-            f"\nВы не вправе диктовать свою волю!"
-            f"\nГлаза теперь {self.__eyes}.")
+            'Пробирочные люди сами выбирают себе глаза.'
+            f'Глаза теперь {self.__eyes}.')
 
     def learn_a_word(self):
         word = input("Я могу учить новые слова! Научи меня новому слову!")
