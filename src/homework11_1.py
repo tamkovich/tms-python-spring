@@ -143,7 +143,7 @@ class Game:
         self.__price = price
 
     def discount(self, discount=10):
-        x = self.price * (100-discount)
+        x = self.price * (100 - discount)
         print('Final price is ', x)
 
     def info(self):
