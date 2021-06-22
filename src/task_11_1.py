@@ -287,7 +287,7 @@ class Teacher(Human):
         self.__class_number = class_number
 
     def stand_up(self):
-        return f'Class please stand up'
+        return 'Class please stand up'
 
     def info(self):
         return (f'Name - {teacher.name}\nlast name - {teacher.last_name}\n'
