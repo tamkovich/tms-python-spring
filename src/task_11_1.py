@@ -4,13 +4,13 @@
 геттеры и сеттеры для каждого атрибута, два метода.
 """
 
+"""
+Class airplane have 4 private atributes
+В каждом классе отдельно созданы функции вывода информации
+"""
+
 
 class Airplane:
-    """
-    Class airplane have 4 private atributes
-    В каждом классе отдельно созданы функции вывода информации
-    """
-
     def __init__(self, weight, speed, name, passengers, engine, types):
         self.weight = weight
         self.speed = speed
@@ -58,12 +58,13 @@ class Airplane:
                 f'5.engine - {airplane.get_engine()}\n6.type - {airplane.get_type()}')
 
 
-class Car:
-    """
-    Родительский класс который будем наследовать
-    в классe BMW
-    """
+"""
+Родительский класс который будем наследовать
+в классe BMW
+"""
 
+
+class Car:
     def __init__(self, body: str, engine: str, type_car: str, count=4, doors=5):
         self.__count = count
         self.doors = doors
@@ -108,11 +109,12 @@ class Car:
         return f'{self.type_car} {self.doors} {self.count} {self.engine} {self.body}'
 
 
-class BMW(Car):
-    """
-    Наследование через Super Class
-    """
+"""
+Наследование через Super Class
+"""
 
+
+class BMW(Car):
     def __init__(self, body: str, country: str, weight: int,
                  count: int, doors: int,
                  engine: str, power: int,
@@ -163,11 +165,13 @@ class BMW(Car):
                 f'9.gas - {bmw.fuel}\n10.type - {car.type_car}')
 
 
+"""
+Родительский класс который будем наследовать
+в классах Techer, Pupil
+"""
+
+
 class Human:
-    """
-    Родительский класс который будем наследовать
-    в классах Techer, Pupil
-    """
     name: str
     last_name: str
     age: int
