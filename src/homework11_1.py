@@ -143,7 +143,8 @@ class Game:
         self.__price = price
 
     def discount(self, discount=10):
-        return self.price * (100-discount)
+        x = self.price * (100-discount)
+        print('Final price is ', x)
 
     def info(self):
         print(f'Game {self.name} in price for {self.price}, author {self.author}.')
@@ -241,7 +242,7 @@ class Exam:
         self.__stress = stress
 
     def gift(self):
-        print(f'You give gift to {self.professor} and reduced your stress to 20 points {self.stress-20}.')
+        print(f'You give gift to {self.professor} and reduced stress to 20 points {self.stress-20}')
 
     def drugs(self):
         self.stress = 0
