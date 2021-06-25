@@ -27,7 +27,7 @@ class MyTime:
 
     The next operations is available for MyTime instances:
         <, >, <=, >=, ==, != - comparisons;
-        +, - - addition an subtraction with related objects;
+        +, - - addition and subtraction with related objects;
         * - multiplication by a number.
 
     When using the instance directly in string operations,
@@ -59,7 +59,7 @@ class MyTime:
         MyTime(time_str = "11-07-15") - create instance "11:7:15"
 
         time_1 = MyTime(time_str="16.25.10")
-        MyTime(time_obj=time_) - create copy of instance time_1
+        MyTime(time_obj=time_1) - create copy of instance time_1
 
         The constructor should only be called with the variants of the argument sets
         shown in the examples above. Otherwise, an exception is raised.
