@@ -1,5 +1,5 @@
-from exceptions import OperationTypeException
 from classes import Math
+from exceptions import OperationTypeException
 
 
 def get_user_choice() -> str:
