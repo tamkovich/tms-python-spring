@@ -15,15 +15,15 @@ class TimeMultException(Exception):
 class MyTime:
     def __init__(self, *args):
         if args:
-            if len(args) == 3:
+            if all(isinstance(arg, int) for arg in args):
                 self.hours = args[0]
                 self.minutes = args[1]
                 self.seconds = args[2]
-            elif len(*args) == 1001:
+            elif all(isinstance(arg, MyTime) for arg in args):
                 self.hours = args[0].hours
                 self.minutes = args[0].minutes
                 self.seconds = args[0].seconds
-            elif len(args) == 1:
+            elif all(isinstance(arg, str) for arg in args):
                 self.hours = int(args[0].split()[0])
                 self.minutes = int(args[0].split()[1])
                 self.seconds = int(args[0].split()[2])
@@ -79,30 +79,30 @@ class MyTime:
             )
 
 
-# time1 = MyTime("89 99 64")
-# print(time1)
-# print(time1*2)
+time1 = MyTime("89 99 64")
+print(time1)
+print(time1*2)
 
-#
-# time2 = MyTime(24, 5, 5)
-# print(time2)
-#
-# time3 = MyTime("24 5 5")
-# print(time3)
-#
-# time4 = MyTime(time3)
-# print(time4)
-#
-# print(time1 > time2, "18;40 БОЛЬШЕ 0;5")
-# print(time1 < time2, "18;40 МЕНЬШЕ 0;5")
-# print(time1 <= time2, "18;40 МЕНЬШЕ ИЛИ РАВНО 0;5")
-# print(time1 >= time2, "18;40 БОЛЬШЕ ИЛИ РАВНО 0;5")
-# print(time1 == time2, "18;40 РАВНО 0;5")
-# print(time1 != time2, "18 40 НЕ РАВНО 0;5")
-# print(time3 != time2, "0;5 НЕ РАВНО 0;5")
-# print(time3 == time2, "0;5 РАВНО 0;5")
-#
-# print(time1+time2)
-# print(time1-time2)
-# print(time2-time1)
-# print("18 34 59")
+
+time2 = MyTime(24, 5, 5)
+print(time2)
+
+time3 = MyTime("24 5 5")
+print(time3)
+
+time4 = MyTime(time3)
+print(time4)
+
+print(time1 > time2, "18;40 БОЛЬШЕ 0;5")
+print(time1 < time2, "18;40 МЕНЬШЕ 0;5")
+print(time1 <= time2, "18;40 МЕНЬШЕ ИЛИ РАВНО 0;5")
+print(time1 >= time2, "18;40 БОЛЬШЕ ИЛИ РАВНО 0;5")
+print(time1 == time2, "18;40 РАВНО 0;5")
+print(time1 != time2, "18 40 НЕ РАВНО 0;5")
+print(time3 != time2, "0;5 НЕ РАВНО 0;5")
+print(time3 == time2, "0;5 РАВНО 0;5")
+
+print(time1+time2)
+print(time1-time2)
+print(time2-time1)
+print("18 34 59")
