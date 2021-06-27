@@ -85,8 +85,7 @@ class Triangle(AbstractFigure):
             raise TriangleException
         self.sides_array = sorted([self.side_a, self.side_b, self.side_c])
         if (
-            self.sides_array[0] ** 2 + self.sides_array[1] ** 2
-            == self.sides_array[2] ** 2
+            self.sides_array[0] ** 2 + self.sides_array[1] ** 2 == self.sides_array[2] ** 2
         ):
             self.triangle_property = "Rectangular"
         elif self.side_a == self.side_b == self.side_c:
