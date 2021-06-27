@@ -12,18 +12,6 @@ class TimeMultException(Exception):
 
 
 class MyTime:
-
-    """Accepts data as input:
-     1) str type, format: "19 1 25"
-     2) int type, format: 6, 12, 14
-     3) lack of input data (creates time 0:0:0)
-     4) another MyTime object
-     If the input contains more than 60 minutes
-     or seconds, the time is recalculated.
-     You lost hours more than 24 (object contains no days).
-     So time 25:05:05 == 1:05:05
-     """
-
     def __init__(self, *args):
         if args:
             if len(args) == 3:

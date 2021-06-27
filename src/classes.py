@@ -10,7 +10,8 @@
 # первом будут описаны все классы, во втором классы будут
 # импортированы и использованы.
 
-from abc import ABC, abstractmethod
+from abc import ABC
+from abc import abstractmethod
 import math
 
 
