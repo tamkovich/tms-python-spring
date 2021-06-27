@@ -78,31 +78,31 @@ class MyTime:
                 f"{mul_amount // 3600 % 24}:{mul_amount // 60 % 60}:{mul_amount % 60}"
             )
 
-
-time1 = MyTime("89 99 64")
-print(time1)
-print(time1*2)
-
-
-time2 = MyTime(24, 5, 5)
-print(time2)
-
-time3 = MyTime("24 5 5")
-print(time3)
-
-time4 = MyTime(time3)
-print(time4)
-
-print(time1 > time2, "18;40 БОЛЬШЕ 0;5")
-print(time1 < time2, "18;40 МЕНЬШЕ 0;5")
-print(time1 <= time2, "18;40 МЕНЬШЕ ИЛИ РАВНО 0;5")
-print(time1 >= time2, "18;40 БОЛЬШЕ ИЛИ РАВНО 0;5")
-print(time1 == time2, "18;40 РАВНО 0;5")
-print(time1 != time2, "18 40 НЕ РАВНО 0;5")
-print(time3 != time2, "0;5 НЕ РАВНО 0;5")
-print(time3 == time2, "0;5 РАВНО 0;5")
-
-print(time1+time2)
-print(time1-time2)
-print(time2-time1)
-print("18 34 59")
+#
+# time1 = MyTime("89 99 64")
+# print(time1)
+# print(time1*2)
+#
+#
+# time2 = MyTime(24, 5, 5)
+# print(time2)
+#
+# time3 = MyTime("24 5 5")
+# print(time3)
+#
+# time4 = MyTime(time3)
+# print(time4)
+#
+# print(time1 > time2, "18;40 БОЛЬШЕ 0;5")
+# print(time1 < time2, "18;40 МЕНЬШЕ 0;5")
+# print(time1 <= time2, "18;40 МЕНЬШЕ ИЛИ РАВНО 0;5")
+# print(time1 >= time2, "18;40 БОЛЬШЕ ИЛИ РАВНО 0;5")
+# print(time1 == time2, "18;40 РАВНО 0;5")
+# print(time1 != time2, "18 40 НЕ РАВНО 0;5")
+# print(time3 != time2, "0;5 НЕ РАВНО 0;5")
+# print(time3 == time2, "0;5 РАВНО 0;5")
+#
+# print(time1+time2)
+# print(time1-time2)
+# print(time2-time1)
+# print("18 34 59")
