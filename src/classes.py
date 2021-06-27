@@ -19,6 +19,7 @@ class Point:
         self.x = x
         self.y = y
 
+
 class AbstractFigure(ABC):
 
     @abstractmethod
@@ -63,7 +64,7 @@ class Circle(AbstractFigure):
 
 class TriangleException(Exception):
     def __init__(self, message='There are no such triangles'):
-         super().__init__(message)
+        super().__init__(message)
 
 
 class Triangle(AbstractFigure):
@@ -78,28 +79,32 @@ class Triangle(AbstractFigure):
                self.side_c > self.side_b and self.side_b + self.side_c > self.side_a):
             raise TriangleException
         self.sides_array = sorted([self.side_a, self.side_b, self.side_c])
-        if self.sides_array[0]**2 + self.sides_array[1]**2 == self.sides_array[2]**2:
+        if self.sides_array[0] ** 2 + self.sides_array[1] ** 2 \
+                == self.sides_array[2] ** 2:
             self.triangle_property = "Rectangular"
         elif self.side_a == self.side_b == self.side_c:
             self.triangle_property = "Equilateral"
-        elif self.side_a == self.side_b or self.side_b == self.side_c or self.side_a == self.side_c:
+        elif self.side_a == self.side_b or self.side_b \
+                == self.side_c or self.side_a == self.side_c:
             self.triangle_property = "Isosceles"
-        elif self.sides_array[0]**2 + self.sides_array[1]**2 < self.sides_array[2]**2:
-            self.triangle_property = "Obtuse" #тупой
+        elif self.sides_array[0] ** 2 + self.sides_array[1] \
+                ** 2 < self.sides_array[2] ** 2:
+            self.triangle_property = "Obtuse"
         else:
-            self.triangle_property = "Acute-angled" #острый
+            self.triangle_property = "Acute-angled"
 
     def find_a_perimetr(self):
         return self.side_a + self.side_b + self.side_c
 
     def find_an_area(self):
-        p = self.find_a_perimetr()/2
-        return math.sqrt(p*(p-self.side_a)*(p-self.side_b)*(p-self.side_c))
+        p = self.find_a_perimetr() / 2
+        return math.sqrt(p * (p - self.side_a) * (p - self.side_b) * (p - self.side_c))
 
     def __str__(self):
         area = self.find_an_area()
         perimetr = self.find_a_perimetr()
-        return f"{self.triangle_property} triangle with area {area} units and perimetr {perimetr} units."
+        return f"{self.triangle_property} triangle " \
+               f"with area {area} units and perimetr {perimetr} units."
 
 
 class Square(AbstractFigure):
@@ -109,10 +114,10 @@ class Square(AbstractFigure):
         self.side = self.find_two_points_len(self.point1, self.point2)
 
     def find_a_perimetr(self):
-        return self.side*4
+        return self.side * 4
 
     def find_an_area(self):
-        return self.side**2
+        return self.side ** 2
 
     def __str__(self):
         area = self.find_an_area()

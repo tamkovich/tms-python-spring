@@ -8,9 +8,11 @@
 
 class TimeMultException(Exception):
     def __init__(self, message='time can only be multiplied by a number'):
-         super().__init__(message)
+        super().__init__(message)
+
 
 class MyTime:
+
     """Accepts data as input:
      1) str type, format: "19 1 25"
      2) int type, format: 6, 12, 14
@@ -21,6 +23,7 @@ class MyTime:
      You lost hours more than 24 (object contains no days).
      So time 25:05:05 == 1:05:05
      """
+
     def __init__(self, *args):
         if args:
             if len(args) == 3:
@@ -39,7 +42,7 @@ class MyTime:
             self.seconds = self.seconds % 60
             self.hours = (self.hours + self.minutes // 60) % 24
             self.minutes = self.minutes % 60
-            self.clean_seconds = self.seconds + self.minutes*60 + self.hours*60*60
+            self.clean_seconds = self.seconds + self.minutes * 60 + self.hours * 60 * 60
         else:
             self.hours = 0
             self.minutes = 0

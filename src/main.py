@@ -1,4 +1,4 @@
-from classes import Point, Triangle, Square, Circle, AbstractFigure
+from classes import Point, Triangle, Square, Circle
 
 circle1 = Circle(Point(1, 2), Point(10, 15))
 
