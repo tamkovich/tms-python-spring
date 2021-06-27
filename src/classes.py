@@ -77,11 +77,11 @@ class Triangle(AbstractFigure):
         self.side_a = self.find_two_points_len(self.point1, self.point2)
         self.side_b = self.find_two_points_len(self.point3, self.point2)
         self.side_c = self.find_two_points_len(self.point1, self.point3)
-        if not (
-            self.side_a + self.side_b > self.side_c
-            and self.side_a + self.side_c > self.side_b
-            and self.side_b + self.side_c > self.side_a
-        ):
+        if not all([
+            self.side_a + self.side_b > self.side_c,
+            self.side_a + self.side_c > self.side_b,
+            self.side_b + self.side_c > self.side_a
+        ]):
             raise TriangleException
         self.sides_array = sorted([self.side_a, self.side_b, self.side_c])
         if (
@@ -91,15 +91,14 @@ class Triangle(AbstractFigure):
             self.triangle_property = "Rectangular"
         elif self.side_a == self.side_b == self.side_c:
             self.triangle_property = "Equilateral"
-        elif (
-            self.side_a == self.side_b
-            or self.side_b == self.side_c
-            or self.side_a == self.side_c
-        ):
+        elif any([
+            self.side_a == self.side_b,
+            self.side_b == self.side_c,
+            self.side_a == self.side_c
+        ]):
             self.triangle_property = "Isosceles"
         elif (
-            self.sides_array[0] ** 2 + self.sides_array[1] ** 2
-            < self.sides_array[2] ** 2
+            self.sides_array[0] ** 2 + self.sides_array[1] ** 2 < self.sides_array[2] ** 2
         ):
             self.triangle_property = "Obtuse"
         else:
