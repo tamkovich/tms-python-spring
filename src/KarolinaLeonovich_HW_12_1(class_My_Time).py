@@ -6,8 +6,9 @@
 # Реализовать нормальное отображение времени(12:65:83 - 13:06:23)
 # [my-oop-02] Задание доделать в рамках cw12
 
+
 class TimeMultException(Exception):
-    def __init__(self, message='time can only be multiplied by a number'):
+    def __init__(self, message="time can only be multiplied by a number"):
         super().__init__(message)
 
 
@@ -73,7 +74,10 @@ class MyTime:
             raise TimeMultException
         else:
             mul_amount = self.clean_seconds * other
-            return f"{mul_amount // 3600 % 24}:{mul_amount // 60 % 60}:{mul_amount % 60}"
+            return (
+                f"{mul_amount // 3600 % 24}:{mul_amount // 60 % 60}:{mul_amount % 60}"
+            )
+
 
 # time1 = MyTime("89 99 64")
 # print(time1)

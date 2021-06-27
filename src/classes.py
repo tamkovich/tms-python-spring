@@ -22,7 +22,6 @@ class Point:
 
 
 class AbstractFigure(ABC):
-
     @abstractmethod
     def find_an_area(self):
         pass
@@ -37,7 +36,9 @@ class AbstractFigure(ABC):
 
 
 class Circle(AbstractFigure):
-    def __init__(self, center: "Point", point_on_circle: "Point" = None, radius: float = None):
+    def __init__(
+        self, center: "Point", point_on_circle: "Point" = None, radius: float = None
+    ):
         self.center = center
         self.point_on_circle = point_on_circle
         self.radius = radius
@@ -64,7 +65,7 @@ class Circle(AbstractFigure):
 
 
 class TriangleException(Exception):
-    def __init__(self, message='There are no such triangles'):
+    def __init__(self, message="There are no such triangles"):
         super().__init__(message)
 
 
@@ -76,20 +77,30 @@ class Triangle(AbstractFigure):
         self.side_a = self.find_two_points_len(self.point1, self.point2)
         self.side_b = self.find_two_points_len(self.point3, self.point2)
         self.side_c = self.find_two_points_len(self.point1, self.point3)
-        if not(self.side_a + self.side_b > self.side_c and self.side_a + self.side_c
-               > self.side_b and self.side_b + self.side_c > self.side_a):
+        if not (
+            self.side_a + self.side_b > self.side_c
+            and self.side_a + self.side_c > self.side_b
+            and self.side_b + self.side_c > self.side_a
+        ):
             raise TriangleException
         self.sides_array = sorted([self.side_a, self.side_b, self.side_c])
-        if self.sides_array[0] ** 2 + self.sides_array[1] ** 2 \
-                == self.sides_array[2] ** 2:
+        if (
+            self.sides_array[0] ** 2 + self.sides_array[1] ** 2
+            == self.sides_array[2] ** 2
+        ):
             self.triangle_property = "Rectangular"
         elif self.side_a == self.side_b == self.side_c:
             self.triangle_property = "Equilateral"
-        elif self.side_a == self.side_b or self.side_b \
-                == self.side_c or self.side_a == self.side_c:
+        elif (
+            self.side_a == self.side_b
+            or self.side_b == self.side_c
+            or self.side_a == self.side_c
+        ):
             self.triangle_property = "Isosceles"
-        elif self.sides_array[0] ** 2 + self.sides_array[1] \
-                ** 2 < self.sides_array[2] ** 2:
+        elif (
+            self.sides_array[0] ** 2 + self.sides_array[1] ** 2
+            < self.sides_array[2] ** 2
+        ):
             self.triangle_property = "Obtuse"
         else:
             self.triangle_property = "Acute-angled"
@@ -104,8 +115,10 @@ class Triangle(AbstractFigure):
     def __str__(self):
         area = self.find_an_area()
         perimetr = self.find_a_perimetr()
-        return f"{self.triangle_property} triangle " \
-               f"with area {area} units and perimetr {perimetr} units."
+        return (
+            f"{self.triangle_property} triangle "
+            f"with area {area} units and perimetr {perimetr} units."
+        )
 
 
 class Square(AbstractFigure):
