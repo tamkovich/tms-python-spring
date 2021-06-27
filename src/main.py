@@ -4,7 +4,6 @@ from classes import Square
 from classes import Triangle
 
 
-
 circle1 = Circle(Point(1, 2), Point(10, 15))
 
 triangle1 = Triangle(Point(0, 0), Point(0, 3), Point(4, 0))
