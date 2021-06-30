@@ -1,5 +1,5 @@
-from exceptions import InputException
 from exceptions import DivByZero
+from exceptions import InputException
 
 
 def add_operation_func(num1, num2):

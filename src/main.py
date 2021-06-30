@@ -7,9 +7,11 @@
 
 
 from func import add_operation_func
-from func import mult_operation_func
-from func import minus_operation_func
 from func import div_operation_func
+from func import minus_operation_func
+from func import mult_operation_func
+
+
 
 from PyQt5 import QtGui
 from PyQt5 import QtCore
