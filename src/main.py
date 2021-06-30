@@ -12,9 +12,8 @@ from func import minus_operation_func
 from func import mult_operation_func
 
 
-
-from PyQt5 import QtGui
 from PyQt5 import QtCore
+from PyQt5 import QtGui
 from PyQt5.QtGui import QFont
 
 from PyQt5.QtWidgets import QApplication
