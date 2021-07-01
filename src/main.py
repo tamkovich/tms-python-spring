@@ -1,4 +1,7 @@
-from classes import Point, Triangle, Square, Circle
+from classes import Point
+from classes import Triangle
+from classes import Square 
+from classes import Circle
 
 
 """Circle"""
