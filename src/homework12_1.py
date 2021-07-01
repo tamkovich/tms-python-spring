@@ -83,7 +83,7 @@ class MyTime:
     def __mul__(self, number: int):
         return self.time_in_seconds * number
 
-    
+
 g = MyTime()
 a = MyTime(12, 65, 83)
 print(a.time)
