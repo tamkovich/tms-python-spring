@@ -23,11 +23,10 @@ def time_str(seconds: int) -> str:  # Convert seconds into time string hh:mm:ss
     return f"{h:02d}:{m:02d}:{s:02d}"
 
 
-def run_timer(hours: int, minutes: int, seconds: int) -> None:
+def timer_tick(hours: int, minutes: int, seconds: int) -> str:
     interval = hours * 3_600 + minutes * 60 + seconds
     while interval >= 0:
-        print(time_str(interval))
-        sleep(0.1)
+        yield time_str(interval)
         interval -= 1
 
 
@@ -51,5 +50,9 @@ log_str = f"{was_started} {username}"
 with open("log.dat", "a") as f_out:
     f_out.write(log_str)
 
-run_timer(args.hr, args.m, args.s)
+run_timer = timer_tick(args.hr, args.m, args.s)
+for tick in run_timer:
+    print(tick)
+    sleep(0.3)
+
 print("ALARM!!!")
