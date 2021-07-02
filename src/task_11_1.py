@@ -7,7 +7,7 @@
 Реализовать нормальное отображение времени(12:65:83 - 13:06:23)
 """
 from datetime import datetime
-from datetime  import timedelta
+from datetime import timedelta
 
 
 class MyTime:

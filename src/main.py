@@ -1,6 +1,6 @@
 from classes import Circle
-from classes import Square
 from classes import Point
+from classes import Square
 from classes import Triangle
 
 
