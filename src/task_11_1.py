@@ -8,13 +8,15 @@
 """
 from datetime import datetime
 from datetime  import timedelta
+
+
 class MyTime:
     def __init__(self, *args):
         if all(isinstance(arg, int) for arg in args):
             self.hours = args[0]
             self.minutes = args[1]
             self.seconds = args[2]
-        if all(isinstance(arg,str) for arg in args):
+        if all(isinstance(arg, str) for arg in args):
             self.hours = int(args[0].split()[0])
             self.minutes = int(args[0].split()[1])
             self.seconds = int(args[0].split()[2])
@@ -63,6 +65,7 @@ class MyTime:
     # магический метод вывода на экран
     def __repr__(self):
         return f"{self.time1}"
+
 
 time_ = MyTime("12 65 83")
 

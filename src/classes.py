@@ -66,6 +66,7 @@ class Triangle(Figure):
         len_c = ((self.point3.x - self.point2.x) ** 2 + (self.point3.y - self.point2.y) ** 2) ** 0.5
         return len_a + len_b + len_c
 
+
 class Square(Figure):
     def __init__(self, name_figure, point1: 'Point', point2: 'Point'):
         self.name_figure = name_figure
@@ -73,8 +74,8 @@ class Square(Figure):
         self.point2 = point2
 
     def fun_area(self):
-        return ((self.point2.x - self.point1.x)
-                ** (self.point2.y - self.point1.y))
+        return ((self.point2.x - self.point1.x) **
+                (self.point2.y - self.point1.y))
 
     def fun_perimetr(self):
         return 2 * ((self.point2.x - self.point1.x) ** (self.point2.y - self.point1.y))

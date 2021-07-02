@@ -1,7 +1,8 @@
+from classes import Point
 from classes import Triangle
 from classes import Square
 from classes import Circle
-from classes import Point
+
 
 cir = Circle('circle', Point(0, 0), 5)
 tr = Triangle('triangle', Point(1, 2), Point(5, 6), Point(3, 1))
