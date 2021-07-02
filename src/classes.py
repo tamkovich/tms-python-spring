@@ -74,8 +74,7 @@ class Square(Figure):
         self.point2 = point2
 
     def fun_area(self):
-        return ((self.point2.x - self.point1.x) **
-                (self.point2.y - self.point1.y))
+        return ((self.point2.x - self.point1.x) ** (self.point2.y - self.point1.y))
 
     def fun_perimetr(self):
         return 2 * ((self.point2.x - self.point1.x) ** (self.point2.y - self.point1.y))

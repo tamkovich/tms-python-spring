@@ -1,7 +1,7 @@
+from classes import Circle
+from classes import Square
 from classes import Point
 from classes import Triangle
-from classes import Square
-from classes import Circle
 
 
 cir = Circle('circle', Point(0, 0), 5)
