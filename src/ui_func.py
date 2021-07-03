@@ -1,5 +1,6 @@
 import func
 
+
 def calculation(operation, num1, num2):
     if operation == '+':
         print(func.fun_summation(num1, num2))
