@@ -21,6 +21,6 @@ while True:
     except StopIteration:
         break
 
-print("ALARM!!")
+print("ALARM!!!")
 
 log(args, 'logs.txt')

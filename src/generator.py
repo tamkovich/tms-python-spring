@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 
+
 def gen(date_time_str):
     date_time_obj = datetime.strptime(date_time_str, '%H:%M:%S')
     while date_time_obj.second + date_time_obj.minute + date_time_obj.hour !=0:
