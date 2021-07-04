@@ -15,6 +15,7 @@ number_list = []
 for _num in range(200, 300 + 1):
     if _num not in number_list:
         _divisors_sum = get_divisors_sum(_num)
-        if 200 < _divisors_sum < 300 and _num != _divisors_sum and _num == get_divisors_sum(_divisors_sum):
+        if 200 < _divisors_sum < 300 and \
+                _num != _divisors_sum and _num == get_divisors_sum(_divisors_sum):
             number_list.append(_divisors_sum)
             print(_num, _divisors_sum)

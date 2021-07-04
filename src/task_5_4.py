@@ -6,4 +6,3 @@ number.isdigit()
 for i in number:
     s = 1 + 1 / int(i)
     print(f'результат вычисления S: {s}')
-
