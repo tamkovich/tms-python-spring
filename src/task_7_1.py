@@ -55,6 +55,7 @@ def fun_pinti(pint):  # Пинты в литры
 def fun_litr_pint(litr_pint):  # Литры в пинты
     return litr_pint * 2.11338
 
+
 while True:
     print("Введите число для перевода: ")
     number = input()
