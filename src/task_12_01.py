@@ -15,7 +15,7 @@ class MyTime:
     Represents a time in a moment of day.
     Days are not counted: if time exceeds 24 hours MyTime instance will contain
     only time after 00:00:00.
-    For example: time 30:15:12 represents as 6:15:12.
+    For example: time 30:15:12 represents as 06:15:12.
     The seconds exceeds 60 are carried over the minutes.
     The minutes exceeds 60 are carried over the hours.
 
@@ -48,11 +48,11 @@ class MyTime:
 
         Correct call examples:
 
-        MyTime() - create instance "0:0:0"
-        MyTime(19,7,7) - create instance "19:7:7"
-        MyTime(19) - create instance "19:0:0"
-        MyTime(minutes=19) - create instance "0:19:0"
-        MyTime(seconds=19) - create instance "0:0:19",
+        MyTime() - create instance "00:00:00"
+        MyTime(19,7,7) - create instance "19:07:07"
+        MyTime(19) - create instance "19:00:00"
+        MyTime(minutes=19) - create instance "00:19:00"
+        MyTime(seconds=19) - create instance "00:00:19",
             and so on when using combinations of named parameters hours, minutes, seconds
         MyTime(time_str = "11:07:15"),
         MyTime(time_str = "11.07.15"),
@@ -173,7 +173,7 @@ class MyTime:
             return self
 
     def __str__(self):
-        return f"{self.hours}:{self.minutes}:{self.seconds}"
+        return f"{self.hours:02d}:{self.minutes:02d}:{self.seconds:02d}"
 
 
 def run():
