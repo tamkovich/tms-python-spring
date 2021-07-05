@@ -1,5 +1,5 @@
-from exceptions import ChoiceException
 import classes
+from exceptions import ChoiceException
 
 
 def start():
