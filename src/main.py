@@ -7,9 +7,10 @@
 # 00:00:02
 # 00:00:01
 # ALARM!!!
-from ui import TimerUI
+
 from classes import Timer
 from classes import User
+from ui import TimerUI
 
 timer1 = TimerUI()
 

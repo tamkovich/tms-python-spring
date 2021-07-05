@@ -51,9 +51,6 @@ class User:
 # timer1 = Timer(5, 10, 15)
 # timer1.timer()
 
-
-
-
 # connection = sqlite3.connect("log.db")
 # cursor = connection.cursor()
 # cursor.execute('''SELECT * FROM tab_users_log''',)

@@ -17,5 +17,5 @@ class TimerUI:
         return int(self.args.hours), int(self.args.minutes), int(self.args.seconds)
 
 
-#timer1 = TimerUI()
-#print(timer1.name_back_input())
+# timer1 = TimerUI()
+# print(timer1.name_back_input())
