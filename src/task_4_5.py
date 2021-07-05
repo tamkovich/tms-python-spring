@@ -35,5 +35,3 @@ for j in range(1, m):
     fb_2 = summa_1
     j += 1
 print(fib_1)
-
-
