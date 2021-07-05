@@ -56,7 +56,7 @@ class MyTime:
             and so on when using combinations of named parameters hours, minutes, seconds
         MyTime(time_str = "11:07:15"),
         MyTime(time_str = "11.07.15"),
-        MyTime(time_str = "11-07-15") - create instance "11:7:15"
+        MyTime(time_str = "11-07-15") - create instance "11:07:15"
 
         time_1 = MyTime(time_str="16.25.10")
         MyTime(time_obj=time_1) - create copy of instance time_1
