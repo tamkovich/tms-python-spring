@@ -19,4 +19,4 @@ def div(a, b):
         answer = round(a / b, 10)
         return f'Результат деления: {answer}'
     except ZeroDivisionError:
-        return f'ZeroDivisionError: division by zero'
+        return 'ZeroDivisionError: division by zero'
