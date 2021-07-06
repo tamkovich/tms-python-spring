@@ -12,18 +12,6 @@ import datetime
 from time import sleep
 
 
-def time_translate_toseconds(time_: datetime):
-    return time_.hour * 3600 + time_.minute * 60 + time_.second
-
-
-def remaining_time(time):
-    while time > 0:
-        print(time)
-        sleep(1)
-        time -= 1
-
-
-
 parser = argparse.ArgumentParser()
 parser.add_argument('-fn', '--first_name', required=True)
 parser.add_argument('-ln', '--last_name', required=True)
