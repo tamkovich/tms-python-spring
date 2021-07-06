@@ -12,6 +12,13 @@ import datetime
 from time import sleep
 
 
+def remaining_time(time):
+    while time > 0:
+        print(time)
+        sleep(1)
+        time -= 1
+
+
 parser = argparse.ArgumentParser()
 parser.add_argument('-fn', '--first_name', required=True)
 parser.add_argument('-ln', '--last_name', required=True)
