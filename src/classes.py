@@ -5,13 +5,13 @@ class SQLiteDataBase:
     def __init__(self, database_file: str):
         self.db = sa.create_engine(f'sqlite:///{database_file}')
 
-    def get_all_columns(self, table: str) -> '[column1, column2...]':
+    def get_all_columns(self, table: str) -> '[]':
         columns = self.db.execute(f'''
                         PRAGMA table_info('{table}')
                         ''')
         return [column[1] for column in columns]
 
-    def get_all_items(self, table: str) -> '[{column: value,...}, {column: value,...}]':
+    def get_all_items(self, table: str) -> '[{}, {}]':
         columns = self.get_all_columns(table)
         rows = self.db.execute(f'''
                     SELECT * from '{table}'

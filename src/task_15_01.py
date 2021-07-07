@@ -16,4 +16,3 @@ while True:
     ui.ACTIONS[user_choice](db, table)
 
 print("Exit program.")
-
