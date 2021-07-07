@@ -87,14 +87,14 @@ def erase_item_by_id(db: 'SQLiteDataBase', table: str):
 
 
 MENU = [
-        '1 - View all items',
-        '2 - View columns names',
-        '3 - View item by id',
-        '4 - Add item',
-        '5 - Update item by id',
-        '6 - Erase item by id',
-        '0 - Exit program'
-    ]
+    '1 - View all items',
+    '2 - View columns names',
+    '3 - View item by id',
+    '4 - Add item',
+    '5 - Update item by id',
+    '6 - Erase item by id',
+    '0 - Exit program'
+]
 
 ACTIONS = {
     '1': view_all_items,
@@ -103,4 +103,4 @@ ACTIONS = {
     '4': add_item,
     '5': update_item_by_id,
     '6': erase_item_by_id
-    }
+}
