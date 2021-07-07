@@ -2,8 +2,8 @@
     Импорируем Созданые классы
 """
 from task_12_2_classes import Circle
-from task_12_2_classes import Treangle
 from task_12_2_classes import Square
+from task_12_2_classes import Treangle
 
 """Создаем экземяры классов"""
 circle = Circle(1, 1, 11)
