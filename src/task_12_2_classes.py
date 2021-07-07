@@ -79,10 +79,7 @@ class Treangle(Figure):
 
     @property
     def area(self):
-        return (self.perimetr * 
-                (self.perimetr - self.storona_1) * 
-                (self.perimetr - self.storona_2) * 
-                (self.perimetr - self.storona_3)) ** 1 / 2
+        return (self.perimetr * (self.perimetr - self.storona_1) * (self.perimetr - self.storona_2) * (self.perimetr - self.storona_3)) ** 1 / 2
 
 
 """Класс создания Квадрата и вычисления площади и периметра"""
