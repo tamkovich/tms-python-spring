@@ -4,9 +4,8 @@ task_9_906: Написать декоратор, который будет вы�
 # from datetime import datetime
 # time = datetime.now()
 """
-import time
 from datetime import datetime
-
+import time
 
 def time_checker(real_func):
     def fake_func(*args):
