@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>24731cb8-e711-4134-8d6f-1a4847757899.DATABASE:hw_16_db</OriginalElement>
+  <nodes>
+    <node x="-195.0" y="-71.0">24731cb8-e711-4134-8d6f-1a4847757899.TABLE:hw_16_db.public.cars</node>
+    <node x="189.5" y="-27.0">24731cb8-e711-4134-8d6f-1a4847757899.TABLE:hw_16_db.public.brands</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="24731cb8-e711-4134-8d6f-1a4847757899.TABLE:hw_16_db.public.cars" target="24731cb8-e711-4134-8d6f-1a4847757899.TABLE:hw_16_db.public.brands" relationship="REFERENCES">
+      <point x="0.0" y="-61.5" />
+      <point x="-123.0" y="104.0" />
+      <point x="253.0" y="104.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="72.0" y="126.0" />
+  <SelectedNodes>
+    <node>24731cb8-e711-4134-8d6f-1a4847757899.TABLE:hw_16_db.public.cars</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
