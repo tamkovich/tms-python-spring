@@ -11,7 +11,7 @@ connection = sqlite3.connect("HW_15.db")
 cursor = connection.cursor()
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS tab_products (id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                                                           col_name TEXT, 
+                                                           col_name TEXT,
                                                            col_price INTEGER,
                                                            col_quantity INTEGER,
                                                            col_comment TEXT)''')
@@ -22,11 +22,8 @@ def add_position():
     price = float(input('введите цену...'))
     quantity = int(input('введите количество...'))
     comment = input('введите комментарий...')
-    cursor.execute(
-                   '''INSERT INTO tab_products
-                   (
-                   col_name, col_price, col_quantity, col_comment
-                   ) 
+    cursor.execute('''INSERT INTO tab_products
+                   (col_name, col_price, col_quantity, col_comment) 
                    VALUES (?, ?, ?, ?)''', (name, price, quantity, comment))
     connection.commit()
 
@@ -53,17 +50,17 @@ def update_table():
                    ''', (name, iden))
     if price:
         price = float(price)
-        cursor.execute('''UPDATE tab_products SET
-                   col_price=? WHERE id=?
+        cursor.execute('''UPDATE tab_products 
+                   SET col_price=? WHERE id=?
                    ''', (price, iden))
     if quantity:
         quantity = int(quantity)
-        cursor.execute('''UPDATE tab_products SET
-                   col_quantity=? WHERE id=?
+        cursor.execute('''UPDATE tab_products 
+                   SET col_quantity=? WHERE id=?
                    ''', (quantity, iden))
     if comment:
-        cursor.execute('''UPDATE tab_products SET
-                   col_comment=? WHERE id=?
+        cursor.execute('''UPDATE tab_products 
+                   SET col_comment=? WHERE id=?
                    ''', (comment, iden))
     connection.commit()
 
