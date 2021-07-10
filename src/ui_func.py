@@ -3,8 +3,8 @@
 from tkinter import Button
 from tkinter import Label
 from tkinter import Tk
-from func import math_callc
 from exeption import Zerodelite
+from func import math_callc
 
 """
     Создаем класс для определения
@@ -103,6 +103,7 @@ class ButtonForm(Button):
 
 def main():
     form = FormCalc("calc", "300x330")
+    ButtonForm()
     form.mainloop()
 
 
