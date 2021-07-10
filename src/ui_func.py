@@ -1,8 +1,10 @@
 """Создаем форму для пользовательского инерфейса"""
 
-from exeption import Zerodelite
-from tkinter import *
+from tkinter import Button
+from tkinter import Tk
+from tkinter import Label
 from func import math_callc
+from exeption import Zerodelite
 
 """
     Создаем класс для определения
@@ -101,7 +103,6 @@ class ButtonForm(Button):
 
 def main():
     form = FormCalc("calc", "300x330")
-    btn = ButtonForm()
     form.mainloop()
 
 
