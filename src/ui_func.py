@@ -1,10 +1,11 @@
 """Создаем форму для пользовательского инерфейса"""
 
 from exeption import Zerodelite
+from func import math_callc
 from tkinter import Button
 from tkinter import Label
 from tkinter import Tk
-from func import math_callc
+
 
 """
     Создаем класс для определения
@@ -57,7 +58,7 @@ class ButtonForm(Button):
         self.lbl.place(x=11, y=50)
         x = 10
         y = 130
-        """создаем обьект кнопки и задаем им логику работы через лямда функцию и передаем обьекту"""
+        """создаем обьект кнопки и задаем им логику работы и передаем обьекту"""
         for bt in self.text_btn:
             com = lambda x=bt: self.logicalc(x)
             Button(text=bt, bg="#FFF", font=("Times New Roman", 15), command=com).place(
