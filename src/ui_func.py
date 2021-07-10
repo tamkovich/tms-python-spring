@@ -1,9 +1,9 @@
 """Создаем форму для пользовательского инерфейса"""
 
+from exeption import Zerodelite
 from tkinter import Button
 from tkinter import Label
 from tkinter import Tk
-from exeption import Zerodelite
 from func import math_callc
 
 """
