@@ -3,7 +3,7 @@
 N = int(input("Введите N:"))
 S = 0
 if N != 0 and N > 0:
-    for i in range(1, N+1):
+    for i in range(1, N + 1):
         S += 1 / i
     print(S)
 else:
