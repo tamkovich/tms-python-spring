@@ -6,12 +6,11 @@
 import csv
 from datetime import date
 
-datas = []
 with open("datas.csv", "r") as fin:
     f_reader = csv.reader(fin, delimiter=",")
-    for row in f_reader:
-        datas.append(row)
-del(datas[0])
+    datas = [row for row in f_reader]
+
+del datas[0]
 
 for index, row in enumerate(datas):
     datas[index] = list(map(int, row))
