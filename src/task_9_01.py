@@ -3,7 +3,7 @@
 это порядковый номер строки в списке. Использовать генератор списков
 """
 
-STRINGS = ["Python", "Java", "JavaScript", "Ruby"]
+STRINGS = ("Python", "Java", "JavaScript", "Ruby")
 
 fmtd_strings = [f"{i} - {string}" for i, string in enumerate(STRINGS)]
 
