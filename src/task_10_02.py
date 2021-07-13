@@ -11,18 +11,17 @@ from datetime import timedelta
 today = datetime.today()
 seek_period = timedelta(days=7)
 
-data = []
 with open("data_weather.csv", "r") as fin:
     f_reader = csv.reader(fin, delimiter=",")
-    for row in f_reader:
-        data.append(row)
-del (data[0])
+    data = [row for row in f_reader]
 
-weather_minsk = list(filter(lambda row: row if row[1] == "Minsk" else None, data))
+del data[0]
+
+weather_minsk = list(filter(lambda row: row[1] == "Minsk", data))
 weather_minsk = list(
     filter(
-        lambda row: row if today - seek_period <= datetime.strptime(row[0], '%Y-%m-%d') <= today
-        else None, weather_minsk))
+        lambda row: today - seek_period <= datetime.strptime(row[0], '%Y-%m-%d') <= today,
+        weather_minsk))
 
 avg_temp = 0
 avg_wind_speed = 0

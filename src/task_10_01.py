@@ -8,23 +8,23 @@
 import csv
 import json
 
-data = []
 with open("data_01.csv", "r") as fin:
     f_reader = csv.reader(fin, delimiter=",")
-    for row in f_reader:
-        data.append(row)
-del(data[0])
+    data = [row for row in f_reader]
+
+del data[0]
 
 peoples_in_age_ranges = {"1-12": 0, "13-18": 0, "19-25": 0, "26-40": 0, "40+": 0}
 
 for row in data:
-    if int(row[2]) <= 12:
+    age = int(row[2])
+    if age <= 12:
         peoples_in_age_ranges["1-12"] += 1
-    elif 12 < int(row[2]) <= 18:
+    elif 12 < age <= 18:
         peoples_in_age_ranges["13-18"] += 1
-    elif 18 < int(row[2]) <= 25:
+    elif 18 < age <= 25:
         peoples_in_age_ranges["19-25"] += 1
-    elif 25 < int(row[2]) <= 40:
+    elif 25 < age <= 40:
         peoples_in_age_ranges["26-40"] += 1
     else:
         peoples_in_age_ranges["40+"] += 1
