@@ -7,18 +7,19 @@ class Point:
         self.x = x
         self.y = y
 
-    def clone(self) -> 'Point':
-        return Point(self.x, self.y)
+    @classmethod
+    def clone(cls, point: 'Point') -> 'Point':
+        return Point(point.x, point.y)
 
 
 class Figure(ABC):
     @abstractmethod
     def perimeter(self) -> float:
-        ...
+        pass
 
     @abstractmethod
     def area(self) -> float:
-        ...
+        pass
 
     @staticmethod
     def length_between(point_1: 'Point', point_2: 'Point') -> float:
@@ -27,7 +28,7 @@ class Figure(ABC):
 
 class Circle(Figure):
     def __init__(self, center: 'Point', radius: float):
-        self.center = center.clone()
+        self.center = Point.clone(center)
         self.radius = radius
 
     @property
@@ -44,9 +45,9 @@ class Circle(Figure):
 
 class Triangle(Figure):
     def __init__(self, apex_1: 'Point', apex_2: 'Point', apex_3: 'Point'):
-        self.apex_1 = apex_1.clone()
-        self.apex_2 = apex_2.clone()
-        self.apex_3 = apex_3.clone()
+        self.apex_1 = Point.clone(apex_1)
+        self.apex_2 = Point.clone(apex_2)
+        self.apex_3 = Point.clone(apex_3)
 
     @property
     def perimeter(self) -> float:
@@ -68,8 +69,8 @@ class Triangle(Figure):
 
 class Square(Figure):
     def __init__(self, apex_1: 'Point', apex_2: 'Point'):
-        self.apex_1 = apex_1.clone()
-        self.apex_2 = apex_2.clone()
+        self.apex_1 = Point.clone(apex_1)
+        self.apex_2 = Point.clone(apex_2)
 
     @property
     def perimeter(self) -> float:
