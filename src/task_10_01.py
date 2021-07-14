@@ -20,7 +20,7 @@ for row in data:
     age = int(row[2])
     if age <= 12:
         peoples_in_age_ranges["1-12"] += 1
-    elif 12 < age <= 18:
+    elif age <= 18:
         peoples_in_age_ranges["13-18"] += 1
     elif 18 < age <= 25:
         peoples_in_age_ranges["19-25"] += 1
