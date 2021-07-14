@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overall info</title>
+</head>
+
+<body>
+  <code>
+      <p>
+      <b> <u> <h2> OVERALL INFORMATION </h2> </u> </b>
+      <a href='/add/'>[Add item]</a>
+      </p>
+      <table cellpadding="5">
+          <tr>
+            <th> ID </th>
+            <th> Product </th>
+            <th> Price </th>
+            <th> Amount </th>
+            <th> Comment </th>
+        </tr>
+    {% for item in all_items %}
+        <tr>
+            <td>{{ item['id']}}</td>
+            <td><a href=/edit/{{ item['id']}}>{{ item['name']}}</a></td>
+            <td>{{ item['price']}}</td>
+            <td>{{ item['count']}}</td>
+            <td>{{ item['comment']}}</td>
+        </tr>
+    {% endfor  %}
+</table>
+      <p> <a href='/add/'>[Add item]</a> </p>
+</code>
+</body>
+</html>
+

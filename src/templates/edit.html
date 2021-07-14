@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit item</title>
+</head>
+<body>
+<code>
+    <form action="" method="POST">
+        <p><b><h2>Edit item</h2></b></p>
+        <p>ID # {{item[0]}}</p>
+        <p>
+            <label for="name">Product</label>
+            <input type="text" name="name" value={{item[1]}}>
+        </p>
+        <p>
+            <label for="price">Price  </label>
+            <input type="number" name="price" min="0.01" max="1000000" step="0.01" value={{item[2]}}>
+        </p>
+        <p>
+            <label for="count"> Amount  </label>
+            <input type="number" name="count" value={{item[3]}}>
+        </p>
+        <p>
+            <label for="comment"> Comment </label>
+            <input type="text" name="comment" value={{item[4]}}>
+        </p>
+
+        <p>
+            <input type="submit" value="Update">
+            <input name="delete" type="submit" value="Delete">
+
+        </p>
+        </form>
+
+    <a href='/'>[Main page]</a>
+
+
+</code>
+</body>
+</html>
