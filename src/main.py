@@ -21,7 +21,7 @@ while True:
         break
     a, b = ui.get_operands()
     math = Math(a, b)
-    result = ui.calculate(choice, math)
+    result = ui.OPERATIONS[choice](math)()
     print(f"{a} {choice} {b} = {result:.2f}"
           "\n-------------------------------------")
 
