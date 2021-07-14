@@ -15,6 +15,8 @@ class Wine:
     is_sparkling - tag of sparkling feature
     """
 
+    COLORS = {"Red", "White", "Rose"}
+
     def __init__(self, year, color="Red", grape_sort="Merlot", is_sparkling=False):
         self.year = year
         self.color = color
@@ -27,8 +29,7 @@ class Wine:
 
     @color.setter
     def color(self, new_color: str):
-        COLORS = {"Red", "White", "Rose"}
-        if new_color.capitalize() in COLORS:
+        if new_color.capitalize() in Wine.COLORS:
             self.__color = new_color.capitalize()
         else:
             self.__color = "Red"
@@ -47,10 +48,7 @@ class Wine:
 
     @year.setter
     def year(self, year: int):
-        if type(year) == int and year >= 0:
-            self.__year = year
-        else:
-            self.__year = 0
+        self.__year = year if type(year) == int and year >= 0 else 0
 
     def get_info(self) -> str:
         return f"{self.color} {'sparkling' if self.is_sparkling else 'still'} " \
