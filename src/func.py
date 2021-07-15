@@ -3,7 +3,7 @@ from exceptions import InputException
 from exceptions import NoInput
 
 
-def add_operation_func(num1, num2):
+def add_operation_func(num1: int, num2: int) -> int:
     try:
         if num1.isalpha() or num2.isalpha():
             raise InputException
@@ -17,7 +17,7 @@ def add_operation_func(num1, num2):
         return n_i
 
 
-def minus_operation_func(num1, num2):
+def minus_operation_func(num1: int, num2: int) -> int:
     try:
         if num1.isalpha() or num2.isalpha():
             raise InputException
@@ -31,7 +31,7 @@ def minus_operation_func(num1, num2):
         return n_i
 
 
-def mult_operation_func(num1, num2):
+def mult_operation_func(num1: int, num2: int) -> int:
     try:
         if num1.isalpha() or num2.isalpha():
             raise InputException
@@ -45,7 +45,7 @@ def mult_operation_func(num1, num2):
         return n_i
 
 
-def div_operation_func(num1, num2):
+def div_operation_func(num1: int, num2: int) -> int:
     try:
         if num2 == "0":
             raise DivByZero
