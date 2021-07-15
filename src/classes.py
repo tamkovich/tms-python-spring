@@ -9,7 +9,7 @@ class Point:
 
     @classmethod
     def clone(cls, point: 'Point') -> 'Point':
-        return Point(point.x, point.y)
+        return cls(point.x, point.y)
 
 
 class Figure(ABC):
