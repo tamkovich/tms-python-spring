@@ -22,7 +22,7 @@ for row in data:
         peoples_in_age_ranges["1-12"] += 1
     elif age <= 18:
         peoples_in_age_ranges["13-18"] += 1
-    elif 18 < age <= 25:
+    elif age <= 25:
         peoples_in_age_ranges["19-25"] += 1
     elif 25 < age <= 40:
         peoples_in_age_ranges["26-40"] += 1
