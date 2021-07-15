@@ -123,22 +123,6 @@ class Person:
             print("А я ничего не знаю")
 
 
-# person1 = Person(45, "мужчина", 186, 86, "рыжие", "зеленые")
-# print(person1.hair)
-# print(person1.weight)
-# print(person1.age)
-# person1.age = 81
-# person1.age = 181
-# person1.gender = "женщина"
-# person1.hair = "седые"
-# person1.hair = "серо-буро-малиновые"
-# person1.eyes = "слоновой кости"
-# person1.learn_a_word()
-# person1.learn_a_word()
-# person1.learn_a_word()
-# person1.tell_me_something()
-
-
 class Student(Person):
     def __init__(self, age, gender, height, weight, hair, eyes, faculty=None, score=0):
         super(Student, self).__init__(age, gender, height, weight, hair, eyes)
@@ -195,29 +179,6 @@ class Student(Person):
         result = self.words_dictionnary.get(word_to_ask, "Это мы не проходили!")
         print(result)
 
-
-# student1 = Student(18, "женщина", 176, 59, "мышиные", "голубиные")
-# print(student1.age)
-# # print(student1.faculty)
-# student1.faculty = "доярочный"
-# print(student1.faculty)
-# del student1.faculty
-# print(student1.faculty)
-# print(student1.score)
-# student1.faculty = "доярочный"
-# # student1.learn_a_word()
-# # student1.learn_a_word()
-# # student1.learn_a_word()
-# # student1.tell_me_something()
-# print(student1.score)
-# # student1.score = 10
-# # student1.miss_a_class()
-# # student1.session()
-# # student1.session()
-# # student1.session()
-#
-# student2 = Student(17, "мужчина", 175, 99, "зеленые", "красные")
-# student3 = Student(22, "мужчина", 195, 89, "синие", "белые")
 
 class Employee(Person):
     def __init__(self, age, gender, height, weight, hair, eyes, job, salary, experience):
@@ -293,53 +254,37 @@ class Employee(Person):
             print("Повышение не положено")
 
 
-# employee1 = Employee(45, "женщина", 165, 60, "рыжие", "синие", "плиточница", 500, 4)
-# #(self, age, gender, height, weight, hair, eyes, job, salary, experience):
-# print(employee1.job)
-# del employee1.job
-# employee1.job = "слесарь"
-# del employee1.experience
-# del employee1.salary
-# employee1.salary = 500
-# employee1.salary = 50
-# employee1.salary = 5000
-#
-# employee1.work_hard()
-# employee1.work_hard()
-# employee1.work_hard()
-# print(employee1.experience)
-# employee1.work_hard()
-# employee1.ask_a_promotion()
-
 class Teacher(Employee):
+    data = {
+        "Фланировать":
+            "неспешная прогулка без какой-либо конкретной цели",
+        "Стяжатель":
+            "человек, который стремится к наживе, накоплению денег",
+        "Пипидастр":
+            "пушистая разноцветную метелку для смахивания пыли",
+        "Пюпитр":
+            "наклонная подставка для нот или книг",
+        "Фраппировать":
+            "неприятно поражать, ошеломлять",
+        "Гаптофобия":
+            "паническая боязнь прикосновений других людей",
+        "Экивоки":
+            "двусмысленные намеки",
+        "Пертрубация":
+            "событие, которое меняет привычный ход вещей и вводит в замешательство",
+        "Транспарентный":
+            "обе стороны максимально честны и ничего не скрывают",
+        "Инсайт":
+            "так говорят, когда человек внезапно проникает в самую суть чего-либо",
+    }
+
     def __init__(
-            self, age, gender, height, weight, hair, eyes, job, salary, experience, *student
+        self, age, gender, height, weight, hair, eyes, job, salary, experience, *student
     ):
         super(Teacher, self).__init__(
             age, gender, height, weight, hair, eyes, job, salary, experience
         )
-        self.data = {
-            "Фланировать":
-                "неспешная прогулка без какой-либо конкретной цели",
-            "Стяжатель":
-                "человек, который стремится к наживе, накоплению денег",
-            "Пипидастр":
-                "пушистая разноцветную метелку для смахивания пыли",
-            "Пюпитр":
-                "наклонная подставка для нот или книг",
-            "Фраппировать":
-                "неприятно поражать, ошеломлять",
-            "Гаптофобия":
-                "паническая боязнь прикосновений других людей",
-            "Экивоки":
-                "двусмысленные намеки",
-            "Пертрубация":
-                "событие, которое меняет привычный ход вещей и вводит в замешательство",
-            "Транспарентный":
-                "обе стороны максимально честны и ничего не скрывают",
-            "Инсайт":
-                "так говорят, когда человек внезапно проникает в самую суть чего-либо",
-        }
+
         self.student = student
 
     def teach_students(self):
@@ -356,15 +301,6 @@ class Teacher(Employee):
                     print(f"{k} - {v}.")
             else:
                 print(f"Студент номер {i + 1} тупой и ничего не знает")
-
-
-# teacher1 = Teacher(
-# 31, "мужчина", 176, 78, "светлые", "синие",
-# "учитель", 500, 6, student1, student2, student3)
-#
-# teacher1.ask_students()
-# teacher1.teach_students()
-# teacher1.ask_students()
 
 
 # 2. Создать класс Car. Атрибуты: марка, модель, год выпуска, скорость(по
@@ -436,19 +372,3 @@ class Car:
     def turn(self):
         self.__speed = -self.__speed
         print("Машина развернулась в другую сторону.")
-
-
-car1 = Car("форд", "фиеста", 2013)
-car1.encrease_speed()
-car1.encrease_speed()
-car1.encrease_speed()
-car1.encrease_speed()
-car1.encrease_speed()
-car1.reduce_speed()
-car1.turn()
-car1.encrease_speed()
-car1.encrease_speed()
-car1.encrease_speed()
-car1.reduce_speed()
-car1.reduce_speed()
-car1.stop()
