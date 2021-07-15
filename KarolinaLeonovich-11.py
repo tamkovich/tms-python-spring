@@ -313,7 +313,7 @@ class Employee(Person):
 
 class Teacher(Employee):
     def __init__(
-            self, age, gender, height, weight, hair, eyes, job, salary, experience, *student
+        self, age, gender, height, weight, hair, eyes, job, salary, experience, *student
     ):
         super(Teacher, self).__init__(
             age, gender, height, weight, hair, eyes, job, salary, experience
