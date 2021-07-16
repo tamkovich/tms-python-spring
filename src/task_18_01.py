@@ -2,6 +2,8 @@ from classes import SQLiteDataBase
 from flask import Flask
 from flask import render_template
 from flask import request
+import os
+from shutil import copy
 
 app = Flask(__name__)
 
@@ -44,7 +46,17 @@ def add():
     return render_template('add.html')
 
 
+@app.route('/restore/')
+def restore():
+    global db, database_path
+    database_origin = os.path.join(os.getcwd(), 'products_origin.db')
+    copy(database_origin, database_path)
+    return render_template('index.html', all_items=db.get_all_items(table))
+
+
+database_path = os.path.join(os.getcwd(), 'products.db')
+db = SQLiteDataBase(database_path)
+table = 'products'
+
 if __name__ == '__main__':
-    db = SQLiteDataBase('products.db')
-    table = 'products'
     app.run()
