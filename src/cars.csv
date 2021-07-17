@@ -1,0 +1,47 @@
+"model_id","brand","model","release_year"
+1,1,"Corolla",2020
+2,1,"Camry",2020
+3,1,"C-HR",2020
+4,1,"Prius",2019
+5,1,"Rav4",2018
+6,1,"Highlander",2019
+7,1,"Fortuner",2018
+8,1,"Land Cruiser PRADO",2020
+9,1,"Land Cruiser 300",2021
+10,1,"Alphard",2020
+11,1,"Hilux",2020
+12,2,"X1",2018
+13,2,"X2",2018
+14,2,"X3",2019
+15,2,"X4",2020
+16,2,"X5",2018
+17,2,"X6",2021
+18,2,"520d xDrive",2020
+19,2,"420i Coupe",2021
+20,2,"Z4 Roadster",2020
+21,4,"Polo",2021
+22,4,"Passat",2015
+23,4,"Tiguan",2021
+24,4,"Touareg",2020
+25,4,"Crafter",2019
+26,3,"e-tron",2021
+27,3,"Q5",2020
+28,3,"Q8",2020
+29,3,"A5",2021
+30,3,"A4",2019
+31,5,"Rapid",2021
+32,5,"Octavia",2020
+33,5,"Superb",2021
+34,5,"Fabia",2019
+35,5,"Kodiaq",2020
+36,5,"Karoq",2020
+37,6,"Qashqai",2021
+38,6,"X-Trail",2020
+39,6,"Terrano",2021
+40,6,"Murano",2019
+41,7,"Logan",2021
+42,7,"Sandero Stepway",2020
+43,7,"Duster",2020
+44,7,"Kaptur",2019
+45,7,"Arkana",2019
+46,7,"KOLEOS",2019

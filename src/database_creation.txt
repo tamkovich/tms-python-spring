@@ -1,0 +1,90 @@
+create table brands(brand_id serial primary key, name varchar(20));
+
+ create table cars(
+     model_id serial primary key,
+     brand integer,
+     foreign key (brand) references brands(brand_id),
+     model varchar(20),
+     release_year integer)
+
+ insert into brands(name)
+ values('Toyota'),
+        ('BMW'),
+        ('Audi'),
+        ('Volkswagen'),
+        ('Skoda'),
+        ('Nissan'),
+        ('Renault');
+
+select * from brands
+
+ insert into cars(brand, model, release_year)
+ values(1, 'Corolla', 2020),
+        (1, 'Camry', 2020),
+        (1, 'C-HR', 2020),
+        (1, 'Prius', 2019),
+        (1, 'Rav4', 2018),
+        (1, 'Highlander', 2019),
+        (1, 'Fortuner', 2018),
+        (1, 'Land Cruiser PRADO', 2020),
+        (1, 'Land Cruiser 300', 2021),
+        (1, 'Alphard', 2020),
+        (1, 'Hilux', 2020);
+
+ insert into cars(brand, model, release_year)
+ values(2, 'X1', 2018),
+        (2, 'X2', 2018),
+        (2, 'X3', 2019),
+        (2, 'X4', 2020),
+        (2, 'X5', 2018),
+        (2, 'X6', 2021),
+        (2, '520d xDrive', 2020),
+        (2, '420i Coupe', 2021),
+        (2, 'Z4 Roadster', 2020);
+
+ insert into cars(brand, model, release_year)
+ values(3, 'Polo', 2021),
+        (3, 'Passat', 2015),
+        (3, 'Tiguan', 2021),
+        (3, 'Touareg', 2020),
+        (3, 'Crafter', 2019);
+
+ update cars set brand=4 where brand=3
+
+ insert into cars(brand, model, release_year)
+ values(3, 'e-tron', 2021),
+        (3, 'Q5', 2020),
+        (3, 'Q8', 2020),
+        (3, 'A5', 2021),
+        (3, 'A4', 2019);
+
+ insert into cars(brand, model, release_year)
+ values(5, 'Rapid', 2021),
+        (5, 'Octavia', 2020),
+        (5, 'Superb', 2021),
+        (5, 'Fabia', 2019),
+        (5, 'Kodiaq', 2020),
+        (5, 'Karoq', 2020);
+
+ insert into cars(brand, model, release_year)
+ values(6, 'Qashqai', 2021),
+        (6, 'X-Trail', 2020),
+        (6, 'Terrano', 2021),
+        (6, 'Murano', 2019);
+
+ insert into cars(brand, model, release_year)
+ values(7, 'Logan', 2021),
+        (7, 'Sandero Stepway', 2020),
+        (7, 'Duster', 2020),
+        (7, 'Kaptur', 2019),
+        (7, 'Arkana', 2019),
+        (7, 'KOLEOS', 2019);
+
+-- Query #1
+ select b.name, c.model, c.release_year
+     from brands b join cars c on b.brand_id = c.brand
+
+-- Query #2
+ select brands.name, cars.model, cars.release_year from
+         brands join cars on brands.brand_id = cars.brand
+         where cars.release_year=2021
