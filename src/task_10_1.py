@@ -6,8 +6,8 @@ task_10_1: Создать csv файл с данными следующей ст
 19-25, 26-40, 40+.
 """
 
-import json
 from csv_utils import age_classification_csv
+import json
 from csv_utils import write_csv
 
 write_csv([["Имя", "Фамилия", "Возраст"],
