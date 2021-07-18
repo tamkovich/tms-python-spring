@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Create a New Post {% endblock %}</h1>
+    {% for p in post %}
+        <a href="#">
+            <h2>{{p}}</h2>
+        </a>
+        {% if p == "product" %}
+            <table>
+            <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>amount</th>
+            <th>comment</th>
+            </tr> <!--ряд с ячейками заголовков-->              
+            {% for list in post["product"] %}
+            <!-- <div class="badge badge-primary">
+                {{list}}  
+            </div>
+            <hr>-->
+            <tr>
+            <td>{{list["id"]}}</td>
+            <td>{{list["name"]}}</td>
+            <td>{{list["price"]}}</td>
+            <td>{{list["amount"]}}</td>
+            <td>{{list["comment"]}}</td>
+            </tr>
+            {% endfor %}
+            </table>
+            
+        {% else %}
+              
+              <span class="badge badge-primary">{{post[p]}}</span>
+        <hr>
+            
+        {% endif %}
+
+    {% endfor %}
+
+{% endblock %}

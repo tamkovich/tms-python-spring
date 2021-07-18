@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Change Post {% endblock %}</h1>
+{% for p in post %}
+        <a href="#">
+            <h2>{{p}}</h2>
+        </a>
+        <span class="badge badge-primary">{{post[p]}}</span>
+        <hr>
+    {% endfor %}
+
+<form method="post">
+    <div class="form-group">
+        <label for="id">id</label>
+        <input type="text" name="id"
+               placeholder="vvedite id" class="form-control"
+               value="{{ request.form['id'] }}"></input>
+     </div>
+    <div class="form-group">
+        <label for="name">name</label>
+        <input type="text" name="name"
+               placeholder="Post name" class="form-control"
+               value="{{ request.form['name'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="price">price</label>
+        <input type="text" name="price"
+               placeholder="Post price" class="form-control"
+               value="{{ request.form['price'] }}"></input>
+    </div>
+
+
+    <div class="form-group">
+        <label for="amount">amount</label>
+        <input type="text" name="amount"
+               placeholder="Post amount" class="form-control"
+               value="{{ request.form['amount'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="comment">comment</label>
+        <textarea name="comment" placeholder="Post comment"
+                  class="form-control">{{ request.form['comment'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}

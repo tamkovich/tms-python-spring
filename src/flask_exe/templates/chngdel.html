@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Change and delete Post {% endblock %}</h1>
+        <div>
+            <table>
+            <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>amount</th>
+            <th>comment</th>
+            </tr> 
+            <tr>
+            <td>{{post["id"]}}</td>
+            <td>{{post["name"]}}</td>
+            <td>{{post["price"]}}</td>
+            <td>{{post["amount"]}}</td>
+            <td>{{post["comment"]}}</td>
+            </tr>
+            
+            </table>
+            <br>
+            <div class="form-group">
+                <form method="post">
+                <button value="value_buuton" type="submit" name = "delete" class="btn btn-primary">delete</button>
+                </form>
+            </div>
+        </div>
+
+
+<form method="post">
+    <div class="form-group">
+        <label for="name">name</label>
+        <input type="text" name="name"
+               placeholder="Post name" class="form-control"
+               value="{{ post["name"]}}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="price">price</label>
+        <input type="text" name="price"
+               placeholder="Post price" class="form-control"
+               value="{{ post["price"] }}"></input>
+    </div>
+
+
+    <div class="form-group">
+        <label for="amount">amount</label>
+        <input type="text" name="amount"
+               placeholder="Post amount" class="form-control"
+               value="{{ post["amount"] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="comment">comment</label>
+        <textarea name="comment" placeholder="Post comment"
+                  class="form-control">{{ post["comment"] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Change</button>
+    </div>
+</form>
+{% endblock %}
