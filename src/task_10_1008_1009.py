@@ -9,24 +9,23 @@ task_10_10.08 + 10.09:
 (Имя товара, цена, количество, комментарий).
 Прочесть файл, Добавить новую позицию в конец. Удалить третью строку.
 """
-from csv_utils import del_pos_csv, reading_csv, write_csv, write_pos_csv
-from csv_utils import full_cost_csv, max_price_csv, min_price_csv, del_quantity_csv
+import csv_utils
 
-write_csv([["Имя товара", "Цена", "Количество", "Комментарий"],
-           ["стол", 100, 2, "белый"],
-           ["стул", 20, 12, "геймерский"],
-           ["лопата", 5, 31, "новый"],
-           ["реактор", 100000, 1, "б/у"],
-           ["зажигалка", 2, 121, "турбо"],
-           ["автомобиль", 15000, 3, "BMW"],
-           ["суперкар", 100000, 2, "ламборджини"]],
-          "product_inf.csv")
+csv_utils.write_csv([["Имя товара", "Цена", "Количество", "Комментарий"],
+                     ["стол", 100, 2, "белый"],
+                     ["стул", 20, 12, "геймерский"],
+                     ["лопата", 5, 31, "новый"],
+                     ["реактор", 100000, 1, "б/у"],
+                     ["зажигалка", 2, 121, "турбо"],
+                     ["автомобиль", 15000, 3, "BMW"],
+                     ["суперкар", 100000, 2, "ламборджини"]],
+                    "product_inf.csv")
 
-write_pos_csv(["снегурочка", 2, 3, "ДОБАВЛЕНО"], "product_inf.csv", -1)
+csv_utils.write_pos_csv(["снегурочка", 2, 3, "ДОБАВЛЕНО"], "product_inf.csv", -1)
 
-del_pos_csv("product_inf.csv", 3)
+csv_utils.del_pos_csv("product_inf.csv", 3)
 
-print(reading_csv("product_inf.csv"))
+print(csv_utils.reading_csv("product_inf.csv"))
 
 #   ВОПРОС: в csv файлы можно что-то добавлять/удалять напрямую (если да, то как?),
 #   или только через преобразование в списки и перезапись?
@@ -42,7 +41,7 @@ print(reading_csv("product_inf.csv"))
 4) Создать функцию уменьшения количества товара(на n, по-умолчанию на 1)
 """
 
-print(f'Полная стоимость всех товаров = {full_cost_csv("product_inf.csv")}')
-print(f'Самый дорогой товар = {max_price_csv("product_inf.csv")}')
-print(f'Самый дешевый товар = {min_price_csv("product_inf.csv")}')
-del_quantity_csv("product_inf.csv", "зажигалка", 10)
+print(f'Полная стоимость всех товаров = {csv_utils.full_cost_csv("product_inf.csv")}')
+print(f'Самый дорогой товар = {csv_utils.max_price_csv("product_inf.csv")}')
+print(f'Самый дешевый товар = {csv_utils.min_price_csv("product_inf.csv")}')
+csv_utils.del_quantity_csv("product_inf.csv", "зажигалка", 10)

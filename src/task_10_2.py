@@ -5,7 +5,8 @@ task_10_2: Создать csv файл с данными о ежедневной
 градусы) для Минск за последние 7 дней.
 """
 
-from csv_utils import write_csv, average_weather_csv
+from csv_utils import average_weather_csv
+from csv_utils import write_csv
 
 write_csv([["Дата", "Место", "Градусы", "Скорость ветра"],
            ["09.07.21", "Минск", 30, 5.1],

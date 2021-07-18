@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
 
 def write_pos_csv(input_list_pos: list, file_name_write_pos: str, position=-1) -> None:
-    """Читает файл в список, добавляет в список  позицию и перезаписывает новый список в тот же файл"""
+    """Читает файл в список, добавляет позицию и перезаписывает новый список в тот же файл"""
     import csv
     with open(file_name_write_pos, "r") as f3:
         list_write_pos = [row1 for row1 in csv.reader(f3)]
@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
 
 def del_pos_csv(file_name_del_pos: str, position=-1) -> None:
-    """Читает файл в список, удаляет позицию из списка и перезаписывает новый список в тот же файл"""
+    """Читает файл в список, удаляет позицию и перезаписывает новый список в тот же файл"""
     import csv
     with open(file_name_del_pos, "r") as f5:
         list_del_pos = [row2 for row2 in csv.reader(f5)]
@@ -149,7 +149,9 @@ if __name__ == "__main__":
 
 def del_quantity_csv(file_name_del_quantity: str, product_name: str, n=1) -> None:
     """Читает файл в список, уменьшает количество нужного товара по его названию
-    и индексу кол-ва из 0 стр., формирует новый список и перезаписывает его в файл"""
+
+    и индексу кол-ва из 0 стр., формирует новый список и перезаписывает его в файл
+    """
     import csv
     with open(file_name_del_quantity, "r") as f14:
         for ll, elem in enumerate(list(csv.reader(f14))[0]):
@@ -235,8 +237,9 @@ def average_weather_csv(file_name_average_weather: str, city: str, days=2) -> tu
         temp_list_temper = []
         temp_list_wind = []
         for s in temp_list_weather:
-            if s[index_city] == city and (datetime.datetime.now() -
-                                          datetime.datetime.strptime(s[index_date], "%d.%m.%y")).days < days:
+            if s[index_city] == city and \
+                    (datetime.datetime.now() - datetime.datetime.strptime(s[index_date],
+                                                                          "%d.%m.%y")).days < days:
                 temp_list_temper.append(float(s[index_temper]))
                 temp_list_wind.append(float(s[index_wind]))
     average_temper = sum(temp_list_temper) / len(temp_list_temper)

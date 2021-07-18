@@ -7,7 +7,8 @@ task_10_1: Создать csv файл с данными следующей ст
 """
 
 import json
-from csv_utils import write_csv, age_classification_csv
+from csv_utils import age_classification_csv
+from csv_utils import write_csv
 
 write_csv([["Имя", "Фамилия", "Возраст"],
            ["Иванов", "Иван", 20],
