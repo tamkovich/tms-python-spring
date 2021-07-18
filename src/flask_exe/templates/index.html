@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Flask {% endblock %}
+{% block content %}
+    <h1>Welcome to Flask </h1>
+    <div>
+        <ul class="navbar-nav">
+    {% for dict in post %}
+        <li class="nav-item active">
+        <a  
+            href="/{{dict["id"]}}"><h2>{{dict["name"]}}</h2> 
+        </a>
+        <span class="badge badge-primary">{{dict["comment"]}}</span>
+        </li>
+    {% endfor %}
+     </ul>
+    </div>
+{% endblock %}
