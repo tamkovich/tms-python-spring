@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}{{ selected_position[1] }}{% endblock %}
+
+{% block content %}
+
+    <table align="center" width="600" bgcolor="#ffcc00">
+        <tbody>
+	    <tr>
+        <td>название</td>
+        <td>{{selected_position[1]}}</td>
+        </tr>
+        <tr>
+            <td>стоимость</td>
+        <td>{{selected_position[2]}}</td>
+            </tr>
+        <tr>
+        <td>количество</td>
+        <td>{{ selected_position[3] }}</td>
+        </tr>
+        <tr>
+        <td>примечания</td>
+        <td>{{ selected_position[4] }}</td>
+        </tr>
+    </table>
+    <br>
+    <a href="/deleteposition/{{ selected_position[0] }}">Удалить позицию</a>
+    <a href="/changeposition/{{ selected_position[0] }}">Изменить позицию</a>
+	
+{% endblock %}
