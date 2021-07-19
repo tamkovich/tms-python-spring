@@ -29,7 +29,7 @@ class Wine:
 
     @color.setter
     def color(self, new_color: str):
-        if new_color.capitalize() in Wine.COLORS:
+        if new_color.capitalize() in self.COLORS:
             self.__color = new_color.capitalize()
         else:
             self.__color = "Red"
