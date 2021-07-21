@@ -9,7 +9,6 @@ task_11_11.09:
 
 class Dog:
     """ Создан класс в соответствии с условиями задачи"""
-
     def __init__(self, name: str, age: int, master: str) -> None:
         self.name = name
         self.age = age
@@ -33,7 +32,6 @@ class Dog:
 
 class Cat:
     """ Создан класс в соответствии с условиями задачи"""
-
     def __init__(self, name: str, age: int, master: str) -> None:
         self.name = name
         self.age = age
@@ -57,7 +55,6 @@ class Cat:
 
 class Parrot:
     """ Создан класс в соответствии с условиями задачи"""
-
     def __init__(self, name: str, age: int, master: str) -> None:
         self.name = name
         self.age = age
