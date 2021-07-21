@@ -108,7 +108,7 @@ dict_operation = {
     10: liters_to_gallons,
     11: pints_to_liters,
     12: liters_to_pints
-    }
+}
 
 if __name__ == "__main__":
     print("0 - выход из программы",
