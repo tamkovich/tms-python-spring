@@ -14,7 +14,7 @@ This parrot cannot fly.
 
 
 class Bird:
-    """ Создан родительский класс"""
+    """Создан родительский класс"""
     def __init__(self, color: str) -> None:
         self.color = color
 
@@ -23,7 +23,7 @@ class Bird:
 
 
 class Parrot(Bird):
-    """ Создан дочерний класс с доп. атрибутами и методами"""
+    """Создан дочерний класс с доп. атрибутами и методами"""
     def __init__(self, color: str, weight: float, height: int) -> None:
         self.color = color
         self.weight = weight
