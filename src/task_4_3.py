@@ -2,12 +2,12 @@
 # Добавить каждому ключу число равное длине этого ключа (пример {‘key’: ‘value’} -> {‘key3’:
 # ‘value’}). Чтобы получить список ключей - использовать метод .keys()(подсказка: создается
 # новый ключ с цифрой в конце, старый удаляется)
-dict = {'test': 'test_value', 'europe': 'eur', 'dollar': 'usd', 'ruble': 'rub'}
-list_keys = list(dict.keys())
-for key in list_keys:
+dct = {'test': 'test_value', 'europe': 'eur', 'dollar': 'usd', 'ruble': 'rub'}
+dct_new = {}
+for key, value in dct.items():
     key_new = key + str(len(key))
-    dict[key_new] = dict.pop(key)
-print(dict)
+    dct_new[key_new] = value
+print(dct_new)
 
 dict_1 = {'test': 'test_value', 'europe': 'eur', 'dollar': 'usd', 'ruble': 'rub'}
 list_1_keys = list(dict_1.keys())
