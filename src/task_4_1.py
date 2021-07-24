@@ -18,4 +18,3 @@ while k < len(lst_1):
     k += 1
     new_lst_1.append(o)
 print(new_lst_1)
-
