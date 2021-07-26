@@ -1,7 +1,9 @@
-# Функции по работе с csv файлами:
-# Задание 10.08  (HW)
+"""
+Функции по работе с csv файлами:
+Задание 10.08  (HW)
+"""
 
-# Чтение.
+"""Чтение."""
 
 
 def reading_csv(file_read: str) -> list:
@@ -12,11 +14,7 @@ def reading_csv(file_read: str) -> list:
     return finish_list_read
 
 
-if __name__ == "__main__":
-    print(reading_csv("file1.csv"))
-
-
-# Запись (перезапись).
+"""Запись (перезапись)."""
 
 
 def write_csv(input_list: list, file_name_write: str) -> None:
@@ -27,11 +25,7 @@ def write_csv(input_list: list, file_name_write: str) -> None:
         csv_writer.writerows(input_list)
 
 
-if __name__ == "__main__":
-    write_csv([["картина", "корзина", "собаченка"], [1, 2, 3, 4, 5]], "file11.csv")
-
-
-# Добавление записи (по позиции, по-умолчанию в конец).
+"""Добавление записи (по позиции, по-умолчанию в конец)."""
 
 
 def write_pos_csv(input_list_pos: list, file_name_write_pos: str, position=-1) -> None:
@@ -48,11 +42,7 @@ def write_pos_csv(input_list_pos: list, file_name_write_pos: str, position=-1) -
         csv_writer.writerows(list_write_pos)
 
 
-if __name__ == "__main__":
-    write_pos_csv(["тест", "записи", "без", "позиции"], "file11.csv")
-
-
-# Удаление записи(по позиции,по-умолчанию последнюю).
+"""Удаление записи(по позиции,по-умолчанию последнюю)."""
 
 
 def del_pos_csv(file_name_del_pos: str, position=-1) -> None:
@@ -66,12 +56,10 @@ def del_pos_csv(file_name_del_pos: str, position=-1) -> None:
         csv_writer.writerows(list_del_pos)
 
 
-if __name__ == "__main__":
-    del_pos_csv("file11.csv", 1)
-
-
-# Задание 10.09  (HW)
-# 1) Функция подсчета полной стоимости всех товаров.
+"""
+Задание 10.09  (HW)
+1) Функция подсчета полной стоимости всех товаров.
+"""
 
 
 def full_cost_csv(file_name_full_cost: str) -> int:
@@ -93,11 +81,7 @@ def full_cost_csv(file_name_full_cost: str) -> int:
     return full_cost
 
 
-if __name__ == "__main__":
-    print(f'Полная стоимость всех товаров = {full_cost_csv("product_inf.csv")}')
-
-
-# 2) Функция поиска самого дорогого товара.
+"""2) Функция поиска самого дорогого товара."""
 
 
 def max_price_csv(file_name_max_price: str) -> list:
@@ -117,11 +101,7 @@ def max_price_csv(file_name_max_price: str) -> list:
     return product_max_price
 
 
-if __name__ == "__main__":
-    print(f'Самый дорогой товар = {max_price_csv("product_inf.csv")}')
-
-
-# 3) Функция поиска самого дешевого товара.
+"""3) Функция поиска самого дешевого товара."""
 
 
 def min_price_csv(file_name_min_price: str) -> list:
@@ -141,11 +121,8 @@ def min_price_csv(file_name_min_price: str) -> list:
     return product_min_price
 
 
-if __name__ == "__main__":
-    print(f'Самый дешевый товар = {min_price_csv("product_inf.csv")}')
+"""4) Функция уменьшения количества товара(на n, по-умолчанию на 1)"""
 
-
-# 4) Функция уменьшения количества товара(на n, по-умолчанию на 1)
 
 def del_quantity_csv(file_name_del_quantity: str, product_name: str, n=1) -> None:
     """Читает файл в список, уменьшает количество нужного товара по его названию
@@ -167,12 +144,10 @@ def del_quantity_csv(file_name_del_quantity: str, product_name: str, n=1) -> Non
         csv_writer.writerows(list_del_quantity)
 
 
-if __name__ == "__main__":
-    del_quantity_csv("product_inf.csv", "зажигалка", 10)
-
-
-# task_10_1  (HW)
-# Функция классификации людей по возрасту.
+"""
+task_10_1  (HW)
+Функция классификации людей по возрасту.
+"""
 
 
 def age_classification_csv(file_name_age_classification: str) -> dict:
@@ -210,12 +185,10 @@ def age_classification_csv(file_name_age_classification: str) -> dict:
     return dict_age_class
 
 
-if __name__ == "__main__":
-    print(age_classification_csv("people_inf.csv"))
-
-
-# task_10_2   (HW)
-# Нахождение средней погоды (скорость ветра и градусы) за последние 7 дней.
+"""
+task_10_2   (HW)
+Нахождение средней погоды (скорость ветра и градусы) за последние 7 дней.
+"""
 
 
 def average_weather_csv(file_name_average_weather: str, city: str, days=2) -> tuple:
@@ -248,5 +221,14 @@ def average_weather_csv(file_name_average_weather: str, city: str, days=2) -> tu
 
 
 if __name__ == "__main__":
+    print(reading_csv("people_inf.csv"))
+    write_csv([["картина", "корзина", "собаченка"], [1, 2, 3, 4, 5]], "file11.csv")
+    write_pos_csv(["тест", "записи", "без", "позиции"], "file11.csv")
+    del_pos_csv("file11.csv", 1)
+    print(f'Полная стоимость всех товаров = {full_cost_csv("product_inf.csv")}')
+    print(f'Самый дорогой товар = {max_price_csv("product_inf.csv")}')
+    print(f'Самый дешевый товар = {min_price_csv("product_inf.csv")}')
+    del_quantity_csv("product_inf.csv", "зажигалка", 10)
+    print(age_classification_csv("people_inf.csv"))
     temper, wind = average_weather_csv("weather_inf.csv", "Минск", 7)
     print(f'Средняя температура = {temper}, средняя скорость ветра = {wind}')
