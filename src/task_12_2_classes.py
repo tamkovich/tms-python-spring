@@ -63,7 +63,7 @@ class Triangle(Figure):
         self.bc = ((self.c.x - self.b.x) ** 2 + (self.c.y - self.b.y) ** 2) ** 0.5
 
     def area_m(self) -> None:
-        pp = (self.ab + self.ac + self.bc)/2
+        pp = (self.ab + self.ac + self.bc) / 2
         s = (pp * (pp - self.ab) * (pp - self.ac) * (pp - self.bc))**0.5
         self.area_a = s
 
