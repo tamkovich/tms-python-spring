@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Cклад{% endblock %}
+
+{% block content %}
+
+    <table align="center" width="600" bgcolor="#ffcc00">
+        <thead>
+            <tr>
+                <th>Название позиции</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Комментарий</th>
+            </tr>
+        <tbody>
+	{% for every_position in base_data %}
+	    <tr>
+		<td><a href="/stock/{{every_position[0]}}">{{every_position[1]}}</a></td>
+        <td>{{every_position[2]}}</td>
+        <td>{{every_position[3]}}</td>
+        <td>{{every_position[4]}}</td>
+        </tr>
+	{% endfor %}
+    </table>
+    <br>
+    <a href="/addposition/new">Добавить позицию</a>
+	
+{% endblock %}
