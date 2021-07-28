@@ -51,8 +51,8 @@ for i in k:
 # тут записываем таблицу с машинами. Небольшой гемор
 # изза структуры сиэсви файла
 
-with open('csv.csv', newline='') as File:
-    reader = csv.reader(File, delimiter=";")
+with open('csv.csv', newline='') as file:
+    reader = csv.reader(file, delimiter=";")
     for row in reader:
         if row[3] == "-":
             cursor.execute('''SELECT * FROM brand''')
