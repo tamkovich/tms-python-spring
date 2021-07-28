@@ -27,8 +27,8 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS car (id INTEGER PRIMARY KEY AUTOINC
 # какого-то скаченого csv из интернета
 
 
-with open('csv.csv', newline='') as File:
-    reader = csv.reader(File, delimiter=";")
+with open('csv.csv', newline='') as file:
+    reader = csv.reader(file, delimiter=";")
     list_brands = []
     for row in reader:
         if row[0] not in list_brands:
