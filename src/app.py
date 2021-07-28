@@ -32,7 +32,7 @@ def delete_something(product_id: int):
     conn.commit()
 
 
-def add_position(name, price, quantity, comment):
+def add_position(name: str, price: int, quantity: int, comment: str):
     cursor.execute('''INSERT INTO products
                    (col_name, col_price, col_quantity, col_comment)
                    VALUES (%s,%s,%s,%s)''', (name, price, quantity, comment))
