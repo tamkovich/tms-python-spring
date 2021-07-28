@@ -27,7 +27,7 @@ def select_something(product_id: int) -> list:
     return rows[0]
 
 
-def delete_something(iden):
+def delete_something(product_id: int):
     cursor.execute("DELETE from products WHERE id=(%s)", (iden,))
     conn.commit()
 
