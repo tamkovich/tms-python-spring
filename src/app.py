@@ -21,7 +21,7 @@ def select_all():
     return rows
 
 
-def select_something(iden):
+def select_something(product_id: int) -> list:
     cursor.execute("SELECT * from products WHERE id=(%s)", (iden,))
     rows = cursor.fetchall()
     return rows[0]
