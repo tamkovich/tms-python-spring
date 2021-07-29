@@ -6,12 +6,9 @@
 """
 
 
-def palindrom(word):
-    if word[::-1] == word:
-        return 1
-    else:
-        return 0
+def is_palindrom(word: str) -> bool:
+    return word[::-1] == word
 
 
 list_of_word = ["123", "432", "aziza"]
-print([f"Слова {i} является палиндром" for i in list_of_word if palindrom(i) == 1])
+print([f"Слова {word} является палиндром" for word in list_of_word if is_palindrom(word)])

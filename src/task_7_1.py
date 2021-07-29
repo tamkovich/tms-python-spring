@@ -6,16 +6,16 @@
 """
 
 
-def fact2(n):
+def fact2(start, n):
     p = 1
-    if n % 2 != 0:
-        for i in range(1, n + 1, 2):
-            p *= i
-    else:
-        for i in range(2, n + 1, 2):
-            p *= i
+    for i in range(start, n + 1, 2):
+        p *= i
     return p
 
 
 number = [5, 8, 4, 9, 12]
-print([fact2(int(i)) for i in number])
+for i in number:
+    if i % 2 != 0:
+        print(fact2(1, i))
+    else:
+        print(fact2(2, i))
