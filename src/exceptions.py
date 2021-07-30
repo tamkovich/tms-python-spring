@@ -3,17 +3,17 @@ list_KeyError = []
 list_ZeroDivisionError = []
 
 
-def add_error_v(v: ValueError) -> None:
+def add_value_error(v: ValueError) -> None:
     """Ф-ция добавляет ValueError в соответствующий список """
     list_ValueError.append(v)
 
 
-def add_error_k(k: KeyError) -> None:
+def add_key_error(k: KeyError) -> None:
     """Ф-ция добавляет KeyError в соответствующий список """
     list_KeyError.append(k)
 
 
-def add_error_z(z: ZeroDivisionError) -> None:
+def add_zero_division_error(z: ZeroDivisionError) -> None:
     """Ф-ция добавляет ZeroDivisionError в соответствующий список """
     list_ZeroDivisionError.append(z)
 

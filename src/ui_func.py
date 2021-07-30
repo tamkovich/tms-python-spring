@@ -1,6 +1,3 @@
-# Реализовать пользовательский интерфейс с бесконечным циклом.
-# Добавить валидацию входных данных.
-
 import exceptions
 import func
 
@@ -26,13 +23,13 @@ def start_calculations() -> None:
             dict_operation[operation](num1, num2)
         except ValueError as v:
             print("Вы ввели не число, расчет невозможен!")
-            exceptions.add_error_v(v)
+            exceptions.add_value_error(v)
             continue
         except KeyError as k:
             print("Знак операции введен не корректно!")
-            exceptions.add_error_k(k)
+            exceptions.add_key_error(k)
             continue
         except ZeroDivisionError as z:
             print("На ноль делить нельзя!")
-            exceptions.add_error_z(z)
+            exceptions.add_zero_division_error(z)
             continue
