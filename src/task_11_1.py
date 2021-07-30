@@ -47,7 +47,7 @@ class Man:
         self.age += 1
 
 
-class Women:
+class Woman:
     """Класс Женщины - хорошеют, иногда варят борщ"""
     def __init__(self, name: str, last_name: str, eye_size: int) -> None:
         self.__name = name
