@@ -136,10 +136,11 @@ if __name__ == "__main__":
         num = input("Введите число для конвертации: ")
         try:
             num = float(num)
-            dict_operation[operation](num)
         except ValueError:
             print("Вы ввели не число, конвертация невозможна!")
             continue
+        try:
+            dict_operation[operation](num)
         except KeyError:
             print("Введенный номер операции не доступен!")
             continue
