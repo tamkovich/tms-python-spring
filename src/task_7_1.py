@@ -61,18 +61,18 @@ while True:
     number = input()
     if number.isdigit():
         list_of_trans = {
-            1: fun_inch(int(number)),
-            2: fun_santimetr(int(number)),
-            3: fun_milli(int(number)),
-            4: fun_kilo(int(number)),
-            5: fun_funt(int(number)),
-            6: fun_kilogram(int(number)),
-            7: fun_unsiya(int(number)),
-            8: fun_gramm(int(number)),
-            9: fun_galon(int(number)),
-            10: fun_litr(int(number)),
-            11: fun_pinti(int(number)),
-            12: fun_litr_pint(int(number))
+            1: fun_inch,
+            2: fun_santimetr,
+            3: fun_milli,
+            4: fun_kilo,
+            5: fun_funt,
+            6: fun_kilogram,
+            7: fun_unsiya,
+            8: fun_gramm,
+            9: fun_galon,
+            10: fun_litr,
+            11: fun_pinti,
+            12: fun_litr_pint
         }
         print("1. Дюймы в сантиметры")
         print("2. Сантиметры в дюймы")
@@ -89,4 +89,4 @@ while True:
         print("Выберите вариант перевода:  ")
         trans = int(input())
         if trans in list_of_trans:
-            print(round(list_of_trans[trans], 3))
+            print(round(list_of_trans[trans](int(number)), 3))
