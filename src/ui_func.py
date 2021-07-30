@@ -2,14 +2,13 @@ from classes import SQLiteDataBase
 
 
 def show_menu():
-    global MENU
     print(f"\n{'-' * 30}")
     for row in MENU:
         print(row)
 
 
 def get_user_choice():
-    CHOICE = {"0", "1", "2", "3", "4", "5", "6"}
+    CHOICE = ("0", "1", "2", "3", "4", "5", "6")
     while True:
         choice = input("Your choice: ")
         if choice in CHOICE:
