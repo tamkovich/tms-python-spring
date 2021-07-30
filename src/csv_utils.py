@@ -2,13 +2,13 @@
 Функции по работе с csv файлами:
 Задание 10.08  (HW)
 """
+import csv
 
 """Чтение."""
 
 
 def reading_csv(file_read: str) -> list:
     """Открывает файл для чтения, формирует и возвращает список строк"""
-    import csv
     with open(file_read, "r") as f:
         finish_list_read = [row for row in csv.reader(f)]
     return finish_list_read
@@ -19,7 +19,6 @@ def reading_csv(file_read: str) -> list:
 
 def write_csv(input_list: list, file_name_write: str) -> None:
     """Создает/открывает файл для записи и записывает в него входящий список по строкам"""
-    import csv
     with open(file_name_write, "w") as f2:
         csv_writer = csv.writer(f2, lineterminator="\n")
         csv_writer.writerows(input_list)
@@ -30,7 +29,6 @@ def write_csv(input_list: list, file_name_write: str) -> None:
 
 def write_pos_csv(input_list_pos: list, file_name_write_pos: str, position=-1) -> None:
     """Читает файл в список, добавляет позицию и перезаписывает новый список в тот же файл"""
-    import csv
     with open(file_name_write_pos, "r") as f3:
         list_write_pos = [row1 for row1 in csv.reader(f3)]
     if position == -1:
@@ -47,7 +45,6 @@ def write_pos_csv(input_list_pos: list, file_name_write_pos: str, position=-1) -
 
 def del_pos_csv(file_name_del_pos: str, position=-1) -> None:
     """Читает файл в список, удаляет позицию и перезаписывает новый список в тот же файл"""
-    import csv
     with open(file_name_del_pos, "r") as f5:
         list_del_pos = [row2 for row2 in csv.reader(f5)]
     del list_del_pos[position]
@@ -64,7 +61,6 @@ def del_pos_csv(file_name_del_pos: str, position=-1) -> None:
 
 def full_cost_csv(file_name_full_cost: str) -> int:
     """В 0 стр. находит индексы цены и количества, по ним считает стоимость в остальных строках"""
-    import csv
     full_cost = 0
     with open(file_name_full_cost, "r") as f6:
         temp_list_header = list(csv.reader(f6))[0]
@@ -86,7 +82,6 @@ def full_cost_csv(file_name_full_cost: str) -> int:
 
 def max_price_csv(file_name_max_price: str) -> list:
     """В 0 стр. находит индекс цены, находит max цену в остальных стр. и отбирает товары по ней"""
-    import csv
     product_max_price = []
     with open(file_name_max_price, "r") as f8:
         for j, elem in enumerate(list(csv.reader(f8))[0]):
@@ -106,7 +101,6 @@ def max_price_csv(file_name_max_price: str) -> list:
 
 def min_price_csv(file_name_min_price: str) -> list:
     """В 0 стр. находит индекс цены, находит min цену в остальных стр. и отбирает товары по ней"""
-    import csv
     product_min_price = []
     with open(file_name_min_price, "r") as f11:
         for k, elem in enumerate(list(csv.reader(f11))[0]):
@@ -129,7 +123,6 @@ def del_quantity_csv(file_name_del_quantity: str, product_name: str, n=1) -> Non
 
     и индексу кол-ва из 0 стр., формирует новый список и перезаписывает его в файл
     """
-    import csv
     with open(file_name_del_quantity, "r") as f14:
         for ll, elem in enumerate(list(csv.reader(f14))[0]):
             if elem == "Количество":
@@ -152,7 +145,6 @@ task_10_1  (HW)
 
 def age_classification_csv(file_name_age_classification: str) -> dict:
     """В 0 стр. находит индекс возраста, по нему классиф. остальные данные"""
-    import csv
     with open(file_name_age_classification, "r") as f17:
         for o, elem in enumerate(list(csv.reader(f17))[0]):
             if elem == "Возраст":
@@ -193,7 +185,6 @@ task_10_2   (HW)
 
 def average_weather_csv(file_name_average_weather: str, city: str, days=2) -> tuple:
     """Находит индексы всех параметров, формирует списки нужных по фильтрам и считает средние"""
-    import csv
     import datetime
     with open(file_name_average_weather, "r") as f19:
         for r, elem in enumerate(list(csv.reader(f19))[0]):
