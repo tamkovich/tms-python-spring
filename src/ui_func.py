@@ -2,14 +2,13 @@ from classes import SQLiteDataBase
 
 
 def show_menu():
-    global MENU
     print(f"\n{'-' * 30}")
     for row in MENU:
         print(row)
 
 
 def get_user_choice():
-    CHOICE = {"0", "1", "2", "3", "4", "5", "6"}
+    CHOICE = ("0", "1", "2", "3", "4", "5", "6")
     while True:
         choice = input("Your choice: ")
         if choice in CHOICE:
@@ -87,14 +86,14 @@ def erase_item_by_id(db: 'SQLiteDataBase', table: str):
 
 
 MENU = [
-        '1 - View all items',
-        '2 - View columns names',
-        '3 - View item by id',
-        '4 - Add item',
-        '5 - Update item by id',
-        '6 - Erase item by id',
-        '0 - Exit program'
-    ]
+    '1 - View all items',
+    '2 - View columns names',
+    '3 - View item by id',
+    '4 - Add item',
+    '5 - Update item by id',
+    '6 - Erase item by id',
+    '0 - Exit program'
+]
 
 ACTIONS = {
     '1': view_all_items,
