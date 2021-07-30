@@ -51,7 +51,6 @@ class Triangle(Figure):
         self.point2 = point2
         self.point3 = point3
 
-        # Нахождения площадь треугольника
     def fun_area(self):
         len_a = ((self.point2.x - self.point1.x) ** 2 + (self.point2.y - self.point1.y) ** 2) ** 0.5
         len_b = ((self.point3.x - self.point1.x) ** 2 + (self.point3.y - self.point1.y) ** 2) ** 0.5
@@ -59,7 +58,6 @@ class Triangle(Figure):
         p = (len_a + len_b + len_c) / 2
         return (p * (p - len_a) * (p - len_b) * (p - len_c)) ** 0.5
 
-        # Нахождения периметра треугольника
     def fun_perimetr(self):
         len_a = ((self.point2.x - self.point1.x) ** 2 + (self.point2.y - self.point1.y) ** 2) ** 0.5
         len_b = ((self.point3.x - self.point1.x) ** 2 + (self.point3.y - self.point1.y) ** 2) ** 0.5
