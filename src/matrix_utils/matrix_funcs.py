@@ -1,9 +1,9 @@
 from matrix_utils import matrix_classes
-# PyCharm ругает строку (Unresolved reference 'matrix_utils' и 'matrix_classes'), но без нее не работает.
+# PyCharm ругает: Unresolved reference 'matrix_utils' и 'matrix_classes', но без 1стр не работает
 
 
 def find_max_matrix_element(my_matrix: matrix_classes.Matrix) -> int or float:
-    """ Ф-ция находит max элемент во входящем объекте класса Matrix"""
+    """Ф-ция находит max элемент во входящем объекте класса Matrix"""
     list_max = []
     for i in my_matrix.data:
         list_max.append(max(i))
@@ -12,7 +12,7 @@ def find_max_matrix_element(my_matrix: matrix_classes.Matrix) -> int or float:
 
 
 def find_min_matrix_element(my_matrix: matrix_classes.Matrix) -> int or float:
-    """ Ф-ция находит min элемент во входящем объекте класса Matrix"""
+    """Ф-ция находит min элемент во входящем объекте класса Matrix"""
     list_min = []
     for i in my_matrix.data:
         list_min.append(min(i))
@@ -21,7 +21,7 @@ def find_min_matrix_element(my_matrix: matrix_classes.Matrix) -> int or float:
 
 
 def find_sum_matrix_elements(my_matrix: matrix_classes.Matrix) -> int or float:
-    """ Ф-ция находит сумму элементов входящего объекта класса Matrix"""
+    """Ф-ция находит сумму элементов входящего объекта класса Matrix"""
     list_sum = []
     for i in my_matrix.data:
         list_sum.append(sum(i))
