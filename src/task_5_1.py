@@ -14,18 +14,15 @@ while True:
     Y = float(input("Введите Y: "))
     if sign == "+":
         Z = X + Y
-        print(Z)
     elif sign == "-":
         Z = X - Y
-        print(Z)
     elif sign == "*":
         Z = X * Y
-        print(Z)
     elif sign == "/":
-        Z = X / Y
-        if Y != 0:
-            print(Z)
-        else:
+        if Y == 0:
             print("Деление на ноль!")
+        else:
+            Z = X / Y
     else:
         print("Неверный знак операции")
+    print(Z)
