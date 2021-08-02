@@ -1,5 +1,4 @@
 from matrix_utils import matrix_classes
-# PyCharm ругает: Unresolved reference 'matrix_utils' и 'matrix_classes', но без 1стр не работает
 
 
 def find_max_matrix_element(my_matrix: matrix_classes.Matrix) -> int or float:
