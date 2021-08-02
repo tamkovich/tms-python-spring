@@ -23,76 +23,88 @@ task_7_2: Написать программу, со следующим инте�
 """
 
 
-def inches_to_centimeters(numb: float) -> None:
+def inches_to_centimeters(numb: float) -> float:
     """Ф-ция переводит дюймы в сантиметры и выводит результат"""
     rez = numb * 2.54
-    print(f"{numb} дюймов = {rez} сантиметров")  # или return rez
+    print(f"{numb} дюймов = {rez} сантиметров")
+    return rez
 
 
-def centimeters_to_inches(numb: float) -> None:
+def centimeters_to_inches(numb: float) -> float:
     """Ф-ция переводит сантиметры в дюймы и выводит результат"""
     rez = numb / 2.54
-    print(f"{numb} сантиметров = {rez} дюймов")  # или return rez
+    print(f"{numb} сантиметров = {rez} дюймов")
+    return rez
 
 
-def miles_to_kilometers(numb: float) -> None:
+def miles_to_kilometers(numb: float) -> float:
     """Ф-ция переводит мили в километры и выводит результат"""
     rez = numb * 1.609344
-    print(f"{numb} миль = {rez} километров")  # или return rez
+    print(f"{numb} миль = {rez} километров")
+    return rez
 
 
-def kilometers_to_miles(numb: float) -> None:
+def kilometers_to_miles(numb: float) -> float:
     """Ф-ция переводит километры в мили и выводит результат"""
     rez = numb / 1.609344
-    print(f"{numb} километров = {rez} миль")  # или return rez
+    print(f"{numb} километров = {rez} миль")
+    return rez
 
 
-def pounds_to_kilograms(numb: float) -> None:
+def pounds_to_kilograms(numb: float) -> float:
     """Ф-ция переводит фунты в килограммы и выводит результат"""
     rez = numb / 2.2046226218
-    print(f"{numb} фунтов = {rez} килограммов")  # или return rez
+    print(f"{numb} фунтов = {rez} килограммов")
+    return rez
 
 
-def kilograms_to_pounds(numb: float) -> None:
+def kilograms_to_pounds(numb: float) -> float:
     """Ф-ция переводит килограммы в фунты и выводит результат"""
     rez = numb * 2.2046226218
-    print(f"{numb} килограммов = {rez} фунтов")  # или return rez
+    print(f"{numb} килограммов = {rez} фунтов")
+    return rez
 
 
-def ounces_to_grams(numb: float) -> None:
+def ounces_to_grams(numb: float) -> float:
     """Ф-ция переводит унции в граммы и выводит результат"""
     rez = numb * 28.349523125
-    print(f"{numb} унции = {rez} грамм")  # или return rez
+    print(f"{numb} унции = {rez} грамм")
+    return rez
 
 
-def grams_to_ounce(numb: float) -> None:
+def grams_to_ounce(numb: float) -> float:
     """Ф-ция переводит граммы в унции и выводит результат"""
     rez = numb / 28.349523125
-    print(f"{numb} грамм = {rez} унции")  # или return rez
+    print(f"{numb} грамм = {rez} унции")
+    return rez
 
 
-def gallons_to_liters(numb: float) -> None:
+def gallons_to_liters(numb: float) -> float:
     """Ф-ция переводит амер.галлоны в литры и выводит результат"""
     rez = numb * 3.785411784
-    print(f"{numb} американских галлона = {rez} литра")  # или return rez
+    print(f"{numb} американских галлона = {rez} литра")
+    return rez
 
 
-def liters_to_gallons(numb: float) -> None:
+def liters_to_gallons(numb: float) -> float:
     """Ф-ция переводит литры в амер.галлоны и выводит результат"""
     rez = numb / 3.785411784
-    print(f"{numb} литра = {rez} американских галлона")  # или return rez
+    print(f"{numb} литра = {rez} американских галлона")
+    return rez
 
 
-def pints_to_liters(numb: float) -> None:
+def pints_to_liters(numb: float) -> float:
     """Ф-ция переводит пинты в литры и выводит результат"""
     rez = numb / 2.11338
-    print(f"{numb} пинты = {rez} литра")  # или return rez
+    print(f"{numb} пинты = {rez} литра")
+    return rez
 
 
-def liters_to_pints(numb: float) -> None:
+def liters_to_pints(numb: float) -> float:
     """Ф-ция переводит литры в пинты и выводит результат"""
     rez = numb * 2.11338
-    print(f"{numb} литра = {rez} пинты")  # или return rez
+    print(f"{numb} литра = {rez} пинты")
+    return rez
 
 
 dict_operation = {
