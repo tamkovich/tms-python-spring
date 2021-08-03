@@ -160,11 +160,11 @@ def age_classification_csv(file_name_age_classification: str) -> dict:
         for p in temp_list_age:
             if 1 <= int(p[index_age]) <= 12:
                 count_1_12 += 1
-            elif 13 <= int(p[index_age]) <= 18:
+            elif int(p[index_age]) <= 18:
                 count_13_18 += 1
-            elif 19 <= int(p[index_age]) <= 25:
+            elif int(p[index_age]) <= 25:
                 count_19_25 += 1
-            elif 26 <= int(p[index_age]) <= 40:
+            elif int(p[index_age]) <= 40:
                 count_26_40 += 1
             elif int(p[index_age]) >= 41:
                 count_41_more += 1
