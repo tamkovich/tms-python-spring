@@ -11,7 +11,6 @@ task_14_01: Написать программу таймер.
 00:00:01
 ALARM!!!
 """
-# """Реализация таймера (примитивный уровень)."""
 import argparse
 from datetime import timedelta
 import time
