@@ -3,6 +3,7 @@
 Задание 10.08  (HW)
 """
 import csv
+import datetime
 
 """Чтение."""
 
@@ -185,7 +186,6 @@ task_10_2   (HW)
 
 def average_weather_csv(file_name_average_weather: str, city: str, days=2) -> tuple:
     """Находит индексы всех параметров, формирует списки нужных по фильтрам и считает средние"""
-    import datetime
     with open(file_name_average_weather, "r") as f19:
         for r, elem in enumerate(list(csv.reader(f19))[0]):
             if elem == "Дата":
