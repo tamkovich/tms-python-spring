@@ -1,0 +1,7 @@
+"ID, integer, unique","email, text","first_name, text","last_name, text",age (integer)
+1,test@gmail,test,test,1
+2,stepa@gmail,stepa,ivanov,2
+3,zeka@gmail,zeka,zekov,3
+4,,ivan,sidorov,13
+5,,ivan,sidorov,12
+6,denis@gmail.com,denis,tam,asdfghjkl
