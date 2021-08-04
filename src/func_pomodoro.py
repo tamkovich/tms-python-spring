@@ -13,7 +13,7 @@ def step_pomodoro(focus_time: int, u_break: int, cycles: int):
         else:
             print(f"Перерыв № {i + 1}")
             yield countdown(u_break)
-    yield print(f" Happy end!")
+    yield print(f"Happy end!")
 
 
 def countdown(minutes):
