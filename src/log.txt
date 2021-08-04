@@ -1,0 +1,2 @@
+Shvaikovskij Sergej focus time: 1 break: 1 cycles: 3
+Shvaikovskij Sergej focus time: 25 break: 5 cycles: 4
