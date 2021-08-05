@@ -1,11 +1,9 @@
 """Дан файл, содержащий различные даты. Каждая дата - это число, месяц и
 год. Найти самую раннюю дату"""
-import datetime
-min_date = datetime.datetime.now()
-
 import csv
-
 from datetime import datetime
+min_date = datetime.now()
+
 
 filename = 'file_for_task_10_03.csv'
 try:

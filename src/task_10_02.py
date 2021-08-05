@@ -26,7 +26,7 @@ rows_weather = [
     ['2021.01.17', 'Pinsk', 20, 65],
     ['2021.01.18', 'Pinsk', 30, 56],
     ['2021.01.17', 'Pinsk', 50, 45]
-    ]
+]
 
 filename = 'date_weather.csv'
 n = 7
@@ -52,7 +52,7 @@ with open(filename, 'r') as csvfile:
     for row in csvreader:
         if row[1] == 'Minsk':
             counter_minsk += 1
-            if counter_minsk >= counter_minsk_weather - (n-1):
+            if counter_minsk >= counter_minsk_weather - (n - 1):
                 average_grade += int(row[2])
                 average_speed += int(row[3])
 
