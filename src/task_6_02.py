@@ -1,8 +1,8 @@
 """ Дано число. Найти сумму и произведение его цифр. """
 chislo = 2212345434334343874343874387438743
-l = str(chislo)
-k = len(list(l))
-z = (list(l))
+l_chislo = str(chislo)
+k = len(list(l_chislo))
+z = (list(l_chislo))
 summa = 0
 proizv = 1
 i = 0
