@@ -7,7 +7,7 @@ import csv
 import json
 
 fields = ['firstname', 'lastname', 'age']
-rows = [['Ivan', 'Ivanov', 5],
+rows = [['Ivan', 'Iwanov', 5],
         ['Petr', 'Petrov', 10],
         ['Dima', 'Dimasov', 15],
         ['Sveta', "Svetlova", 18],
@@ -51,7 +51,7 @@ with open(filename, 'r') as csvfile:
             dict_res_file["26 - 40"] = grup_26_40
         else:
             grup_40 += 1
-            dict_res_file["40+"] = grup_40
+            dict_res_file["40+ "] = grup_40
 
 with open("res_count_people.json", "w") as f_:
     data = json.dumps(dict_res_file)

@@ -1,4 +1,4 @@
-date,location,grade,wind speed
+date,location,grade,wind_speed
 2021.01.01,Minsk,5,50
 2021.01.02,Minsk,10,70
 2021.01.03,Minsk,15,60

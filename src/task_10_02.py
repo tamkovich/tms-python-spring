@@ -5,7 +5,7 @@
 
 import csv
 
-fields_weather = ['date', 'location', 'grade', 'wind speed']
+fields_weather = ['date', 'location', 'grade', 'wind_speed']
 rows_weather = [
     ['2021.01.01', 'Minsk', 5, 50],
     ['2021.01.02', 'Minsk', 10, 70],
