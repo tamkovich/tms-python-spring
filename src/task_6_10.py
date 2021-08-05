@@ -6,7 +6,7 @@
 изучение принципов работы со
 временем в Python(библиотека datetime) """
 
-from datetime import datetime, timedelta
+from datetime import datetime
 from datetime import timedelta
 vrem_v_pyti = timedelta(hours=7, minutes=20)
 spisok_poezdov = [{"номер поезда": 100,
