@@ -62,7 +62,8 @@ class Car:
 
 if __name__ == "__main__":
     car = Car("Lada", "2101", "1989", 220)
-    print(f"mark - {car.mark}, model - {car.model}, year - {car.year_of_manufacture}, speed - {car.speed}")
+    print(f"mark - {car.mark}, model - {car.model},\n"
+          f"year - {car.year_of_manufacture}, speed - {car.speed}")
     car.increase_speed()
     car.reduce_speed()
     car.turn()
