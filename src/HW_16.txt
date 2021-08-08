@@ -1,0 +1,79 @@
+/*
+Создать таблицы Brand(name), Car(model, release_year, brand(foreing key на таблицу Brand)).
+Реализовать CRUD(создание, чтение, обновление по id, удаление по id) для бренда и машины.
+Создать пользовательский интерфейс.  
+*/
+--1)Создание таблиц
+
+CREATE TABLE brand (
+id serial primary key ,
+Name varchar(255)
+);
+
+INSERT INTO brand (Name)
+VALUES ('BMW' ),
+       ('Mercedes'),
+       ('Volkswagen'),
+       ('Porshe'),
+       ('Ford'),
+       ('LADA'),
+       ('Jaguar');
+
+CREATE TABLE Car (
+id serial primary key,
+Model varchar(255),
+Release_year integer,
+Brand varchar(255),
+brand_id integer
+)
+
+INSERT INTO car (Model, Release_year, Brand, brand_id)
+VALUES ('750', 2021, 'BMW', 1),
+       ('S500',2021,'Mercedes', 2),
+       ('C200',2010,'Mercedes', 2),
+       ('Urban',2017,'LADA', 6),
+       ('Golf', 2014,'Volkswagen', 3),
+       ('Panamera',2021,'Porshe', 4),
+       ('Mondeo',2009,'Ford', 5),
+       ('Vesta',2018,'LADA', 6),
+       ('XF',2013,'Jaguar', 7),
+       ('i8', 2019, 'BMW', 1 ),
+       ('Phaeton', 2016,'Volkswagen', 2),
+       ('911',2017,'Porshe', 4);
+
+2)foreing key на таблицу Brand
+ALTER TABLE car ADD CONSTRAINT FK_brand_id
+ FOREIGN KEY (brand_id) REFERENCES brand(id);
+
+INSERT INTO car (Model, Release_year, Brand, brand_id)
+VALUES ('Challenger', 2021, 'Dodge', 10)
+*/
+Не добавляется автомобиль с несуществующим id
+*/
+
+--2)Чтение
+SELECT model FROM car;
+SELECT id FROM brand;
+SELECT * FROM car WHERE release_year < 2017;
+
+
+--3)Обновление по id
+
+UPDATE brand
+SET name = 'Chevrolet'
+WHERE id =5;
+
+
+UPDATE car
+SET model = 'Corvette'
+SET brand = 'Chevrolet'
+WHERE brand_id =5;
+
+UPDATE car
+SET brand = 'Chevrolet'
+WHERE brand_id =5;
+
+--4)Удаление по id
+
+DELETE FROM car
+WHERE model = 'Urban';
