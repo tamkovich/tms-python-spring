@@ -1,10 +1,9 @@
 /*
-Создать таблицы Brand(name), Car(model, release_year, brand(foreing key на таблицу Brand)).
-Реализовать CRUD(создание, чтение, обновление по id, удаление по id) для бренда и машины.
-Создать пользовательский интерфейс.  
+РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†С‹ Brand(name), Car(model, release_year, brand(foreing key РЅР° С‚Р°Р±Р»РёС†Сѓ Brand)).
+Р РµР°Р»РёР·РѕРІР°С‚СЊ CRUD(СЃРѕР·РґР°РЅРёРµ, С‡С‚РµРЅРёРµ, РѕР±РЅРѕРІР»РµРЅРёРµ РїРѕ id, СѓРґР°Р»РµРЅРёРµ РїРѕ id) РґР»СЏ Р±СЂРµРЅРґР° Рё РјР°С€РёРЅС‹.
+РЎРѕР·РґР°С‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РёРЅС‚РµСЂС„РµР№СЃ.  
 */
-
---1)Создание таблиц
+--1)РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†
 
 CREATE TABLE brand (
 id serial primary key ,
@@ -42,23 +41,23 @@ VALUES ('750', 2021, 'BMW', 1),
        ('Phaeton', 2016,'Volkswagen', 2),
        ('911',2017,'Porshe', 4);
 
-2)foreing key на таблицу Brand
+2)foreing key РЅР° С‚Р°Р±Р»РёС†Сѓ Brand
 ALTER TABLE car ADD CONSTRAINT FK_brand_id
  FOREIGN KEY (brand_id) REFERENCES brand(id);
 
 INSERT INTO car (Model, Release_year, Brand, brand_id)
 VALUES ('Challenger', 2021, 'Dodge', 10)
 */
-Не добавляется автомобиль с несуществующим id
+РќРµ РґРѕР±Р°РІР»СЏРµС‚СЃСЏ Р°РІС‚РѕРјРѕР±РёР»СЊ СЃ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРј id
 */
 
---2)Чтение
+--2)Р§С‚РµРЅРёРµ
 SELECT model FROM car;
 SELECT id FROM brand;
 SELECT * FROM car WHERE release_year < 2017;
 
 
---3)Обновление по id
+--3)РћР±РЅРѕРІР»РµРЅРёРµ РїРѕ id
 
 UPDATE brand
 SET name = 'Chevrolet'
@@ -74,7 +73,7 @@ UPDATE car
 SET brand = 'Chevrolet'
 WHERE brand_id =5;
 
---4)Удаление по id
+--4)РЈРґР°Р»РµРЅРёРµ РїРѕ id
 
 DELETE FROM car
 WHERE model = 'Urban';
