@@ -1,0 +1,35 @@
+"""
+Homework - 15
+task_15:  Создать таблицу продуктов (https://sqliteonline.com/).
+Атрибуты продукта: id, название, цена, количество, комментарий.
+Реализовать CRUD(создание, чтение, обновление по id, удаление по id) для продуктов.
+"""
+
+Создать таблицу:
+CREATE TABLE products (
+  id integer primary key autoincrement,
+  name varchar(50),
+  price FLOAT,
+  amount integer,
+  comment VARCHAR (200)
+)
+
+Создание продукта:
+INSERT INTO products (name, price, amount, comment)
+VALUES  ("чемодан", 80.2, 3, "новый"),
+		("саквояж", 103, 10, "б/у"),
+        ("картина", 255.7, 2, "пейзаж"),
+        ("карзина", 22, 88, "плетеная"),
+        ("картонка", 4.2, 1111, "б/у"),
+        ("маленькая собаченка", 10000, 1, "громко лает")
+
+Чтение(выборка) продуктов:
+SELECT * FROM products
+SELECT * FROM products WHERE id > 3
+SELECT name FROM products WHERE id IN (1, 3, 5)
+
+Обновление продукта по id:
+UPDATE products SET name = 'корзина', price = 11, amount = 77 WHERE id = 4
+
+Удаление продукта по id:
+DELETE FROM products WHERE id = 1;
