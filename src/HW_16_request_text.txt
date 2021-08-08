@@ -1,0 +1,60 @@
+"""
+Homework - 16
+task_16:  Создать таблицы Brand(name),
+Car(model, release_year, brand(foreing key на таблицу Brand)).
+Реализовать CRUD(создание, чтение, обновл. по id, удал. по id) для бренда и машины.
+"""
+
+Создать таблицы бренда и машин:
+
+CREATE TABLE brands (
+  id INTEGER primary key autoincrement,
+  name VARCHAR(50)
+);
+
+CREATE TABLE cars (
+  id INTEGER primary key autoincrement,
+  model VARCHAR(50),
+  release_year INTEGER,
+  car_brand INTEGER,
+  FOREIGN KEY (car_brand) REFERENCES brands(name)
+)
+
+
+Создание брендов и машин (заполнение таблиц):
+
+INSERT INTO brands (name)
+VALUES  ("BMW"), ("Ford"), ("Opel"), ("Ferrari"), ("Лада");
+
+INSERT INTO cars (model, release_year, car_brand)
+VALUES  ("X5", 2015, "BMW"),
+        ("X6", 2019, "BMW"),
+        ("Kuga", 2001, "Ford"),
+        ("Astra", 1850, "Opel"),
+        ("Zafira", 2008, "Opel"),
+        ("F360", 1999, "Ferrari"),
+        ("Гранта", 2008, "Лада"),
+        ("Калина", 2012, "Лада"),
+        ("Х-рэй", 2018, "Лада")
+
+
+Чтение(выборка) бренда и машины:
+
+SELECT * FROM brands
+SELECT * FROM brands WHERE id > 2
+
+SELECT * FROM cars
+SELECT * FROM cars WHERE car_brand = "Лада"
+SELECT * FROM cars WHERE release_year > 2010
+
+
+Обновление бренда и машины по id:
+
+UPDATE brands SET name = "Lada" WHERE id = 5;
+UPDATE cars SET car_brand = "Lada" WHERE car_brand = "Лада";
+UPDATE cars SET release_year = 2007 WHERE car_brand = "Lada" and release_year = 2008
+
+
+Удаление бренда и машины по id:
+
+DELETE FROM cars WHERE id = 9
