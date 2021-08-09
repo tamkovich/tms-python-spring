@@ -1,12 +1,12 @@
 import func
 
 
-def calculation(operation, num1, num2):
+def Calculation(operation, num1, num2):
     if operation == '+':
-        print(func.fun_summation(num1, num2))
+        return  func.FunSummation(num1, num2)
     if operation == '-':
-        print(func.fun_subtraction(num1, num2))
+        return func.FunSubtraction(num1, num2)
     if operation == '*':
-        print(func.fun_multiplication(num1, num2))
+        return func.FunMultiplication(num1, num2)
     if operation == '/':
-        print(func.fun_division(num1, num2))
+        return func.funDivision(num1, num2)
