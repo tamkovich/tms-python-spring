@@ -24,13 +24,15 @@ def fun_santimetr(santimetr):
 
 
 def fun_milli(milli):
-    milli /=  1000000
+    milli /= 1000000
     return milli
 
 
 """
 Километры в мили
 """
+
+
 def fun_kilo(kilo):
     kilo *= 1000000
     return kilo

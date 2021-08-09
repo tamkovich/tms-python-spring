@@ -59,9 +59,7 @@ def find_min_element(array):
 
 
 def sum_all_elements(array):
-    """
-    создаеем список сумм каждой строки
-    """
+    # создаеем список сумм каждой строки
     list_of_max_elements = []
     for row in array:
         list_of_max_elements.append(sum(row))
