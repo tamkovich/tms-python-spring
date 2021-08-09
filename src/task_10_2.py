@@ -37,23 +37,33 @@ class Car:
     def year(self, year):
         self.__year = year
 
-    # увеличить скорости(скорость + 5)
+    """
+    увеличить скорости(скорость + 5)
+    """
     def increase_speed(self, speed):
         self.__speed += speed
 
-    # уменьшение скорости(скорость - 5)
+    """
+    уменьшение скорости(скорость - 5)
+    """
     def decreas_speed(self, speed):
         self.__speed -= speed
 
-    # стоп(сброс скорости на 0)
+    """
+    стоп(сброс скорости на 0)
+    """
     def stop_speed(self):
         self.__speed = 0
 
-    # отображение скорости
+    """
+    отображение скорости
+    """
     def display_speed(self):
         print(f"Скорость машины {self.__brand} равно {self.__speed}")
 
-    # разворот(изменение знака скорости)
+    """
+    разворот(изменение знака скорости)
+    """
     def change_speed(self, speed):
         self.__speed = speed
 

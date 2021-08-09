@@ -43,11 +43,15 @@ class FunSquare:
     def b(self, b: float) -> None:
         self.__b = b
 
-    # функция площадь прямоугольника
+    """
+    функция площадь прямоугольника
+    """
     def area(self, a: float, b: float) -> float:
         return a * b
 
-    # функция периметр прямоугольника
+    """
+    функция периметр прямоугольника
+    """
     def perimeter(self, a: float, b: float) -> float:
         return 2 * (a + b)
 
@@ -90,11 +94,15 @@ class FunCylinder:
     def h(self, h: float) -> None:
         self.__h = h
 
-    # Нахождения площадь цилиндра
+    """
+    Нахождения площадь цилиндра
+    """
     def area(self, r: float, h: float) -> float:
         return 2 * r * r * 3.14 + 2 * r * h * 3.14
 
-    # Нахождения объем цилиндра
+    """
+    Нахождения объем цилиндра
+    """
     def volume(self, r: float) -> float:
         return r * r * 3.14
 
@@ -147,11 +155,15 @@ class FunTrapezoid:
     def h(self, h: float) -> None:
         self.__h = h
 
-    # Площадь трапеции
+    """
+    Площадь трапеции
+    """
     def area(self, a: float, b: float, h: float) -> float:
         return (h * (a + b)) / 2
 
-    #  Нахождении середини линии трапеции
+    """
+    Нахождении середини линии трапеции
+    """
     def middle_line(self, a: float, b: float) -> float:
         return (a + b) / 2
 
@@ -204,11 +216,15 @@ class FunTriangle:
     def c(self, c: float) -> None:
         self.__c = c
 
-    # Нахождения площадь треугольника
+    """
+    Нахождения площадь треугольника
+    """
     def area(self, a: float, b: float, c: float, p: float) -> float:
         return (p * (p - a) * (p - b) * (p - c)) ** 1 / 2
 
-    # Нахождения периметра треугольника
+    """
+    Нахождения периметра треугольника
+    """
     def perimeter(self, a: float, b: float, c: float) -> float:
         return (a + b + c) / 2
 
@@ -251,11 +267,15 @@ class FunRhombus:
     def h(self, h: float) -> None:
         self.__h = h
 
-    # Нахождения площадь ромба
+    """
+    Нахождения площадь ромба
+    """
     def area(self, a: float, h: float) -> float:
         return a * h
 
-    # Периметр ромба
+    """
+    Периметр ромба
+    """
     def perimeter(self, a: float) -> float:
         return 4 * a
 
