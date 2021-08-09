@@ -1,7 +1,9 @@
 from statistics import geometric_mean
 
 
-# Нахождения среднего арифметического и геометрического
+"""
+Нахождения среднего арифметического и геометрического
+"""
 def fun_1(*args, mean_type):
     if mean_type == 1:
         return float(sum(args)) / max(len(args), 1)
