@@ -1,6 +1,8 @@
 """
 Дюймы в сантиметры
 """
+
+
 def fun_inch(inch):
     inch *= 2.54
     return inch
@@ -9,6 +11,8 @@ def fun_inch(inch):
 """
 Сантиметры в дюймы
 """
+
+
 def fun_santimetr(santimetr):
     santimetr *= 0.39
     return santimetr
@@ -17,9 +21,12 @@ def fun_santimetr(santimetr):
 """
 Мили в километры
 """
+
+
 def fun_milli(milli):
     milli /=  1000000
     return milli
+
 
 """
 Километры в мили
@@ -32,6 +39,8 @@ def fun_kilo(kilo):
 """
 Фунты в килограммы
 """
+
+
 def fun_funt(funt):
     funt *= 0.45359237
     return funt
@@ -40,6 +49,8 @@ def fun_funt(funt):
 """
 Килограммы в фунты
 """
+
+
 def fun_kilogram(kilogram):
     kilogram /= 0.45359237
     return kilogram
@@ -48,6 +59,8 @@ def fun_kilogram(kilogram):
 """
 Унции в граммы
 """
+
+
 def fun_unsiya(unsiya):
     unsiya *= 28.3495
     return unsiya
@@ -56,6 +69,8 @@ def fun_unsiya(unsiya):
 """
 Граммы в унции
 """
+
+
 def fun_gramm(gramm):
     gramm *= 0.035274
     return gramm
@@ -64,6 +79,8 @@ def fun_gramm(gramm):
 """
 Галлон в литры
 """
+
+
 def fun_galon(galon):
     galon *= 3.785412
     return galon
@@ -72,6 +89,8 @@ def fun_galon(galon):
 """
 Литры в галлоны
 """
+
+
 def fun_litr(litr):
     litr *= 2.113376
     return litr
@@ -80,6 +99,8 @@ def fun_litr(litr):
 """
 Пинты в литры
 """
+
+
 def fun_pinti(pint):
     return pint * 0.473176
 
@@ -87,24 +108,26 @@ def fun_pinti(pint):
 """
 Литры в пинты
 """
+
+
 def fun_litr_pint(litr_pint):
     return litr_pint * 2.11338
 
 
 list_of_trans = {
-            1: fun_inch,
-            2: fun_santimetr,
-            3: fun_milli,
-            4: fun_kilo,
-            5: fun_funt,
-            6: fun_kilogram,
-            7: fun_unsiya,
-            8: fun_gramm,
-            9: fun_galon,
-            10: fun_litr,
-            11: fun_pinti,
-            12: fun_litr_pint
-        }
+    1: fun_inch,
+    2: fun_santimetr,
+    3: fun_milli,
+    4: fun_kilo,
+    5: fun_funt,
+    6: fun_kilogram,
+    7: fun_unsiya,
+    8: fun_gramm,
+    9: fun_galon,
+    10: fun_litr,
+    11: fun_pinti,
+    12: fun_litr_pint
+}
 while True:
     print("Введите число для перевода: ")
     number = input()

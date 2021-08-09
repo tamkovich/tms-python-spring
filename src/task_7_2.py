@@ -1,6 +1,8 @@
 """
 Создать матрицу
 """
+
+
 def create_matrix(n1, m1):
     array = []
     for i in range(n1):
@@ -16,6 +18,8 @@ def create_matrix(n1, m1):
 """
 Вывод матрицы
 """
+
+
 def print_matrix(array):
     for row in array:
         print(row)
@@ -25,6 +29,8 @@ def print_matrix(array):
 """
 Нахождения максимального элемента
 """
+
+
 def find_max_element(array):
     list_of_max_elements = []
     # создаеем список максимальных элементов из каждой строки
@@ -37,6 +43,8 @@ def find_max_element(array):
 """
 Нахождения минимального элемента
 """
+
+
 def find_min_element(array):
     list_of_max_elements = []
     for row in array:
@@ -48,9 +56,10 @@ def find_min_element(array):
 """
 Нахождения сумму элементов
 """
+
+
 def sum_all_elements(array):
     """
-
     создаеем список сумм каждой строки
     """
     list_of_max_elements = []

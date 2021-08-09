@@ -1,6 +1,8 @@
 """
  Нахождения сумма и максималного элемента
 """
+
+
 def fun_sum_max(*args):
     return sum(args), max(args)
 
