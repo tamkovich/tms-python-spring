@@ -1,10 +1,10 @@
 import func
 
 
-def fun_calculation(operation, num1, num2):
-    list_of_operation = {'+': func.Math(num1, num2).fun_summation(),
-                         '-': func.Math(num1, num2).fun_subtraction(),
-                         '*': func.Math(num1, num2).fun_multiplication(),
-                         '/': func.Math(num1, num2).fun_division()
+def Calculation(operation, num1, num2):
+    list_of_operation = {'+': func.Math(num1, num2).FunSummation(),
+                         '-': func.Math(num1, num2).FunSubtraction(),
+                         '*': func.Math(num1, num2).FunMultiplication(),
+                         '/': func.Math(num1, num2).FunDivision()
                          }
     print(list_of_operation[operation])

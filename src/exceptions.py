@@ -1,4 +1,4 @@
-def fun_TypeError(num1, num2, flag):
+def FunTypeError(num1, num2, flag):
     try:
         int(num1)
         int(num2)
@@ -8,7 +8,7 @@ def fun_TypeError(num1, num2, flag):
     return flag
 
 
-def fun_ZeroDivisionError(num1, num2, flag):
+def FunZeroDivisionError(num1, num2, flag):
     try:
         int(num1) / int(num2)
     except ZeroDivisionError:
