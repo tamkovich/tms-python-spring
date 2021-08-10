@@ -16,7 +16,7 @@ while True:
     if operation in list_of_operation and operation != '0':
         num1 = input("Введите первое число:  ")
         num2 = input("Введите втарое число:  ")
-        ui_func.Calculation(operation, num1, num2)
+        ui_func.calculate(operation, num1, num2)
     elif operation == '0':
         break
     else:
