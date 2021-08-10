@@ -1,7 +1,7 @@
 import func
 
 
-def Calculation(operation, num1, num2):
+def calculate(operation, num1, num2):
     if operation == '+':
         return func.FunSummation(num1, num2)
     if operation == '-':
