@@ -1,9 +1,9 @@
 from datetime import timedelta
 import time
+from typing import Iterator
 
 
-def step_pomodoro(focus_time: int, u_break: int, cycles: int):
-    # Expected type 'Iterator' по итогу идентифицирует как Unresolved reference 'Iterator' ?
+def step_pomodoro(focus_time: int, u_break: int, cycles: int) -> Iterator[str]:
     """Ф-ция пошагового выполнения. yield - как доп.элем.управл.: старт таймеров"""
     for i in range(cycles):
         print(f"Цикл № {i+1}")
@@ -16,7 +16,7 @@ def step_pomodoro(focus_time: int, u_break: int, cycles: int):
     yield print("Happy end!")
 
 
-def countdown(minutes):
+def countdown(minutes: int) -> None:
     """Ф-ция обратного отсчета."""
     total_seconds = minutes * 60
     for j in range(total_seconds, 0, -1):
