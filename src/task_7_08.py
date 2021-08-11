@@ -7,6 +7,8 @@
 -среднеарифметическое
 -среднегеометрическое
 -точка входа"""
+
+
 def sredn_arifm(*args):
     return sum(args) / len(args)
 
