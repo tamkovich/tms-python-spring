@@ -32,6 +32,7 @@ def sum_all_elements(matrix):
         list_of_all_elements.append(sum(row))
     return sum(list_of_all_elements)
 
+
 """4)Нахождение максимального элемента"""
 
 
@@ -40,6 +41,7 @@ def find_max_element(matrix):
     for row in matrix:
         list_of_max_elements.append(max(row))
     return max(list_of_max_elements)
+
 
 """5)Нахождение минимального элемента"""
 
