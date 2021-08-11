@@ -1,9 +1,7 @@
+import random
 """Задание 7.02 (HW)
 Написать программу для работы с матрицами:"""
 """1)Создание"""
-
-
-import random
 
 
 def create_matrix(n):
