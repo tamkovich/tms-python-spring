@@ -9,7 +9,7 @@ for n in range(N, M + 1):
     for k in range(1, n):
         if n % k == 0:
             s += k
-    g.update({n: s})
+    g[n] = s
 for n in g.keys():
     for d in g.keys():
         if n != d and d == g[n] and n == g[d]:
