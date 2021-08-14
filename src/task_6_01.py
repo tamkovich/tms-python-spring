@@ -5,33 +5,33 @@ sign (+, –, /, *). Вычислить результат Z в зависимо
 программа (т.е. построить бесконечный цикл). В качестве символа прекращения
 вычислений принять ‘0’ (т.е. sign='0'). """
 
-X = int(input("Введите X: "))
-Y = int(input("Введите Y: "))
 z = 0
 while True:
-    a = input("sign = ")
-    if a == '+':
-        z = X + Y
-        print(z)
-        continue
-    elif a == '-':
-        z = X - Y
-        print(z)
-        continue
-    elif a == '/':
-        if Y == 0:
-            print("на '0' делить нельзя - введите другой знак")
-            continue
-        else:
-            z = X / Y
-            print(z)
-        continue
-    elif a == '*':
-        z = X * Y
-        print(z)
-        continue
-    elif a == "0":
+    b = int(input("Для вычислений введите - 1. или введите 0, если хотите выйти: "))
+    if b == 0:
         break
     else:
-        print("неверный знак - введите новый внимательно")
-        continue
+        X = int(input("Введите X: "))
+        Y = int(input("Введите Y: "))
+        a = input("Введите один из знаков операций [ +, -, *, / ]")
+        while True:
+            if a == '+':
+                z = X + Y
+                break
+            elif a == '-':
+                z = X - Y
+                break
+            elif a == '/':
+                if Y == 0:
+                    z = "На '0' делить нельзя - введите другую цивру или оператор и повторите!"
+                    break
+                else:
+                    z = X / Y
+                    break
+            elif a == '*':
+                z = X * Y
+                break
+            else:
+                z = "Неверный знак - введите новый внимательно!"
+                break
+        print(z)
