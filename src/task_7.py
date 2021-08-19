@@ -1,8 +1,8 @@
 """1. Написать 12 функций по переводу:"""
-"""1. Дюймы в сантиметры"""
 
 
 def func_dm_sm(s):
+    """1. Дюймы в сантиметры"""
     number = s * 2.54
     print(f'{s} дюймов = {number} сантиметров')
     return number
@@ -10,10 +10,9 @@ def func_dm_sm(s):
 
 func_dm_sm(5)
 
-"""2. Сантиметры в дюймы"""
-
 
 def func_sm_dm(s):
+    """2. Сантиметры в дюймы"""
     number = s / 2.54
     print(f'{s} сантиметров = {number} дюймов')
     return number
@@ -21,10 +20,9 @@ def func_sm_dm(s):
 
 func_sm_dm(3)
 
-"""3. Мили в километры"""
-
 
 def func_ml_km(s):
+    """3. Мили в километры"""
     number = s * 1.6
     print(f'{s} миль = {number} километров')
     return number
@@ -32,10 +30,9 @@ def func_ml_km(s):
 
 func_ml_km(10)
 
-"""4. Километры в мили"""
-
 
 def func_km_ml(s):
+    """4. Километры в мили"""
     number = s / 1.6
     print(f'{s} километров  = {number} миль ')
     return number
@@ -43,10 +40,9 @@ def func_km_ml(s):
 
 func_km_ml(16)
 
-"""5. Фунты в килограммы"""
-
 
 def func_lb_kg(s):
+    """5. Фунты в килограммы"""
     number = s / 2.2046
     print(f'{s} фунтов  = {number} килограммов')
     return number
@@ -54,10 +50,9 @@ def func_lb_kg(s):
 
 func_lb_kg(35)
 
-"""6. Килограммы в фунты"""
-
 
 def func_kg_lb(s):
+    """6. Килограммы в фунты"""
     number = s * 2.2046
     print(f'{s} килограммов   = {number} фунтов ')
     return number
@@ -65,10 +60,9 @@ def func_kg_lb(s):
 
 func_kg_lb(57)
 
-"""7. Унции в граммы"""
-
 
 def func_oz_g(s):
+    """7. Унции в граммы"""
     number = s / 0.035274
     print(f'{s} унций   = {number} грамм ')
     return number
@@ -76,21 +70,19 @@ def func_oz_g(s):
 
 func_oz_g(68)
 
-"""8. Граммы в унции"""
-
 
 def func_g_oz(s):
+    """8. Граммы в унции"""
     number = s * 0.035274
     print(f'{s} грамм  = {number} унций ')
     return number
 
 
-func_oz_g(7)
-
-"""9. Галлон в литры"""
+func_g_oz(7)
 
 
 def func_gal_l(s):
+    """9. Галлон в литры"""
     number = s * 3.7854
     print(f'{s} галлонов  = {number} литров ')
     return number
@@ -98,10 +90,9 @@ def func_gal_l(s):
 
 func_gal_l(7)
 
-"""10. Литры в галлоны"""
-
 
 def func_l_gal(s):
+    """10. Литры в галлоны"""
     number = s / 3.7854
     print(f'{s} литров  = {number} галлонов ')
     return number
@@ -109,10 +100,9 @@ def func_l_gal(s):
 
 func_l_gal(32)
 
-"""11. Пинты в литры"""
-
 
 def func_p_l(s):
+    """11. Пинты в литры"""
     number = s * 0.4732
     print(f'{s} пинта  = {number} литров ')
     return number
@@ -120,10 +110,9 @@ def func_p_l(s):
 
 func_p_l(89)
 
-"""12. Литры в пинты"""
-
 
 def func_l_p(s):
+    """12. Литры в пинты"""
     number = s / 0.4732
     print(f'{s} пинта  = {number} литров ')
     return number
