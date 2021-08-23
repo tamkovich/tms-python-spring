@@ -8,17 +8,11 @@ def func_dm_sm(s):
     return number
 
 
-func_dm_sm(5)
-
-
 def func_sm_dm(s):
     """2. Сантиметры в дюймы"""
     number = s / 2.54
     print(f'{s} сантиметров = {number} дюймов')
     return number
-
-
-func_sm_dm(3)
 
 
 def func_ml_km(s):
@@ -28,17 +22,11 @@ def func_ml_km(s):
     return number
 
 
-func_ml_km(10)
-
-
 def func_km_ml(s):
     """4. Километры в мили"""
     number = s / 1.6
     print(f'{s} километров  = {number} миль ')
     return number
-
-
-func_km_ml(16)
 
 
 def func_lb_kg(s):
@@ -48,17 +36,11 @@ def func_lb_kg(s):
     return number
 
 
-func_lb_kg(35)
-
-
 def func_kg_lb(s):
     """6. Килограммы в фунты"""
     number = s * 2.2046
     print(f'{s} килограммов   = {number} фунтов ')
     return number
-
-
-func_kg_lb(57)
 
 
 def func_oz_g(s):
@@ -68,17 +50,11 @@ def func_oz_g(s):
     return number
 
 
-func_oz_g(68)
-
-
 def func_g_oz(s):
     """8. Граммы в унции"""
     number = s * 0.035274
     print(f'{s} грамм  = {number} унций ')
     return number
-
-
-func_g_oz(7)
 
 
 def func_gal_l(s):
@@ -88,17 +64,11 @@ def func_gal_l(s):
     return number
 
 
-func_gal_l(7)
-
-
 def func_l_gal(s):
     """10. Литры в галлоны"""
     number = s / 3.7854
     print(f'{s} литров  = {number} галлонов ')
     return number
-
-
-func_l_gal(32)
 
 
 def func_p_l(s):
@@ -108,9 +78,6 @@ def func_p_l(s):
     return number
 
 
-func_p_l(89)
-
-
 def func_l_p(s):
     """12. Литры в пинты"""
     number = s / 0.4732
@@ -118,6 +85,17 @@ def func_l_p(s):
     return number
 
 
+func_dm_sm(5)
+func_sm_dm(3)
+func_ml_km(10)
+func_km_ml(16)
+func_lb_kg(35)
+func_kg_lb(57)
+func_oz_g(68)
+func_g_oz(7)
+func_l_gal(32)
+func_gal_l(7)
+func_p_l(89)
 func_l_p(108)
 """Примечание: функция принимает на вход число и возвращает конвертированное число"""
 
