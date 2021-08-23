@@ -1,84 +1,83 @@
 """1. Написать 12 функций по переводу:"""
 
 
-def func_dm_sm(s):
-    """1. Дюймы в сантиметры"""
+def func_dm_sm(s: float) -> float:
     number = s * 2.54
     print(f'{s} дюймов = {number} сантиметров')
     return number
 
 
-def func_sm_dm(s):
+def func_sm_dm(s: float) -> float:
     """2. Сантиметры в дюймы"""
     number = s / 2.54
     print(f'{s} сантиметров = {number} дюймов')
     return number
 
 
-def func_ml_km(s):
+def func_ml_km(s: float) -> float:
     """3. Мили в километры"""
     number = s * 1.6
     print(f'{s} миль = {number} километров')
     return number
 
 
-def func_km_ml(s):
+def func_km_ml(s: float) -> float:
     """4. Километры в мили"""
     number = s / 1.6
     print(f'{s} километров  = {number} миль ')
     return number
 
 
-def func_lb_kg(s):
+def func_lb_kg(s: float) -> float:
     """5. Фунты в килограммы"""
     number = s / 2.2046
     print(f'{s} фунтов  = {number} килограммов')
     return number
 
 
-def func_kg_lb(s):
+def func_kg_lb(s: float) -> float:
     """6. Килограммы в фунты"""
     number = s * 2.2046
     print(f'{s} килограммов   = {number} фунтов ')
     return number
 
 
-def func_oz_g(s):
+def func_oz_g(s: float) -> float:
     """7. Унции в граммы"""
     number = s / 0.035274
     print(f'{s} унций   = {number} грамм ')
     return number
 
 
-def func_g_oz(s):
+def func_g_oz(s: float) -> float:
     """8. Граммы в унции"""
     number = s * 0.035274
     print(f'{s} грамм  = {number} унций ')
     return number
 
 
-def func_gal_l(s):
+def func_gal_l(s: float) -> float:
     """9. Галлон в литры"""
     number = s * 3.7854
     print(f'{s} галлонов  = {number} литров ')
     return number
 
 
-def func_l_gal(s):
+def func_l_gal(s: float) -> float:
     """10. Литры в галлоны"""
     number = s / 3.7854
     print(f'{s} литров  = {number} галлонов ')
     return number
 
 
-def func_p_l(s):
+def func_p_l(s: float) -> float:
     """11. Пинты в литры"""
     number = s * 0.4732
     print(f'{s} пинта  = {number} литров ')
     return number
 
 
-def func_l_p(s):
+def func_l_p(s: float) -> float:
     """12. Литры в пинты"""
     number = s / 0.4732
     print(f'{s} пинта  = {number} литров ')
