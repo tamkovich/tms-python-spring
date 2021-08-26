@@ -11,5 +11,5 @@ from base import sum, minus
 
 
 def test_sum_list_of_numbers():
-    with pytest.raises(TypeError) as err:
+    with pytest.raises(TypeError):
         sum([1, 2, 3])

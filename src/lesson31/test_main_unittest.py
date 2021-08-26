@@ -5,13 +5,17 @@ from user import check_password
 
 
 class TestSum(unittest.TestCase):
+    def setUp(self) -> None:
+        self.username = 'test'
+        self.success_password = '123123abc'
 
     def test_login_successfully(self):
-        self.assertEqual("Hello, test", login("test", "123123abc"))
+        self.assertEqual("Hello, test", login(self.username, self.success_password))
+        self.username = 'not_test_user'
 
     def test_login_invalid(self):
-        self.assertEqual("Invalid credentials for user admin", login(
-            "admin", "test password"
+        self.assertEqual("Invalid credentials for user test", login(
+            self.username, "test password"
         ))
 
     def test_check_password_correct(self):
