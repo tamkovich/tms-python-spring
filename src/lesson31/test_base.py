@@ -13,3 +13,19 @@ from base import sum, minus
 def test_sum_list_of_numbers():
     with pytest.raises(TypeError):
         sum([1, 2, 3])
+
+
+@pytest.mark.parametrize(
+    'first_number, second_number, expected_result',
+    [
+        (1, 3, 4),
+        (2, 4, 6),
+        (0, 0, 0),
+    ],
+)
+def test_sum_works_with_1_and_2(first_number, second_number, expected_result):
+    assert sum(first_number, second_number) == expected_result
+
+
+def test_sum_works_with_1_and_3():
+    assert sum(1, 3) == 4
