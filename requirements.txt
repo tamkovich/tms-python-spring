@@ -1,3 +1,4 @@
 flake8
 pydocstyle
 flask
+pytest
