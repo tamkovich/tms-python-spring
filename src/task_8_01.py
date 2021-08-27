@@ -7,13 +7,13 @@
 def fact_2(*args):
     for n in args:
         if n % 2 == 0:
-            s = [number for number in range(2, n+1) if number % 2 == 0]
+            s = [number for number in range(2, n + 1) if number % 2 == 0]
             fact_chet = 1
             for i in s:
                 fact_chet *= i
             print(f"{n} = {fact_chet}")
         else:
-            s = [number for number in range(1, n+1) if number % 2 != 0]
+            s = [number for number in range(1, n + 1) if number % 2 != 0]
             fact_chet = 1
             for i in s:
                 fact_chet *= i
