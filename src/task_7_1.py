@@ -22,53 +22,66 @@
 Затем программа выдает конвертированный результат. Использовать функции из первого
 задания. Программа должна быть в бесконечном цикле. Код выхода из программы - “0”."""
 
+
 def inches_in_centimeters(number_):
     result_ = number_ * 2.54
     return result_
+
 
 def centimeters_in_inches(number_):
     result_ = number_ / 2.54
     return result_
 
+
 def miles_in_kilometers(number_):
     result_ = number_ * 1.609
     return result_
+
 
 def kilometers_in_miles(number_):
     result_ = number_ / 1.609
     return result_
 
+
 def pounds_in_kilograms(number_):
     result_ = number_ * 0.45359237
     return result_
+
 
 def kilograms_in_pounds(number_):
     result_ = number_ / 0.45359237
     return result_
 
+
 def intions_in_grams(number_):
     result_ = number_ * 28.3
     return result_
+
 
 def grams_in_intions(number_):
     result_ = number_ / 28.3
     return result_
 
+
 def gallons_in_liters(number_):
     result_ = number_ * 3.7854
     return result_
+
 
 def liters_in_gallons(number_):
     result_ = number_ / 3.7854
     return result_
 
+
 def pints_in_liters(number_):
     result_ = number_ * 0.5683
     return result_
 
+
 def liters_in_pints(number_):
     result_ = number_ / 0.5683
     return result_
+
 
 var_perevoda = {1: inches_in_centimeters,
                 2: centimeters_in_inches,
@@ -84,7 +97,7 @@ var_perevoda = {1: inches_in_centimeters,
                 12: liters_in_pints}
 
 while True:
-    num_comand = int(input("Введите цифру от 0 до 12, где:\n"
+    num_comand = int(input("Введите число от 0 до 12, где:\n"
                            "0 - выход из программы\n"
                            "1 - перевод дюймов в сантиметры\n"
                            "2 - перевод сантиметров в дюймы\n"
@@ -101,9 +114,9 @@ while True:
                            ">>>>> : "))
     if num_comand == 0:
         break
+    elif num_comand >= 13:
+        print("Ошибка! Вы ввели неправильное число!")
     else:
-        for num_, funk_ in var_perevoda.items():
-            if num_comand == int(num_):
-                a_number = int(input("Введите числовое значение: "))
-                print(funk_(a_number))
+        rez = var_perevoda[num_comand](int(input("Введите числовое значение: ")))
+        print(rez)
 print("The End")
