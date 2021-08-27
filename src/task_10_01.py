@@ -31,27 +31,17 @@ dict_res_file = {"1 - 12": 0,
 with open(filename, 'r') as csvfile:
     csvreader = csv.reader(csvfile)
     fields = next(csvreader)
-    grup_1_12 = 0
-    grup_13_18 = 0
-    grup_19_25 = 0
-    grup_26_40 = 0
-    grup_40 = 0
     for row in csvreader:
         if int(row[2]) < 13:
-            grup_1_12 += 1
-            dict_res_file["1 - 12"] = grup_1_12
+            dict_res_file["1 - 12"] += 1
         elif int(row[2]) < 19:
-            grup_13_18 += 1
-            dict_res_file["13 - 18"] = grup_13_18
+            dict_res_file["13 - 18"] += 1
         elif int(row[2]) < 26:
-            grup_19_25 += 1
-            dict_res_file["19 - 25"] = grup_19_25
+            dict_res_file["19 - 25"] += 1
         elif int(row[2]) < 41:
-            grup_26_40 += 1
-            dict_res_file["26 - 40"] = grup_26_40
+            dict_res_file["26 - 40"] += 1
         else:
-            grup_40 += 1
-            dict_res_file["40+ "] = grup_40
+            dict_res_file["40+"] += 1
 
 with open("res_count_people.json", "w") as f_:
     data = json.dumps(dict_res_file)
