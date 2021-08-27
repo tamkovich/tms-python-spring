@@ -6,13 +6,12 @@
 list_exp = ['ivavi', 'nana', 'opo']
 
 
-def palindrom_(*args):
-    for i in args:
-        if i[::-1] == i:
-            print(f"{i} - палиндром")
-        else:
-            print(f"{i} - не палиндром")
+def is_palindrom(word: str) -> bool:
+    if word[::-1] == word:
+        return True
+    else:
+        return False
 
 
-for j in list_exp:
-    palindrom_(j)
+for word in list_exp:
+    print(f"{word} это палиндром? - {is_palindrom(word)}")
